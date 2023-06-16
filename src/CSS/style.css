@@ -147,6 +147,10 @@ a {
 
 header {
   background: linear-gradient(#018f25, #019d9a, #0058f1)
+    /* background: url(header_background.jpg) no-repeat center center fixed;
+  background-size: cover;
+  height: 100px;
+  width: 100%; */
 }
 
 header .main-color {

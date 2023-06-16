@@ -9,7 +9,7 @@ import "bootstrap/dist/css/bootstrap.css"
 import NotFound from "./views/NotFound";
 import Experiencias from "./views/Experiencias";
 import Carrito from "./views/Carrito"
-
+import Home from "./views/Home";
 // import Layout_carrito from "./Components/Layout_carrito";
 import Pago from "./views/Pago";
 import Enviar from "./views/Enviar"
@@ -26,7 +26,7 @@ function App() {
       <Routes>
 
         <Route path="/" element={<Layout />}>
-          <Route index element={<Login />} />
+          <Route index element={<Home />} />
           <Route path="modelos">
             <Route index element={<Modelos />} />
             <Route path=":id" element={<Detalles />} />
@@ -41,7 +41,7 @@ function App() {
           <Route path="pago" element={<Pago />} />
           <Route path="enviar" element={<Enviar />} />
         </Route>
-
+        <Route path="login" element={<Login />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>

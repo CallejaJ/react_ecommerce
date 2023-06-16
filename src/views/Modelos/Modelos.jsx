@@ -5,7 +5,6 @@ import Footer from "../../Components/Footer"
 import slider1 from '../../assets/slider1.jpg'
 import slider2 from '../../assets/slider2.jpg'
 import slider3 from '../../assets/slider3.jpg'
-import Destacados from "../../Components/Destacados/Destacados"
 import { Link } from "react-router-dom"
 import "../../CSS/style.css"
 
@@ -55,7 +54,6 @@ function Modelos() {
 
 
             <Card cards={card} />
-            <Destacados />
             <section className="container d-flex justify-content-between my-5 py-5">
                 <div className="w-100">
                     <h2>Experiencias de clientes</h2>

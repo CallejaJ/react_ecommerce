@@ -1,6 +1,5 @@
 import Benefits from "../../Components/Benefits/Benefits"
 import Footer from "../../Components/Footer/Footer"
-import video from "../../assets/video.mp4"
 
 
 function Login() {
@@ -45,12 +44,6 @@ function Login() {
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div className="container mp4 mt-5 mb-5">
-                <video controls width="500">
-                    <source src={video} type="video/mp4" />
-                </video>
             </div>
             <Benefits />
             <Footer />

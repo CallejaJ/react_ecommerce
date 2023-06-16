@@ -1,0 +1,1 @@
+export { default } from './Home'; // para acortar acceso desde App

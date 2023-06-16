@@ -1,0 +1,1 @@
+export { default } from './Benefits'; // para acortar acceso desde App

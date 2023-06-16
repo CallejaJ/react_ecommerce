@@ -1,0 +1,1 @@
+export { default } from './Footer'; // para acortar acceso desde App

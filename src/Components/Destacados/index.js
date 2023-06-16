@@ -1,0 +1,1 @@
+export { default } from './Destacados'; // para acortar acceso desde App

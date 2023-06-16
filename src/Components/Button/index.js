@@ -1,0 +1,1 @@
+export { default } from './Button'; // para acortar acceso desde App

@@ -1,0 +1,1 @@
+export { default } from './Header'; // para acortar acceso desde App

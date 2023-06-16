@@ -145,12 +145,14 @@ a {
 
 /* Header */
 
-header {
+/* header {
   background: linear-gradient(#018f25, #019d9a, #0058f1)
-    /* background: url(header_background.jpg) no-repeat center center fixed;
+} */
+
+.headerB {
+  background: url(https://wallpapercave.com/wp/wp7873943.jpg);
   background-size: cover;
-  height: 100px;
-  width: 100%; */
+  background-position: right;
 }
 
 header .main-color {

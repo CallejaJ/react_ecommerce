@@ -22,8 +22,8 @@ function Modelos() {
                     <div className="carousel-item active">
                         <img src={slider1} className="d-block w-100" alt="slider1" />
                         <div className="carousel-caption d-none d-md-block">
-                            <h5 className="h1 text-primary">Set 1</h5>
-                            <p className="h4 text-primary">Tu sueño hecho realidad</p>
+                            <h5 className="h1 text-primary">Modelos 3D</h5>
+                            <p className="h4 text-primary">a la vanguardia</p>
 
                         </div>
                     </div>

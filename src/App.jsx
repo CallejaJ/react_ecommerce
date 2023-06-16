@@ -34,6 +34,7 @@ function App() {
           <Route path="tecnologias" element={<Tecnologias />} />
           <Route path="garantia" element={<Garantia />} />
           <Route path="experiencias" element={<Experiencias />} />
+          <Route path="login" element={<Login />} />
         </Route>
 
         <Route path="carrito" element={<Layout />} >
@@ -41,7 +42,6 @@ function App() {
           <Route path="pago" element={<Pago />} />
           <Route path="enviar" element={<Enviar />} />
         </Route>
-        <Route path="login" element={<Login />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>

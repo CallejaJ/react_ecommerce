@@ -1,11 +1,10 @@
 import { Link } from 'react-router-dom';
 import "../../CSS/style.css"
 import logo from "../../assets/logo-sin-fondo.png"
-// import header_background from "../../assets/header_background.jpg"
 
 function Header() {
     return (
-        <header className="navbar navbar-expand-lg py-5 bg-primary">
+        <header className="headerB navbar navbar-expand-lg py-5 bg-primary">
             <div className="container gap-3">
                 <div className="logo">
                     <img className="navbar-brand" src={logo}></img>

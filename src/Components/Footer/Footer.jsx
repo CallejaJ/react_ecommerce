@@ -3,6 +3,7 @@ import "../../CSS/style.css"
 import logo from "../../assets/logo-sin-fondo.png"
 
 
+
 function Footer() {
     return (
         <>

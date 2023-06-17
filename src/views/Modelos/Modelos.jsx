@@ -12,51 +12,45 @@ import Carousel from 'react-bootstrap/Carousel';
 function Modelos() {
     return (
         <>
+            <div className="container">
+                <Carousel>
+                    <Carousel.Item>
+                        <img
+                            className="d-block w-100"
+                            src={slider1}
+                            alt="First slide"
+                        />
+                        <Carousel.Caption>
+                            <h3 className="text-primary">Set 1</h3>
+                            <p className="text-secondary">Elegance</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img
+                            className="d-block w-100"
+                            src={slider2}
+                            alt="Second slide"
+                        />
 
-            <Carousel>
-                <Carousel.Item>
-                    <img
-                        className="d-block w-100"
-                        src={slider1}
-                        alt="First slide"
-                    />
-                    <Carousel.Caption>
-                        <h3>First slide label</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        className="d-block w-100"
-                        src={slider2}
-                        alt="Second slide"
-                    />
+                        <Carousel.Caption>
+                            <h3 className="text-primary">Set 2</h3>
+                            <p className="text-secondary">Family</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img
+                            className="d-block w-100"
+                            src={slider3}
+                            alt="Third slide"
+                        />
 
-                    <Carousel.Caption>
-                        <h3>Second slide label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        className="d-block w-100"
-                        src={slider3}
-                        alt="Third slide"
-                    />
-
-                    <Carousel.Caption>
-                        <h3>Third slide label</h3>
-                        <p>
-                            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                        </p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-            </Carousel>
-
-
-
-
-
+                        <Carousel.Caption>
+                            <h3 className="text-primary">Set 3</h3>
+                            <p className="text-secondary">Cohousing</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                </Carousel>
+            </div>
 
             <Card cards={card} />
             <section className="container d-flex justify-content-between my-5 py-5">

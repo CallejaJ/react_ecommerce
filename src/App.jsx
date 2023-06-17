@@ -25,24 +25,25 @@ function App() {
     <>
       <Routes>
 
-        <Route path="/" element={<Layout />}>
+        <Route path="/" element={<Layout withHeader />}>
           <Route index element={<Home />} />
+
           <Route path="modelos">
             <Route index element={<Modelos />} />
             <Route path=":id" element={<Detalles />} />
           </Route>
+
           <Route path="tecnologias" element={<Tecnologias />} />
           <Route path="garantia" element={<Garantia />} />
           <Route path="experiencias" element={<Experiencias />} />
           <Route path="login" element={<Login />} />
         </Route>
 
-        <Route path="carrito" element={<Layout />} >
-          <Route index element={<Carrito />} />
+        <Route path="/" element={<Layout />} >
+          <Route path="carrito" element={<Carrito />} />
         </Route>
 
         <Route path="*" element={<NotFound />} />
-
       </Routes>
     </>
   );

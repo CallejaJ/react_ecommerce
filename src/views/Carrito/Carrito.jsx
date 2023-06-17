@@ -1,25 +1,31 @@
 import Benefits from "../../Components/Benefits/Benefits"
 import "bootstrap/dist/css/bootstrap.css"
 import Footer from "../../Components/Footer/Footer"
+import Stepper from "../../Components/Stepper/Stepper"
 
 function Carrito() {
     return (
         <>
-            <nav aria-label="Page navigation example">
-                <ul className="pagination justify-content-end">
-                    <li className="page-item disabled">
-                        <a className="page-link" href="#" tabIndex="-1">Previous</a>
-                    </li>
-                    <li className="page-item"><a className="page-link" href="#">1</a></li>
-                    <li className="page-item"><a className="page-link" href="#">2</a></li>
-                    <li className="page-item"><a className="page-link" href="#">3</a></li>
-                    <li className="page-item">
-                        <a className="page-link" href="#">Next</a>
-                    </li>
-                </ul>
-            </nav>
+            <Stepper />
+            <div className="container">
+                <section className="container">
+                    <div className="card">
+                        <img src="../assets/images/maqueta1.jpg" alt="maqueta1" width="300" />
+                        <h3>Maqueta 1</h3>
+                        <p className="price">1790,00<i className="bi bi-currency-euro m-color"></i></p>
 
-
+                        <div className="rating">
+                            <i className="bi bi-star-fill m-color"></i>
+                            <i className="bi bi-star-fill m-color" ></i>
+                            <i className="bi bi-star-fill"></i>
+                            <i className="bi bi-star-fill"></i>
+                            <i className="bi bi-star-fill"></i>
+                        </div>
+                        <input type="number" name="cantidad" min="o" max="10" value="1" />
+                        <button>Eliminar</button>
+                    </div>
+                </section>
+            </div>
 
             <Benefits />
             <Footer />

@@ -10,7 +10,7 @@ function Pago() {
         <>
             <nav>
                 <h1>Formas de pago</h1>
-                <Link to="modelos">Seguir comprando</Link>
+                <Link to="/modelos">Seguir comprando</Link>
             </nav>
 
             <main className="container">

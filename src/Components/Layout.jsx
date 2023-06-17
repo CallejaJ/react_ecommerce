@@ -30,12 +30,20 @@ import Header from './Header/Header';
 
 // ]
 
-function Layout() {
+function Layout(withHeader) {
     return (
         <>
-            <Header />
-            <Navbar existUser />
-            <Outlet />
+            {withHeader ? (
+                <>
+                    <Header />
+                    <Navbar existUser />
+                    <Outlet />
+                </>
+            ) : (
+                <Outlet />
+            )
+            }
+            )
         </>
     )
 }

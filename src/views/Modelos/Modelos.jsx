@@ -1,18 +1,25 @@
+import { Link } from "react-router-dom"
+import "../../CSS/style.css"
+
 import Benefits from "../../Components/Benefits/Benefits"
 import { card } from "../../Components/Card/CardsDummy"
 import Card from "../../Components/Card/"
-import Footer from "../../Components/Footer"
+import Carousel from 'react-bootstrap/Carousel';
 import slider1 from '../../assets/slider1.jpg'
 import slider2 from '../../assets/slider2.jpg'
 import slider3 from '../../assets/slider3.jpg'
-import { Link } from "react-router-dom"
-import "../../CSS/style.css"
-import Carousel from 'react-bootstrap/Carousel';
+import slider4 from '../../assets/slider4.jpg'
+import slider5 from '../../assets/slider5.jpg'
+import slider6 from '../../assets/slider6.jpg'
+import slider7 from '../../assets/slider7.jpg'
+import slider8 from '../../assets/slider8.jpg'
+
+import Footer from "../../Components/Footer"
 
 function Modelos() {
     return (
         <>
-            <div className="container">
+            <div className="container mt-5 mb-5">
                 <Carousel>
                     <Carousel.Item>
                         <img
@@ -22,7 +29,7 @@ function Modelos() {
                         />
                         <Carousel.Caption>
                             <h3 className="text-primary">Set 1</h3>
-                            <p className="text-secondary">Elegance</p>
+                            <p className="text-secondary">Cottage</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
@@ -43,10 +50,68 @@ function Modelos() {
                             src={slider3}
                             alt="Third slide"
                         />
-
                         <Carousel.Caption>
                             <h3 className="text-primary">Set 3</h3>
                             <p className="text-secondary">Cohousing</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+
+                    <Carousel.Item>
+                        <img
+                            className="d-block w-100"
+                            src={slider4}
+                            alt="First slide"
+                        />
+                        <Carousel.Caption>
+                            <h3 className="text-primary">Set 4</h3>
+                            <p className="text-secondary">Elegance</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+
+                    <Carousel.Item>
+                        <img
+                            className="d-block w-100"
+                            src={slider5}
+                            alt="First slide"
+                        />
+                        <Carousel.Caption>
+                            <h3 className="text-primary">Set 5</h3>
+                            <p className="text-secondary">Urban</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+
+                    <Carousel.Item>
+                        <img
+                            className="d-block w-100"
+                            src={slider6}
+                            alt="First slide"
+                        />
+                        <Carousel.Caption>
+                            <h3 className="text-primary">Set 6</h3>
+                            <p className="text-secondary">Diversity</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img
+                            className="d-block w-100"
+                            src={slider7}
+                            alt="First slide"
+                        />
+                        <Carousel.Caption>
+                            <h3 className="text-primary">Set 7</h3>
+                            <p className="text-secondary">Happiness</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+
+                    <Carousel.Item>
+                        <img
+                            className="d-block w-100"
+                            src={slider8}
+                            alt="First slide"
+                        />
+                        <Carousel.Caption>
+                            <h3 className="text-primary">Set 8</h3>
+                            <p className="text-secondary">Fantasy</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>

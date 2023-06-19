@@ -7,8 +7,8 @@
 */
 
 :root {
-  --hue: 220.8;
-  --principal: hsl(var(--hue) 50% 35% / 1);
+  --hue: 218;
+  --principal: hsl(var(--hue) 71% 60% / 1);
   --secundario: hsl(var(--hue) 71% 70% / 1);
   --resalto: hsl(calc(var(--hue) - 180)91% 50% / 1);
   --negro: hsl(var(--hue) 21% 20% / 1);
@@ -144,10 +144,6 @@ a {
 }
 
 /* Header */
-
-/* header {
-  background: linear-gradient(#018f25, #019d9a, #0058f1)
-} */
 
 .headerB {
   background: url(https://wallpapercave.com/wp/wp7873943.jpg);

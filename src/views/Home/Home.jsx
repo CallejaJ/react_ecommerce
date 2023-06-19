@@ -32,8 +32,8 @@ export default
                             <p>Justo lo que les pedí y en sólo 2 meses estuvo lista.</p>
                         </blockquote>
                         <figcaption className="blockquote-footer">
-                            <cite title="Source Title">Luis Salgado, Sotogrande</cite>
-                            <div className="text-black-50">
+                            <cite className="mt-3" title="Source Title">Luis Salgado, Sotogrande</cite>
+                            <div className="text-black-50 mt-3">
                                 <i className="bi bi-star-fill text-primary"></i>
                                 <i className="bi bi-star-fill text-primary"></i>
                                 <i className="bi bi-star-fill text-primary"></i>

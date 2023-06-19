@@ -12,8 +12,8 @@ export default
     function Home() {
     return (
         <>
-            <div className="container mp4 mt-5 mb-5">
-                <video controls width="1200">
+            <div className="mp4 mt-5 mb-5">
+                <video controls className="container">
                     <source src={video} type="video/mp4" />
                 </video>
             </div>

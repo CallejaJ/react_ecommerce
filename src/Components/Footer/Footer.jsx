@@ -28,7 +28,7 @@ function Footer() {
                                     <li><Link className="nav-link active text-white h1" aria-current="page" to="blog">Blog</Link></li>
                                     <li><Link className="nav-link active text-white h1" aria-current="page" to="suppliers">Proveedores</Link></li>
                                     <li><Link className="nav-link active text-white h1" aria-current="page" to="oficinas">Red</Link></li>
-                                    <li><Link className="nav-link active text-white h1" aria-current="page" to="contact">Contacto</Link></li>
+                                    <li><Link className="nav-link active text-white h1" aria-current="page" to="contacto">Contacto</Link></li>
                                 </ul>
                             </div>
                         </div>
@@ -51,7 +51,7 @@ function Footer() {
                                 <i className="bi bi-instagram"></i>
                                 <i className="bi bi-youtube"></i>
                                 <i className="bi bi-pinterest"></i>
-                                <i className="bi bi-linkedin    "></i>
+                                <i className="bi bi-linkedin"></i>
 
                             </div>
                         </div>

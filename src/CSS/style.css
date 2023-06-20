@@ -198,6 +198,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 1200px;
 }
 
 /* 
@@ -238,6 +239,13 @@ relative en el botón y position absolute en el número.
 /* Componentes */
 
 /* Botones */
+
+#columnas {
+  column-count: 2;
+  column-gap: 20px;
+  column-rule: none;
+  list-style: none;
+}
 
 /* 
 ❏ Consigue que todos los botones, por defecto, tengan display:inline-block y
@@ -484,5 +492,6 @@ main.login .caja {
 @media only screen and(max-width:768px) {
   main-login {
     flex-direction: column;
+    text-align: justify;
   }
 }

@@ -12,7 +12,7 @@ export default
     function Home() {
     return (
         <>
-            <div className="mp4 mt-5 mb-5">
+            <div className="mp4 container mt-5 mb-5">
                 <video controls className="container">
                     <source src={video} type="video/mp4" />
                 </video>

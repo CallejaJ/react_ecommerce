@@ -13,6 +13,7 @@ export default
             <div className="container align-items-center" >
                 <img className="mt-3 mb-3" src={experience} loading="lazy"></img>
             </div>
+            <h1 className="container text-primary mb-4"><strong>Experiencias</strong></h1>
 
             <Experiencia experiencias={experiencia} />
             <Destacados />

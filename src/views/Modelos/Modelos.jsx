@@ -116,6 +116,8 @@ function Modelos() {
                     </Carousel.Item>
                 </Carousel>
             </div>
+            <h1 className="container text-primary mb-4"><strong>Modelos</strong></h1>
+
 
             <Card cards={card} />
             <section className="container d-flex justify-content-between my-5 py-5">

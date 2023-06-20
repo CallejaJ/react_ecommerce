@@ -12,6 +12,7 @@ export default
             <div className="container align-items-center" >
                 <img className="mt-3 mb-3" src={warranty} loading="lazy"></img>
             </div>
+            <h1 className="container text-primary mb-4"><strong>Garantía</strong></h1>
 
             <Experiencia experiencias={experiencia} />
             <Destacados />

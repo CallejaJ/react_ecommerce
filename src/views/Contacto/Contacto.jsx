@@ -2,7 +2,7 @@
 import React from 'react';
 import { MDBInput, MDBCheckbox, MDBBtn } from 'mdb-react-ui-kit';
 
-export default function App() {
+export default function Contacto() {
     return (
         <form id='form' className='text-center' style={{ width: '100%', maxWidth: '300px' }}>
             <h2>Contact us</h2>

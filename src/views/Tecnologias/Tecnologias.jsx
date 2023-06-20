@@ -2,8 +2,7 @@ import Benefits from "../../Components/Benefits/Benefits"
 import Footer from "../../Components/Footer"
 import tecnology from "../../assets/tecnology.png"
 import Destacados from "../../Components/Destacados"
-import { experiencia } from "../../Components/Experiencia/ExperienciasDummy"
-import Experiencia from "../../Components/Experiencia"
+import { Link } from "react-router-dom"
 import tecnology_video from "../../assets/tecnology_video.mp4"
 
 
@@ -18,32 +17,67 @@ export default
             </div>
 
             <div className="container mt-3">
-                <p>By now, you’re probably wondering how to get started with learning 3D modelling. The good news is the resources to do so are readily available. All you need is the motivation to learn and access to the internet!</p>
-                <p>Plenty of the software needed to teach yourself the basics are free to download, or at least offer free trials, and there are many resources available online that can help you along the way.&nbsp;</p>
+                <h1 className="text-primary mb-4"><strong>Tecnologías</strong></h1>
+                <div id="columnas" className="container mt-3">
+                    <p>La impresión 3D en la construcción es una las tecnologías que promete revolucionar el sector en el futuro. La impresión 3D permite un uso en casi cualquier campo y ámbito, desde la arquitectura, la ingeniería, la construcción, el sector aeroespacial, la educación e incluso en la sanidad para el reemplazo de órganos humanos.</p>
+                    <p>Muchos expertos consideran esta tecnología como el inicio de la llamada cuarta revolución industrial por el amplio abanico de posibilidades que permite su uso. Hasta ahora, nunca te habías propuesto vivir en un hogar fabricado en 3D ¿verdad? Sin embargo, es posible con 3DREAMS. Vamos a conocer en el siguiente video cómo se fabrican los moldes en 3D.</p>
+                    <p>Te parecerá increible esta tecnología de vanguardia, sostenible y resistente a seismos. ¿Quieres aprender más sobre esta tecnología? Modelamos tu hogar de entre los diferentes modelos y estilos arquitectónicos.</p>
+                </div>
             </div>
-            <div className="mp4 mt-4 mb-4">
+            <div className="container mp4 mt-4 mb-4">
                 <video className="container" controls>
                     <source src={tecnology_video} type="video/mp4" />
                 </video>
             </div>
-            <div className="container">
-                <p>By now, you’re probably wondering how to get started with learning 3D modelling. The good news is the resources to do so are readily available. All you need is the motivation to learn and access to the internet!</p>
-                <p>Plenty of the software needed to teach yourself the basics are free to download, or at least offer free trials, and there are many resources available online that can help you along the way.&nbsp;</p>
-                <h3><span className="ez-toc-section" id="3D_modelling_courses"></span><strong>3D modelling courses&nbsp;</strong><span class="ez-toc-section-end"></span></h3>
-                <p>It’s entirely possible to learn the ways of 3D modelling software at home. Online courses are a great way to start, and often guide you through the entire process until you’re comfortable with the software. It’s an easy way to have someone show you the ropes at any time and place.&nbsp;</p>
-                <p>We’ve outlined some of our highly-rated courses that will set you up for success within 3D modelling:</p>
-                <p>Once you’re comfortable with the fundamentals of 3D modelling, you’ll be able to practice and hone your skills. You’ll be creating games and designing buildings in no time!&nbsp;</p>
-                <h4><strong>How to make your 3D model&nbsp;</strong></h4>
-                <p>What your first 3D project will depend greatly on where you’re learning and what you’re learning. However, it’s always a good idea to start simple. Pick up the basics and become comfortable with the software you’re using. You’ll eventually pick up the pace and be creating fully-fledged 3D models of anything your heart desires.&nbsp;</p>
-                <p>Since a lot of online courses will walk you through the process of making something, you’ll likely start with their suggestion. You could also play around with the software and see if you can make a personal project once you know the basics.&nbsp;</p>
-                <p>In our Introduction to 3D modelling course, you’ll learn the basics of 3D modelling and also get the chance to make your very own 3D model project.</p>
-                <h4><strong>Is 3D modelling worth learning?</strong></h4>
-                <p>The answer to this is simple &#8211; absolutely! The industry is incredibly fast-paced, with lots of room for creativity and job opportunities. Whether you’re eager to find a new hobby or you’re trying to tap into a fun techy career, 3D modelling is the way to go.&nbsp;</p>
-                <p>The 3D space is full to the brim with new opportunities. Take the metaverse, for example, a fully three-dimensional environment taking the world by storm. The 3D mapping and modelling market is even projected to <a href="https://www.imarcgroup.com/3d-mapping-modeling-market">grow by 17.2%</a> between 2022-2027.&nbsp;</p>
-                <p>With the 3D modelling space being relevant in so many industries and increasing in popularity with increased technological advancements, it’s a great area to work in. Some of the roles you could land yourself with 3D modelling skills include, but are not limited to:&nbsp;</p>
-            </div>
+            <div className="container mt-3 mb-5">
+                <h4 className="container text-secondary"><strong>¿En qué consiste la impresión en 3D?&nbsp;</strong></h4>
 
-            <Experiencia experiencias={experiencia} />
+                <div id="columnas" className="container mt-3 mb-5">
+                    <p>Esta tecnología ha crecido de forma exponencial desde el 2003, al comienzo eran excesivamente caras y con el paso del tiempo se han abaratado los costes y son accesibles a la población (existen algunas a la venta desde los 100 euros), aunque por norma general todavía son un poco caras. </p>
+                    <p>Este invento fue diseñado por un ingeniero estadounidense llamado Chuck Hull y patentado en 1986.</p>
+                    <p>El proceso actual de la impresión en 3D fue inicialmente llamado como estereolitografía. Consiste en la unión de moléculas gracias al uso de luz láser ultravioleta que crea formas sólidas a partir de un líquido fotopolimérico.</p>
+                </div>
+
+                <h4 className="container text-secondary"><strong>¿Cuáles son las principales ventajas de la impresión 3D en la construcción?&nbsp;</strong></h4>
+                <h4 className="container text-secondary"><strong>Is 3D modelling worth learning?</strong></h4>
+                <div id="columnas" className="container mt-3 mb-5">
+                    <p>La impresión 3D en la construcción es una las tecnologías que promete revolucionar el sector en el futuro. La impresión 3D permite un uso en casi cualquier campo y ámbito, desde la arquitectura, la ingeniería, la construcción, el sector aeroespacial, la educación e incluso en la sanidad para el reemplazo de órganos humanos.</p>
+                    <p>Muchos expertos consideran esta tecnología como el inicio de la llamada cuarta revolución industrial por el amplio abanico de posibilidades que permite su uso. Hasta ahora, nunca te habías propuesto vivir en un hogar fabricado en 3D ¿verdad? Sin embargo, es posible con 3DREAMS. Vamos a conocer en el siguiente video cómo se fabrican los moldes en 3D.</p>
+                    <p>Te parecerá increible esta tecnología de vanguardia, sostenible y resistente a seismos. ¿Quieres aprender más sobre esta tecnología? Modelamos tu hogar de entre los diferentes modelos y estilos arquitectónicos.</p>
+                </div>
+
+                <h4 className="container text-secondary"><strong>Is 3D modelling worth learning?</strong></h4>
+                <div id="columnas" className="container mt-3 mb-5">
+                    <p>La impresión 3D en la construcción es una las tecnologías que promete revolucionar el sector en el futuro. La impresión 3D permite un uso en casi cualquier campo y ámbito, desde la arquitectura, la ingeniería, la construcción, el sector aeroespacial, la educación e incluso en la sanidad para el reemplazo de órganos humanos.</p>
+                    <p>Muchos expertos consideran esta tecnología como el inicio de la llamada cuarta revolución industrial por el amplio abanico de posibilidades que permite su uso. Hasta ahora, nunca te habías propuesto vivir en un hogar fabricado en 3D ¿verdad? Sin embargo, es posible con 3DREAMS. Vamos a conocer en el siguiente video cómo se fabrican los moldes en 3D.</p>
+                    <p>Te parecerá increible esta tecnología de vanguardia, sostenible y resistente a seismos. ¿Quieres aprender más sobre esta tecnología? Modelamos tu hogar de entre los diferentes modelos y estilos arquitectónicos.</p>
+                </div>
+            </div>
+            <section className="container d-flex justify-content-between my-5 py-5">
+                <div className="w-100">
+                    <h2>Experiencias de clientes</h2>
+                    <p>Clientes internacionales satisfechos con la experiencia 3DREAMS</p>
+                    <Link className="btn btn-primary" to="/experiencias">Más experiencias</Link>
+                </div>
+
+                <div className="w-100">
+                    <figure className="text-end border border-primary border-2 rounded-4 p-5 align-items-center">
+                        <blockquote className="blockquote">
+                            <p>Justo lo que les pedí y en sólo 2 meses estuvo lista.</p>
+                        </blockquote>
+                        <figcaption className="blockquote-footer">
+                            <cite className="mt-3" title="Source Title">Luis Salgado, Sotogrande</cite>
+                            <div className="text-black-50 mt-3">
+                                <i className="bi bi-star-fill text-primary"></i>
+                                <i className="bi bi-star-fill text-primary"></i>
+                                <i className="bi bi-star-fill text-primary"></i>
+                                <i className="bi bi-star-fill text-primary"></i>
+                                <i className="bi bi-star-fill text-primary"></i>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+            </section>
             <Destacados />
             <Benefits />
             <Footer />

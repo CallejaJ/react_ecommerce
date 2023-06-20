@@ -10,7 +10,7 @@ export default
     return (
         <>
             <div className="container align-items-center" >
-                <img className="mt-3 mb-3" src={warranty}></img>
+                <img className="mt-3 mb-3" src={warranty} loading="lazy"></img>
             </div>
 
             <Experiencia experiencias={experiencia} />

@@ -14,7 +14,7 @@ export default
         <>
 
             <div className="container align-items-center" >
-                <img className="mt-3 mb-3" src={tecnology}></img>
+                <img className="mt-3 mb-3" src={tecnology} loading="lazy"></img>
             </div>
 
             <div className="container mt-3">
@@ -36,7 +36,7 @@ export default
                 <h4><strong>How to make your 3D model&nbsp;</strong></h4>
                 <p>What your first 3D project will depend greatly on where you’re learning and what you’re learning. However, it’s always a good idea to start simple. Pick up the basics and become comfortable with the software you’re using. You’ll eventually pick up the pace and be creating fully-fledged 3D models of anything your heart desires.&nbsp;</p>
                 <p>Since a lot of online courses will walk you through the process of making something, you’ll likely start with their suggestion. You could also play around with the software and see if you can make a personal project once you know the basics.&nbsp;</p>
-                <p>In our Introduction<a href="/courses/introduction-to-3d-modeling"> to 3D modelling</a> course, you’ll learn the basics of 3D modelling and also get the chance to make your very own 3D model project.</p>
+                <p>In our Introduction to 3D modelling course, you’ll learn the basics of 3D modelling and also get the chance to make your very own 3D model project.</p>
                 <h4><strong>Is 3D modelling worth learning?</strong></h4>
                 <p>The answer to this is simple &#8211; absolutely! The industry is incredibly fast-paced, with lots of room for creativity and job opportunities. Whether you’re eager to find a new hobby or you’re trying to tap into a fun techy career, 3D modelling is the way to go.&nbsp;</p>
                 <p>The 3D space is full to the brim with new opportunities. Take the metaverse, for example, a fully three-dimensional environment taking the world by storm. The 3D mapping and modelling market is even projected to <a href="https://www.imarcgroup.com/3d-mapping-modeling-market">grow by 17.2%</a> between 2022-2027.&nbsp;</p>

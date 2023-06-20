@@ -10,9 +10,8 @@ import NotFound from "./views/NotFound";
 import Experiencias from "./views/Experiencias";
 import Carrito from "./views/Carrito"
 import Home from "./views/Home";
-// import Layout_carrito from "./Components/Layout_carrito";
-// import Pago from "./views/Pago";
-// import Enviar from "./views/Enviar"
+import Pago from "./views/Pago";
+import Enviar from "./views/Enviar"
 import Detalles from "./views/Detalles/Detalles";
 // import { useLocation } from "react-router-dom";
 // import { useParams } from "react-router-dom";
@@ -41,6 +40,9 @@ function App() {
 
         <Route path="/" element={<Layout />} >
           <Route path="carrito" element={<Carrito />} />
+          <Route path="pago" element={<Pago />} />
+          <Route path="enviar" element={<Enviar />} />
+
         </Route>
 
         <Route path="*" element={<NotFound />} />

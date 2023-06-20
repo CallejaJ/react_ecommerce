@@ -259,7 +259,27 @@ asegúrate que el proceso de compra del carrito se ve como en el diseño.
   transition: all 0.3s;
 }
 
+.button_carrito {
+  display: inline-block;
+  text-decoration: none;
+  padding: 16px 24px;
+  border: 2px solid var(--principal);
+  border-radius: 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: var(--blanco);
+  background: var(--principal);
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
 .button:hover {
+  background-color: transparent;
+  color: var(--principal);
+}
+
+.button_carrito:hover {
   background-color: transparent;
   color: var(--principal);
 }

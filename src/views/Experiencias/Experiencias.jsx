@@ -11,7 +11,7 @@ export default
     return (
         <>
             <div className="container align-items-center" >
-                <img className="mt-3 mb-3" src={experience}></img>
+                <img className="mt-3 mb-3" src={experience} loading="lazy"></img>
             </div>
 
             <Experiencia experiencias={experiencia} />

@@ -8,7 +8,7 @@ function Pago() {
     return (
 
         <>
-            <nav>
+            <nav className="container">
                 <h1>Formas de pago</h1>
                 <Link to="/modelos">Seguir comprando</Link>
             </nav>

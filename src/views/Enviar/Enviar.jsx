@@ -1,13 +1,15 @@
 import Benefits from "../../Components/Benefits/Benefits"
 import "bootstrap/dist/css/bootstrap.css"
 import Footer from "../../Components/Footer/Footer"
+import Stepper from "../../Components/Stepper"
+
 
 function Enviar() {
     return (
 
         <>
-
-            <nav>
+            <Stepper />
+            <nav className="container">
                 <h1>Añadir dirección de envío</h1>
                 <a href="index.html">Cancelar</a>
             </nav>

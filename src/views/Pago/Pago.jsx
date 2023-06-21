@@ -2,12 +2,15 @@ import Benefits from "../../Components/Benefits/Benefits"
 import "bootstrap/dist/css/bootstrap.css"
 import Footer from "../../Components/Footer/Footer"
 import { Link } from "react-router-dom"
+import Stepper from "../../Components/Stepper"
+
 
 function Pago() {
 
     return (
 
         <>
+            <Stepper />
             <nav className="container">
                 <h1 className="text-primary mb-4"><strong>Modelos</strong></h1>
                 <Link to="/modelos">Seguir comprando</Link>

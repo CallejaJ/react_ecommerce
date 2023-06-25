@@ -1,6 +1,6 @@
 import Benefits from "../../Components/Benefits/Benefits"
 import Footer from "../../Components/Footer"
-import warranty from "../../assets/warranty.jpg"
+import warranty from "../../assets/webp/warranty.webp"
 import Destacados from "../../Components/Destacados/Destacados"
 import { experiencia } from "../../Components/Experiencia/ExperienciasDummy"
 import Experiencia from "../../Components/Experiencia"

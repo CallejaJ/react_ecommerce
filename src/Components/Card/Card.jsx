@@ -9,7 +9,7 @@ function Card({ cards }) {
             <div className="container d-flex justify-content-evenly my-3 mt-4 gap-1">
                 {cards.map((card, index) => (
                     <div key={index} className="card">
-                        <img src={card.imagen} className="card-img-top" alt="imagen modelo" />
+                        <img width={250} height={150} src={card.imagen} className="card-img-top" alt="imagen modelo" />
 
                         <div className="card-body gap-3">
                             <div className="d-flex justify-content-between">

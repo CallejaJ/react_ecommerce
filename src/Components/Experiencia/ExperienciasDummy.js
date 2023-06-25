@@ -15,5 +15,29 @@ export const experiencia = [
       texto: "Sie sind Profis im 3D-Wohndesign.",
       autor: "Klaus Huberts (Marbella)",
     },
+    {
+      texto: "Increible resultado y una tecnología impresionante.",
+      autor: "Kevin Pizarro (Sotogrande)",
+    },
+    {
+      texto: "Amazing design, thank you very much.",
+      autor: "Amanda Thompson (Marbella)",
+    },
+    {
+      texto: "Nous sommes tres content avec la maison.",
+      autor: "Vincent Lardelier (Bois-Colombes)",
+    },
+    {
+      texto: "Ha merecido la pena invertir en 3DREAMS.",
+      autor: "Rafael Gutiérrez (Guadalajara)",
+    },
+    {
+      texto: "La mejor inversión de mi vida.",
+      autor: "Raúl Cubero (Algeciras)",
+    },
+    {
+      texto: "Estem molt contents amb la casa.",
+      autor: "Marc Sagasta (Lérida)",
+    },
 
   ]

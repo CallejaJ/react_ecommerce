@@ -1,5 +1,5 @@
 import Footer from '../../Components/Footer/Footer'
-import error404 from '../../assets/error404.jpg'
+import error404 from '../../assets/webp/error404.webp'
 
 
 function NotFound() {

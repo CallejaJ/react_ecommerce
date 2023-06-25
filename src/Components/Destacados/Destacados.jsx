@@ -1,16 +1,44 @@
-import "../../CSS/style.css"
 import { Link } from 'react-router-dom';
+import "../../CSS/style.css"
+import { card } from "../../Components/Card/CardsDummy"
+import Card from "../../Components/Card/"
+
+let card2 = []
+let items = 4
+let aleatoryCard;
+
+while (card2.length < items) {
+    aleatoryCard = card[Math.floor(Math.random() * card.length)];
+    if (!repetida(aleatoryCard, card2)) {
+        card2.push(aleatoryCard);
+        console.log(aleatoryCard);
+        console.log(card2);
+    }
+}
+
+function repetida(aleatoryCard, card2) {
+    for (let i = 0; i < card2.length; i++) {
+        if (card2[i] === aleatoryCard) {
+            return true
+        }
+    }
+    return false
+}
+
 
 
 function Destacados() {
     return (
-        <div className="container d-flex justify-content-between align-items-center my-3 mt-5">
-            <div>
-                <h2>Modelos destacados</h2>
-                <p>Diseños personalizados, diferentes estilos y estructuras para vivir en el hogar de tus sueños. </p>
+        <>
+            <div className="container d-flex justify-content-between align-items-center my-3 mt-5">
+                <div className='container'>
+                    <h2>Modelos destacados</h2>
+                    <p>Diseños en 3D para el diseño personalizable del hogar de tus sueños. </p>
+                    <Link className="btn btn-primary" to="/modelos">Ver más</Link>
+                </div>
             </div>
-            <Link className="btn btn-primary" to="/modelos">Todos los modelos</Link>
-        </div>
+            <Card cards={card2} />
+        </>
     )
 }
 

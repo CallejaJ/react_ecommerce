@@ -5,16 +5,43 @@ import Benefits from "../../Components/Benefits/Benefits"
 import { card } from "../../Components/Card/CardsDummy"
 import Card from "../../Components/Card/"
 import Carousel from 'react-bootstrap/Carousel';
-import slider1 from '../../assets/slider1.jpg'
-import slider2 from '../../assets/slider2.jpg'
-import slider3 from '../../assets/slider3.jpg'
-import slider4 from '../../assets/slider4.jpg'
-import slider5 from '../../assets/slider5.jpg'
-import slider6 from '../../assets/slider6.jpg'
-import slider7 from '../../assets/slider7.jpg'
-import slider8 from '../../assets/slider8.jpg'
-
+import slider1 from '../../assets/webp/slider1.webp'
+import slider2 from '../../assets/webp/slider2.webp'
+import slider3 from '../../assets/webp/slider3.webp'
+import slider4 from '../../assets/webp/slider4.webp'
+import slider5 from '../../assets/webp/slider5.webp'
+import slider6 from '../../assets/webp/slider6.webp'
+import slider7 from '../../assets/webp/slider7.webp'
+import slider8 from '../../assets/webp/slider8.webp'
+import { experiencia } from "../../Components/Experiencia/ExperienciasDummy"
+import Experiencia from "../../Components/Experiencia"
 import Footer from "../../Components/Footer"
+
+
+let experiencia3 = []
+let item = 2
+let experienceCard;
+
+while (experiencia3.length < item) {
+    experienceCard = experiencia[Math.floor(Math.random() * experiencia.length)];
+    if (!repetidas(experienceCard, experiencia3)) {
+        experiencia3.push(experienceCard);
+        console.log(experienceCard);
+        console.log(experiencia3);
+    }
+}
+
+function repetidas(experienceCard, experiencia3) {
+    for (let i = 0; i < experiencia3.length; i++) {
+        if (experiencia3[i] === experienceCard) {
+            return true
+        }
+    }
+    return false
+}
+
+
+
 
 function Modelos() {
     return (
@@ -120,32 +147,15 @@ function Modelos() {
 
 
             <Card cards={card} />
+
             <section className="container d-flex justify-content-between my-5 py-5">
-                <div className="w-100">
+                <div className=" container w-100">
                     <h2>Experiencias de clientes</h2>
                     <p>Clientes internacionales satisfechos con la experiencia 3DREAMS</p>
                     <Link className="btn btn-primary" to="/experiencias">Más experiencias</Link>
                 </div>
 
-                <div className="w-100">
-                    <figure className="text-end border border-primary border-2 rounded-4 p-5 align-items-center">
-                        <blockquote className="blockquote">
-                            <p>Justo lo que les pedí y en sólo 2 meses estuvo lista.</p>
-                        </blockquote>
-                        <figcaption className="blockquote-footer">
-                            <cite title="Source Title">Luis Salgado, Sotogrande</cite>
-                            <div className="text-black-50">
-                                <i className="bi bi-star-fill text-primary"></i>
-                                <i className="bi bi-star-fill text-primary"></i>
-                                <i className="bi bi-star-fill text-primary"></i>
-                                <i className="bi bi-star-fill text-primary"></i>
-                                <i className="bi bi-star-fill text-primary"></i>
-                            </div>
-
-
-                        </figcaption>
-                    </figure>
-                </div>
+                <Experiencia experiencias={experiencia3} />
 
             </section>
 

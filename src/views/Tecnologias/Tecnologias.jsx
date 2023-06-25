@@ -1,6 +1,6 @@
 import Benefits from "../../Components/Benefits/Benefits"
 import Footer from "../../Components/Footer"
-import tecnology from "../../assets/tecnology.png"
+import tecnology from "../../assets/webp/tecnology.webp"
 import Destacados from "../../Components/Destacados"
 import { Link } from "react-router-dom"
 import tecnology_video from "../../assets/tecnology_video.mp4"

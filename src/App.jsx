@@ -38,11 +38,10 @@ function App() {
           <Route path="login" element={<Login />} />
         </Route>
 
-        <Route path="/carrito" element={<Carrito />} >
+        <Route path="/" element={<Carrito />} >
           <Route index element={<Carrito />} />
           <Route path="pago" element={<Pago />} />
           <Route path="enviar" element={<Enviar />} />
-
         </Route>
 
         <Route path="*" element={<NotFound />} />

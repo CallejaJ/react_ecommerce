@@ -6,6 +6,8 @@ import Destacados from "../../Components/Destacados/Destacados"
 import { Link } from "react-router-dom"
 import "../../CSS/style.css"
 import video from "../../assets/video.mp4"
+import { experiencia } from "../../Components/Experiencia/ExperienciasDummy"
+import Experiencia from "../../Components/Experiencia"
 
 let card2 = []
 let items = 4
@@ -30,6 +32,29 @@ function repetida(aleatoryCard, card2) {
 }
 
 
+let experiencia3 = []
+let item = 2
+let experienceCard;
+
+while (experiencia3.length < item) {
+    experienceCard = experiencia[Math.floor(Math.random() * experiencia.length)];
+    if (!repetidas(experienceCard, experiencia3)) {
+        experiencia3.push(experienceCard);
+        console.log(experienceCard);
+        console.log(experiencia3);
+    }
+}
+
+function repetidas(experienceCard, experiencia3) {
+    for (let i = 0; i < experiencia3.length; i++) {
+        if (experiencia3[i] === experienceCard) {
+            return true
+        }
+    }
+    return false
+}
+
+
 
 export default
     function Home() {
@@ -40,32 +65,23 @@ export default
                     <source src={video} type="video/mp4" />
                 </video>
             </div>
+            <div className="container d-flex justify-content-between align-items-center my-3 mt-5">
+                <div className='container'>
+                    <h2>Diseña tu hogar en 3D</h2>
+                    <p>Diseños personalizados, diferentes estilos y estructuras para vivir en el hogar de tus sueños. </p>
+                </div>
+            </div>
             <Card cards={card2} />
             <Destacados />
             <section className="container d-flex justify-content-between my-5 py-5">
-                <div className="w-100">
+                <div className=" container w-100">
                     <h2>Experiencias de clientes</h2>
                     <p>Clientes internacionales satisfechos con la experiencia 3DREAMS</p>
                     <Link className="btn btn-primary" to="/experiencias">Más experiencias</Link>
                 </div>
 
-                <div className="w-100">
-                    <figure className="text-end border border-primary border-2 rounded-4 p-5 align-items-center">
-                        <blockquote className="blockquote">
-                            <p>Justo lo que les pedí y en sólo 2 meses estuvo lista.</p>
-                        </blockquote>
-                        <figcaption className="blockquote-footer">
-                            <cite className="mt-3" title="Source Title">Luis Salgado, Sotogrande</cite>
-                            <div className="text-black-50 mt-3">
-                                <i className="bi bi-star-fill text-primary"></i>
-                                <i className="bi bi-star-fill text-primary"></i>
-                                <i className="bi bi-star-fill text-primary"></i>
-                                <i className="bi bi-star-fill text-primary"></i>
-                                <i className="bi bi-star-fill text-primary"></i>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </div>
+                <Experiencia experiencias={experiencia3} />
+
             </section>
             <Benefits />
             <Footer />

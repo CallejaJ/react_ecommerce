@@ -1,7 +1,7 @@
 import Benefits from "../../Components/Benefits/Benefits"
 import Footer from "../../Components/Footer/Footer"
 // import Card from "../../Components/Card/Card"
-// import { card } from "../../Components/Card/CardsDummy"
+import { card } from "../../Components/Card/CardsDummy"
 import { useParams } from 'react-router-dom'
 import "bootstrap/dist/css/bootstrap.css"
 
@@ -16,6 +16,12 @@ export default
     // hacer un fetch  para traerme el producto con la id "x"
     // renderizar mi jsx con el resultado del fetch
     let modelo = null;
+
+    for (let i = 0; i < card.length; i++) {
+        if (card[i].id == id) {
+            modelo = card[i]
+        }
+    }
     // fetch("localhost:3000/tarjetas/id")
 
     return (
@@ -27,7 +33,7 @@ export default
                         <img src={modelo.imagen} className="card-img-top" alt=".." />
                         <div className="card-body">
                             <h5 className="card-title">{modelo.titulo}</h5>
-                            <p className="card-text">{modelo.text}</p>
+                            <p className="card-text">{modelo.texto}</p>
                         </div>
                     </div>
                 ) : (

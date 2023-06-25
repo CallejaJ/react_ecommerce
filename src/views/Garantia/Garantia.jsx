@@ -10,7 +10,7 @@ export default
     return (
         <>
             <div className="container align-items-center" >
-                <img className="mt-3 mb-3" src={warranty} loading="lazy"></img>
+                <img className="mt-3 mb-3" src={warranty}></img>
             </div>
             <h1 className="container text-primary mb-4"><strong>Garantía</strong></h1>
 

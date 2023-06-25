@@ -29,7 +29,7 @@ function Card({ cards }) {
 
                             <div className="d-flex gap-3">
                                 <a href="#" className="btn btn-primary w-100">Añadir al carrito</a>
-                                <Link className="btn btn-secondary w-20" to={`${card.id}`}>Ver</Link>
+                                <Link className="btn btn-secondary w-20" to={`/modelos/${card.id}`}>Ver</Link>
                             </div>
                         </div>
                     </div>

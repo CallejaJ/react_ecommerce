@@ -7,8 +7,8 @@
 */
 
 :root {
-  --hue: 218;
-  --principal: hsl(var(--hue) 71% 60% / 1);
+  --hue: 220;
+  --principal: hsl(var(--hue) 100% 26% / 1);
   --secundario: hsl(var(--hue) 71% 70% / 1);
   --resalto: hsl(calc(var(--hue) - 180)91% 50% / 1);
   --negro: hsl(var(--hue) 21% 20% / 1);
@@ -191,7 +191,9 @@ header .container {
 }
 
 footer {
-  font-size: small
+  font-size: small;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
 }
 
 .mp4 {

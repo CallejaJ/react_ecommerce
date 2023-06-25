@@ -7,6 +7,29 @@ import { Link } from "react-router-dom"
 import "../../CSS/style.css"
 import video from "../../assets/video.mp4"
 
+let card2 = []
+let items = 4
+let aleatoryCard;
+
+while (card2.length < items) {
+    aleatoryCard = card[Math.floor(Math.random() * card.length)];
+    if (!repetida(aleatoryCard, card2)) {
+        card2.push(aleatoryCard);
+        console.log(aleatoryCard);
+        console.log(card2);
+    }
+}
+
+function repetida(aleatoryCard, card2) {
+    for (let i = 0; i < card2.length; i++) {
+        if (card2[i] === aleatoryCard) {
+            return true
+        }
+    }
+    return false
+}
+
+
 
 export default
     function Home() {
@@ -17,7 +40,7 @@ export default
                     <source src={video} type="video/mp4" />
                 </video>
             </div>
-            <Card cards={card} />
+            <Card cards={card2} />
             <Destacados />
             <section className="container d-flex justify-content-between my-5 py-5">
                 <div className="w-100">

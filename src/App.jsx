@@ -38,7 +38,7 @@ function App() {
           <Route path="login" element={<Login />} />
         </Route>
 
-        <Route path="/" element={<Carrito />} >
+        <Route path="/carrito" >
           <Route index element={<Carrito />} />
           <Route path="pago" element={<Pago />} />
           <Route path="enviar" element={<Enviar />} />

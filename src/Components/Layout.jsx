@@ -30,7 +30,7 @@ import Header from './Header/Header';
 
 // ]
 
-function Layout(withHeader) {
+function Layout({ withHeader }) {
     return (
         <>
             {withHeader ? (

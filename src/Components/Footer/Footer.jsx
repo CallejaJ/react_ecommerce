@@ -9,7 +9,7 @@ function Footer() {
         <>
 
             <section className="mt-3">
-                <footer className="p-3 mb-2 bg-secondary text-white">
+                <footer className="p-3 bg-secondary text-white">
                     <div className="container d-flex">
                         <div className="w-100">
 

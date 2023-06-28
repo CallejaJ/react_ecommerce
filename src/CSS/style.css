@@ -17,10 +17,14 @@
   --error: hsl(7deg 91% 50% / 1)
 }
 
+
+
 /* ❏ Para evitar que se redimensione el ancho 
 ejecutamos el box-sizing.*/
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 

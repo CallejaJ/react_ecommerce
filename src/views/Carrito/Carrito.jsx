@@ -10,7 +10,7 @@ function Carrito() {
             <div className="container">
                 <section className="container">
                     <div className="card">
-                        <img src="../assets/images/maqueta1.jpg" alt="maqueta1" width="300" />
+                        <img src="../assets/images/webp/modelo1.webp" alt="modelo1" width="300" />
                         <h3>Maqueta 1</h3>
                         <p className="price">1790,00<i className="bi bi-currency-euro m-color"></i></p>
 

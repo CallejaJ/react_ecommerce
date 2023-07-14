@@ -8,13 +8,7 @@ export default function LoginFormikView({ formik }) {
     const { errorMessage } = useAuthContext();
     // es una respuesta del backend si hay errores en el endpoint
 
-    const {
-        values,
-        touched,
-        errors,
-        handleChange,
-        handleSubmit,
-    } = formik;
+    const { values, touched, errors, handleChange, handleSubmit } = formik;
 
     return (
 
@@ -37,16 +31,17 @@ export default function LoginFormikView({ formik }) {
                                         label="Type your e-mail address"
                                         value={values.email}
                                         onChange={handleChange}
-                                        error={touched.email && Boolean(errors.email)}
-                                        helperText={touched.email && errors.email} />
+                                    // error={touched.email && Boolean(errors.email)}
+                                    // helperText={touched.email && errors.email} 
+                                    />
                                     <input
                                         type="password"
                                         name="contraseña"
                                         placeholder="Contraseña"
                                         value={values.password}
                                         onChange={handleChange}
-                                        error={touched.password && Boolean(errors.password)}
-                                        helperText={touched.password && errors.password}
+                                    // error={touched.password && Boolean(errors.password)}
+                                    // helperText={touched.password && errors.password}
                                     />
                                     {errorMessage ? (
                                         <Alert variant="outlined" severity="info">

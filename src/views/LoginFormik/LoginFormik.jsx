@@ -1,4 +1,4 @@
-import { Formik } from "formik";
+import { Formik } from "formik"
 import LoginFormikView from "../LoginFormik/LoginFormikView";
 import { LoginFormikSchema } from "../LoginFormik/LoginFormikSchema";
 import { initialValues } from "../LoginFormik/utils/form";

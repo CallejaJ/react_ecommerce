@@ -10,7 +10,7 @@ const AuthContext = createContext(
 
 const USER_KEY = "USER_KEY"
 
-export function AuthContextProvider({ children }) {
+export default function AuthContextProvider({ children }) {
 
     // children es todo lo que abraza el contexto en la APP
     // el estado lo inicializo nulo porque no hay usuario
@@ -32,7 +32,7 @@ export function AuthContextProvider({ children }) {
     }
 
     const value = {
-        user, login, logout, errorMessage
+        user, login, logout, errorMessage,
     };
 
     return (

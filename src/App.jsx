@@ -1,5 +1,5 @@
 import { Routes, Route, BrowserRouter } from "react-router-dom";
-import { AuthContextProvider } from "./context/AuthContext";
+import AuthContextProvider from "./context/AuthContext";
 import LoginFormik from "./views/LoginFormik/LoginFormik"
 import PublicRoute from './components/Router/PublicRoute';
 import PrivateRoute from "./Components/Router/PrivateRoute";
@@ -21,17 +21,16 @@ import "bootstrap/dist/css/bootstrap.css"
 
 
 
-function App() {
+export default function App() {
   return (
     <>
       <BrowserRouter>
         <AuthContextProvider>
           <Routes>
-
             <Route path="/" element={<Layout withHeader />}>
               <Route index element={<Home />} />
-              {/* Rutas públicas */}
               <Route path="login" element={<LoginFormik />} />
+              {/* Rutas públicas */}
               <Route element={<PublicRoute />} >
                 <Route path="modelos">
                   <Route index element={<Modelos />} />
@@ -63,4 +62,3 @@ function App() {
   );
 }
 
-export default App

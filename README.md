@@ -1,2 +1,4 @@
 # react_ecommerce
-React.js E-Commerce with Bootstrap
+React.js
+React-Bootstrap
+Formik

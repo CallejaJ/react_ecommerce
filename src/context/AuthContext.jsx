@@ -1,4 +1,5 @@
 import { createContext, useState, useContext } from 'react';
+
 const AuthContext = createContext(
     {
         user: null,
@@ -9,7 +10,7 @@ const AuthContext = createContext(
 
 const USER_KEY = "USER_KEY"
 
-export default function AuthContextProvider({ children }) {
+export function AuthContextProvider({ children }) {
 
     // children es todo lo que abraza el contexto en la APP
     // el estado lo inicializo nulo porque no hay usuario
@@ -19,7 +20,7 @@ export default function AuthContextProvider({ children }) {
     function login({ email, password }) {
         if (email === "user@mail.com" && password === "3Dreams") {
             setUser({ email })
-            localStorage.setItem(USER_KEY)
+            localStorage.setItem(USER_KEY, email)
             setErrorMessage(null)
         }
         setErrorMessage("Please try again")

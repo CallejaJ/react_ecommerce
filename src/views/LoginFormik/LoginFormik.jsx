@@ -1,5 +1,5 @@
 import { Formik } from "formik";
-import { LoginFormikView } from "../LoginFormik/LoginFormikView";
+import LoginFormikView from "../LoginFormik/LoginFormikView";
 import { LoginFormikSchema } from "../LoginFormik/LoginFormikSchema";
 import { initialValues } from "../LoginFormik/utils/form";
 import { useAuthContext } from "../../context/AuthContext";

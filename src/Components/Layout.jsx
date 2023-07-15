@@ -36,7 +36,7 @@ function Layout({ withHeader }) {
             {withHeader ? (
                 <>
                     <Header />
-                    <Navbar existUser />
+                    <Navbar />
                     <Outlet />
                 </>
             ) : (

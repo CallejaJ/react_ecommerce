@@ -1,9 +1,14 @@
 import "../../CSS/style.css"
 import { Link } from 'react-router-dom';
-// lógica de comprobación de si existe usuario
+import { useAuthContext } from '../../context/AuthContext'
 
-export default
-    function Navbar(existUser) {
+export default function Navbar({ user }) {
+
+    const { logout } = useAuthContext();
+    function loggingOut() {
+        logout();
+    }
+
     return (
         <>
             <nav className="navbar navbar-expand-lg bg-body-white">
@@ -35,7 +40,7 @@ export default
                             </ul>
                         </div>
                     </div>
-                    {existUser ? (
+                    {user ? (
 
                         <div className="">
                             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,7 +49,7 @@ export default
                             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                                 <ul className="navbar-nav me-auto mb-2 mb-lg-0 main-color">
                                     <li className="nav-item">
-                                        <Link className="nav-link active text-secondary" aria-current="page" to="/Login">Cerrar sesion</Link>
+                                        <Link onClick={loggingOut} className="nav-link active text-secondary" aria-current="page" to="/" >Cerrar sesion</Link>
                                     </li>
                                 </ul>
 
@@ -65,6 +70,7 @@ export default
                         </div>
                     </div>)
                     }
+
                 </div>
             </nav >
         </>

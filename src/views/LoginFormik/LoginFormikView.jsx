@@ -7,7 +7,7 @@ export default function LoginFormikView({ formik }) {
     const { errorMessage } = useAuthContext();
     // es una respuesta del backend si hay errores en el endpoint
 
-    const { values, touched, errors, handleChange, handleSubmit } = formik;
+    const { values, touched, errors, handleChange, handleSubmit, handleBlur } = formik;
 
     return (
 
@@ -17,33 +17,38 @@ export default function LoginFormikView({ formik }) {
                 <div className="row">
                     <div className="col">
                         <div>
-                            <div className="text border border-primary border-2 rounded-4 p-5 align-items-center">
+                            <div className="text border border-secondary border-1 rounded-4 p-5 align-items-center">
 
                                 <h3>Iniciar sesion</h3>
                                 <p>Accede con tus datos anteriores</p>
 
                                 <form onSubmit={handleSubmit}>
                                     <input
+                                        id='email'
                                         type="email"
-                                        name="email"
-                                        placeholder="Type your email"
+                                        placeholder="Escribe tu email"
                                         value={values.email}
+                                        onBlur={handleBlur}
                                         onChange={handleChange}
-                                    // error={touched.email && Boolean(errors.email)}
-                                    // helperText={touched.email && errors.email} 
+                                        className={errors.email && touched.email ? "input-error" : ""}
                                     />
+                                    {errors.email && touched.email && (
+                                        <p className="error">{errors.email}</p>
+                                    )}
                                     <input
+                                        id='password'
                                         type="password"
-                                        name="password"
-                                        placeholder="Type your password"
+                                        placeholder="Escribe tu password"
                                         value={values.password}
                                         onChange={handleChange}
-                                    // {touched.password && Boolean(errors.password)}
-                                    // helperText={touched.password && errors.password}
+                                        onBlur={handleBlur}
+                                        className={errors.password && touched.password ? "input-error" : ""}
                                     />
-
+                                    {errors.password && touched.password && (
+                                        <p className="error">{errors.password}</p>
+                                    )}
                                     {errorMessage ? (
-                                        <h6>
+                                        <h6 className="error">
                                             {errorMessage}
                                         </h6>
                                     ) : null}
@@ -51,7 +56,6 @@ export default function LoginFormikView({ formik }) {
                                         type="submit"
                                         value="Iniciar sesión" />
                                 </form>
-                                <pre>{JSON.stringify({ values, errors }, null, 1)}</pre>
 
                             </div>
 
@@ -59,7 +63,7 @@ export default function LoginFormikView({ formik }) {
                     </div>
                     <div className="col">
                         <div>
-                            <div className="text border border-primary border-2 rounded-4 p-5 align-items-center">
+                            <div className="text border border-secondary border-1 rounded-4 p-5 align-items-center">
 
                                 <h3>Regístrate</h3>
                                 <p>Crea tu cuenta en 3DREAMS para guardar tus progresos.</p>

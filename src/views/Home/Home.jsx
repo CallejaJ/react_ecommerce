@@ -65,9 +65,9 @@ export default
                     <source src={video} type="video/mp4" />
                 </video>
             </div>
-            <div className="container d-flex justify-content-between align-items-center my-3 mt-5">
+            <div className="container d-flex justify-content-between align-items-center my-3 mt-4 gap-1">
                 <div className='container'>
-                    <h2>Diseña tu hogar en 3D</h2>
+                    <h2>Diseñamos tu hogar en 3D</h2>
                     <p>Diseños personalizados, diferentes estilos y estructuras para vivir en el hogar de tus sueños. </p>
                 </div>
             </div>

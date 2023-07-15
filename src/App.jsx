@@ -1,8 +1,8 @@
 import { Routes, Route, BrowserRouter } from "react-router-dom";
-import AuthContextProvider from "./context/AuthContext";
 import LoginFormik from "./views/LoginFormik/LoginFormik"
 import PublicRoute from './components/Router/PublicRoute';
 import PrivateRoute from "./Components/Router/PrivateRoute";
+import AuthContextProvider from "./context/AuthContext";
 
 import Modelos from "./views/Modelos";
 import Layout from "./Components/Layout";
@@ -40,7 +40,6 @@ export default function App() {
                 <Route path="garantia" element={<Garantia />} />
                 <Route path="experiencias" element={<Experiencias />} />
               </Route>
-
             </Route>
             {/* rutas privadas */}
             <Route element={<PrivateRoute />} >
@@ -53,9 +52,7 @@ export default function App() {
 
             <Route path="*" element={<NotFound />} />
           </Routes>
-
         </AuthContextProvider>
-
       </BrowserRouter>
 
     </>

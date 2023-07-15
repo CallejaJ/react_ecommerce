@@ -17,7 +17,7 @@ function Login() {
 
                                 <form>
                                     <input type="email" name="email" placeholder="E-mail" />
-                                    <input type="password" name="contraseña" placeholder="Contraseña" />
+                                    <input type="password" name="password" placeholder="password" />
                                     <input type="submit" value="Iniciar sesión" />
                                 </form>
 

@@ -30,7 +30,7 @@ function repetida(aleatoryCard, card2) {
 function Destacados() {
     return (
         <>
-            <div className="container d-flex justify-content-between align-items-center my-3 mt-5">
+            <div className="container d-flex justify-content-evenly my-3 mt-4 gap-1">
                 <div className='container'>
                     <h2>Modelos destacados</h2>
                     <p>Diseños en 3D para el diseño personalizable del hogar de tus sueños. </p>

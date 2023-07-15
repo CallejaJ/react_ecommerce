@@ -12,6 +12,7 @@ const USER_KEY = "USER_KEY"
 
 export default function AuthContextProvider({ children }) {
 
+
     // children es todo lo que abraza el contexto en la APP
     // el estado lo inicializo nulo porque no hay usuario
     const [user, setUser] = useState(localStorage.getItem(USER_KEY) ?? null);
@@ -23,7 +24,7 @@ export default function AuthContextProvider({ children }) {
             localStorage.setItem(USER_KEY, email)
             setErrorMessage(null)
         }
-        setErrorMessage("Please try again")
+        setErrorMessage("Inténtalo de nuevo")
     }
 
     function logout() {

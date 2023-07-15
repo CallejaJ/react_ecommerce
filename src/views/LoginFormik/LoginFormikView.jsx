@@ -1,7 +1,6 @@
 import { useAuthContext } from '../../context/AuthContext';
 import Benefits from "../../Components/Benefits/Benefits"
 import Footer from "../../Components/Footer/Footer"
-import { Alert } from 'bootstrap';
 
 export default function LoginFormikView({ formik }) {
 
@@ -27,8 +26,7 @@ export default function LoginFormikView({ formik }) {
                                     <input
                                         type="email"
                                         name="email"
-                                        placeholder="E-mail"
-                                        label="Type your e-mail address"
+                                        placeholder="Type your email"
                                         value={values.email}
                                         onChange={handleChange}
                                     // error={touched.email && Boolean(errors.email)}
@@ -36,22 +34,24 @@ export default function LoginFormikView({ formik }) {
                                     />
                                     <input
                                         type="password"
-                                        name="contraseña"
-                                        placeholder="Contraseña"
+                                        name="password"
+                                        placeholder="Type your password"
                                         value={values.password}
                                         onChange={handleChange}
-                                    // error={touched.password && Boolean(errors.password)}
+                                    // {touched.password && Boolean(errors.password)}
                                     // helperText={touched.password && errors.password}
                                     />
+
                                     {errorMessage ? (
-                                        <Alert variant="outlined" severity="info">
+                                        <h6>
                                             {errorMessage}
-                                        </Alert>
+                                        </h6>
                                     ) : null}
                                     <input
                                         type="submit"
                                         value="Iniciar sesión" />
                                 </form>
+                                <pre>{JSON.stringify({ values, errors }, null, 1)}</pre>
 
                             </div>
 
@@ -68,7 +68,7 @@ export default function LoginFormikView({ formik }) {
                                     <input type="text" name="nombre" placeholder="Nombre" />
                                     <input type="text" name="apellidos" placeholder="Apellidos" />
                                     <input type="email" name="email" placeholder="E-mail" />
-                                    <input type="password" name="contraseña" placeholder="Contraseña" />
+                                    <input type="password" name="password" placeholder="password" />
                                     <input type="submit" value="Crear cuenta ahora" />
                                 </form>
 

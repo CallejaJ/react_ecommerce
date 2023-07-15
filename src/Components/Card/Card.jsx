@@ -13,7 +13,7 @@ function Card({ cards }) {
 
                         <div className="card-body gap-3">
                             <div className="d-flex justify-content-between">
-                                <h5 className="card-title">{card.titulo}</h5>
+                                <h6 className="card-title">{card.titulo}</h6>
                                 <span>{card.precio} <i className="bi bi-currency-euro text-primary"></i></span>
                             </div>
 
@@ -28,7 +28,7 @@ function Card({ cards }) {
                             <p className="card-text">{card.text}</p>
 
                             <div className="d-flex gap-3">
-                                <a href="#" className="btn btn-primary w-100">Añadir al carrito</a>
+                                <Link className="btn btn-primary w-100" >Reservar</Link>
                                 <Link className="btn btn-secondary w-20" to={`/modelos/${card.id}`}>Ver</Link>
                             </div>
                         </div>

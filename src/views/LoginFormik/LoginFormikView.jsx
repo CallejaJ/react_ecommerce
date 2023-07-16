@@ -1,6 +1,7 @@
 import { useAuthContext } from '../../context/AuthContext';
 import Benefits from "../../Components/Benefits/Benefits"
 import Footer from "../../Components/Footer/Footer"
+import Alert from 'react-bootstrap/Alert';
 
 export default function LoginFormikView({ formik }) {
 
@@ -48,10 +49,11 @@ export default function LoginFormikView({ formik }) {
                                         <p className="error">{errors.password}</p>
                                     )}
                                     {errorMessage ? (
-                                        <h6 className="error">
+                                        <Alert variant='info' >
                                             {errorMessage}
-                                        </h6>
-                                    ) : null}
+                                        </Alert>
+                                    ) : null
+                                    }
                                     <input
                                         type="submit"
                                         value="Iniciar sesión" />

@@ -2,6 +2,30 @@ import { Outlet } from 'react-router-dom';
 import Navbar from './Navbar/Navbar';
 import Header from './Header/Header';
 
+
+
+function Layout({ withHeader }) {
+    return (
+        <>
+            {withHeader ? (
+                <>
+                    <Header />
+                    <Navbar />
+                    <Outlet />
+                </>
+            ) : (
+                <Outlet />
+            )
+            }
+
+        </>
+    )
+}
+
+export default Layout
+
+
+
 // const sections = [
 //     {
 //         label: "Inicio",
@@ -29,23 +53,3 @@ import Header from './Header/Header';
 //     },
 
 // ]
-
-function Layout({ withHeader }) {
-    return (
-        <>
-            {withHeader ? (
-                <>
-                    <Header />
-                    <Navbar />
-                    <Outlet />
-                </>
-            ) : (
-                <Outlet />
-            )
-            }
-
-        </>
-    )
-}
-
-export default Layout

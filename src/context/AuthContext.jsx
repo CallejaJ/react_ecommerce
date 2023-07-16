@@ -22,9 +22,11 @@ export default function AuthContextProvider({ children }) {
         if (email === "user@mail.com" && password === "3Dreams") {
             setUser({ email })
             localStorage.setItem(USER_KEY, email)
-            setErrorMessage(null)
+            setErrorMessage(`Ya puedes navegar ${USER_KEY}`)
         }
-        setErrorMessage("Inténtalo de nuevo")
+        else {
+            setErrorMessage("Inténtalo de nuevo")
+        }
     }
 
     function logout() {

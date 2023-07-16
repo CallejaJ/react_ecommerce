@@ -2,8 +2,8 @@ import "../../CSS/style.css"
 import { Link } from 'react-router-dom';
 import { useAuthContext } from '../../context/AuthContext'
 
-export default function Navbar({ user }) {
-
+export default function Navbar() {
+    const { user } = useAuthContext();
     const { logout } = useAuthContext();
     function loggingOut() {
         logout();

@@ -9,7 +9,7 @@ function Header() {
                 <div className="logo">
                     <img className="navbar-brand" src={logo}></img>
                 </div>
-                <h1 className="navbar-brand text-light">Proyecto 3DREAMS</h1>
+                <h1 className="navbar-brand text-light">3DREAMS</h1>
 
                 <form className="d-flex w-100" role="search">
                     <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />

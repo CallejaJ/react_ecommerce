@@ -2,7 +2,7 @@ import Benefits from "../../Components/Benefits/Benefits"
 import Footer from "../../Components/Footer/Footer"
 // import Card from "../../Components/Card/Card"
 import { card } from "../../Components/Card/CardsDummy"
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import "bootstrap/dist/css/bootstrap.css"
 
 
@@ -28,14 +28,34 @@ export default
         <>
             {
                 modelo ? (
-                    // aqui saco el detalle de todas la tarjeta elegida
-                    <div className="card">
-                        <img src={modelo.imagen} className="card-img-top" alt=".." />
-                        <div className="card-body">
-                            <h5 className="card-title">{modelo.titulo}</h5>
-                            <p className="card-text">{modelo.texto}</p>
+                    // aqui saco el detalle de la tarjeta elegida
+                    <>
+                        <h1 className="container text-primary mt-5 mb-3">Detalles del modelo {id}</h1>
+                        <div className="container card">
+                            <img src={modelo.imagen} className="card-img-top mt-3" alt=".." />
+                            <div className="card-body">
+                                <div className="d-flex justify-content-between">
+                                    <h6 className="card-title">{modelo.titulo}</h6>
+                                    <span>{modelo.precio} <i className="bi bi-currency-euro text-primary"></i></span>
+                                </div>
+
+                                <div className="text-black-50">
+                                    <i className="bi bi-star-fill text-primary"></i>
+                                    <i className="bi bi-star-fill text-primary"></i>
+                                    <i className="bi bi-star-fill text-primary"></i>
+                                    <i className="bi bi-star-fill text-primary"></i>
+                                    <i className="bi bi-star-fill"></i>
+                                </div>
+
+                                <p className="card-text text-secondary mt-3 mb-4">{modelo.texto}</p>
+
+                                <div className="d-flex gap-3">
+                                    <Link className="btn btn-primary w-50" >Añadir al carrito</Link>
+                                    <Link className="btn btn-secondary w-50" to="/modelos">Ver más</Link>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    </>
                 ) : (
                     <h1> El id del modelo elegido es {id} </h1>
                 )

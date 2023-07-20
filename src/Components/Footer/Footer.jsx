@@ -17,7 +17,7 @@ function Footer() {
                                 <div className="logo">
                                     <img className="navbar-brand" src={logo}></img>
                                 </div>
-                                <p className="navbar-brand text-light">Proyecto 3DREAMS</p>
+                                <p className="navbar-brand text-light">3DREAMS</p>
                                 <ul>
                                     <li><Link className="nav-link active text-white h1" aria-current="page" to="privacidad">Política de privacidad</Link></li>
                                     <li><Link className="nav-link active text-white h1" aria-current="page" to="devluciones">Politica de devoluciones</Link></li>

@@ -1,8 +1,11 @@
 /* eslint-disable react/prop-types */
 import "../../CSS/style.css"
 import { Link } from "react-router-dom"
+import { useCartContext } from "../../context/CartContext";
 
 function Card({ cards }) {
+    const { addToCart } = useCartContext();
+
     return (
         <>
 
@@ -28,7 +31,8 @@ function Card({ cards }) {
                             <p className="card-text">{card.text}</p>
 
                             <div className="d-flex gap-3">
-                                <Link className="btn btn-primary w-100" >Añadir al carrito</Link>
+                                <Link addToCart={addToCart}
+                                    className="btn btn-primary w-100" >Añadir al carrito</Link>
                                 <Link className="btn btn-secondary w-20" to={`/modelos/${card.id}`}>Detalles</Link>
                             </div>
                         </div>

@@ -46,11 +46,11 @@ function repetidas(experienceCard, experiencia3) {
 function Modelos() {
     return (
         <>
-            <div className="container mt-5 mb-5">
+            <div className="container mt-5 mb-5 ">
                 <Carousel>
                     <Carousel.Item>
-                        <img
-                            className="d-block w-100"
+                        <img width={600} height={600}
+                            className="container d-block w-100"
                             src={slider1}
                             alt="First slide"
                         />
@@ -60,7 +60,7 @@ function Modelos() {
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
-                        <img
+                        <img width={600} height={600}
                             className="d-block w-100"
                             src={slider2}
                             alt="Second slide"
@@ -72,7 +72,7 @@ function Modelos() {
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
-                        <img
+                        <img width={600} height={600}
                             className="d-block w-100"
                             src={slider3}
                             alt="Third slide"
@@ -84,7 +84,7 @@ function Modelos() {
                     </Carousel.Item>
 
                     <Carousel.Item>
-                        <img
+                        <img width={600} height={600}
                             className="d-block w-100"
                             src={slider4}
                             alt="First slide"
@@ -96,7 +96,7 @@ function Modelos() {
                     </Carousel.Item>
 
                     <Carousel.Item>
-                        <img
+                        <img width={600} height={600}
                             className="d-block w-100"
                             src={slider5}
                             alt="First slide"
@@ -108,7 +108,7 @@ function Modelos() {
                     </Carousel.Item>
 
                     <Carousel.Item>
-                        <img
+                        <img width={600} height={600}
                             className="d-block w-100"
                             src={slider6}
                             alt="First slide"
@@ -119,7 +119,7 @@ function Modelos() {
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
-                        <img
+                        <img width={600} height={600}
                             className="d-block w-100"
                             src={slider7}
                             alt="First slide"
@@ -131,7 +131,7 @@ function Modelos() {
                     </Carousel.Item>
 
                     <Carousel.Item>
-                        <img
+                        <img width={600} height={600}
                             className="d-block w-100"
                             src={slider8}
                             alt="First slide"

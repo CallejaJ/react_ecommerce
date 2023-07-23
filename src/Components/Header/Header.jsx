@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom';
 import "../../CSS/style.css"
 import logo from "../../assets/webp/logo-sin-fondo.webp"
+import { useCartContext } from '../../context/CartContext';
 
 function Header() {
+    const { totalItems } = useCartContext()
     return (
         <header className="headerB navbar navbar-expand-lg py-5 bg-primary">
             <div className="container gap-3">
@@ -21,7 +23,7 @@ function Header() {
                     <button type="button" className="btn btn btn-light position-relative">
                         Carrito
                         <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                            0
+                            {totalItems}
                             <span className="visually-hidden">unread messages</span>
                         </span>
                     </button>

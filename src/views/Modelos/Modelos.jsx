@@ -3,7 +3,6 @@ import "../../CSS/style.css"
 
 import Benefits from "../../Components/Benefits/Benefits"
 import { card } from "../../Components/Card/CardsDummy"
-import Card from "../../Components/Card/"
 import Carousel from 'react-bootstrap/Carousel';
 import slider1 from '../../assets/webp/slider1.webp'
 import slider2 from '../../assets/webp/slider2.webp'
@@ -16,6 +15,7 @@ import slider8 from '../../assets/webp/slider8.webp'
 import { experiencia } from "../../Components/Experiencia/ExperienciasDummy"
 import Experiencia from "../../Components/Experiencia"
 import Footer from "../../Components/Footer"
+import Card4 from "../../Components/Card/Card4"
 
 
 let experiencia3 = []
@@ -146,7 +146,7 @@ function Modelos() {
             <h1 className="container text-primary mb-4"><strong>Modelos</strong></h1>
 
 
-            <Card cards={card} />
+            <Card4 cards={card} />
 
             <section className="container d-flex justify-content-between my-5 py-5">
                 <div className=" container w-100">

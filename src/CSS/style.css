@@ -96,6 +96,11 @@ h5 {
   color: var(--negro);
 }
 
+span.texto-grande {
+  font-size: 2em;
+  color: var(--negro);
+}
+
 
 h1,
 .h1 {

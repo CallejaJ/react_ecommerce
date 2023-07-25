@@ -30,13 +30,13 @@ export default
                 modelo ? (
                     // aqui saco el detalle de la tarjeta elegida
                     <>
-                        <h1 className="container text-primary mt-5 mb-3">Detalles del modelo {id}</h1>
+                        <h1 className="container text-primary mt-5 mb-5"><strong>Detalles</strong></h1>
                         <div className="container card">
-                            <img src={modelo.imagen} className="card-img-top mt-3" alt=".." />
+                            <img src={modelo.imagen} className="card-img-top mt-3" alt={modelo.id} />
                             <div className="card-body">
                                 <div className="d-flex justify-content-between">
-                                    <h6 className="card-title">{modelo.titulo}</h6>
-                                    <span>{modelo.precio} <i className="bi bi-currency-euro text-primary"></i></span>
+                                    <h3 className="card-title text-secondary mt-2">{modelo.titulo}</h3>
+                                    <span className="span texto-grande mt-2">{modelo.precio} <i className="bi bi-currency-euro text-primary"></i></span>
                                 </div>
 
                                 <div className="text-black-50">
@@ -50,8 +50,8 @@ export default
                                 <p className="card-text text-secondary mt-3 mb-4">{modelo.texto}</p>
 
                                 <div className="d-flex gap-3">
-                                    <Link className="btn btn-primary w-50" >Añadir al carrito</Link>
-                                    <Link className="btn btn-secondary w-50" to="/modelos">Ver más</Link>
+                                    <Link className="btn btn-primary w-40" >Añadir al carrito</Link>
+                                    <Link className="btn btn-secondary w-20" to="/modelos">Ver más</Link>
                                 </div>
                             </div>
                         </div>

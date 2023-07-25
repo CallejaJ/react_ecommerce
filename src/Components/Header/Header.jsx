@@ -20,7 +20,7 @@ function Header() {
 
 
                 <Link className="nav-link active text-primary" aria-current="page" to="carrito">
-                    <button type="button" className="btn btn btn-light position-relative">
+                    <button id="test2" type="button" className="btn btn btn-light position-relative">
                         Carrito
                         <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                             {totalItems}

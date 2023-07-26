@@ -18,10 +18,8 @@ describe('template spec', () => {
     cy.get('input[id="email"]').type('user@mail.com')
     cy.get('input[id="password"]').type('3Dreams')
     cy.get('#login').submit()
-    cy.location('pathname').should('eq', '/');
+    cy.location('pathname').should('eq', '/modelos');
   });
-
-
 
 })
 

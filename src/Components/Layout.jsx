@@ -4,20 +4,12 @@ import Header from './Header/Header';
 
 
 
-function Layout({ withHeader }) {
+function Layout() {
     return (
         <>
-            {withHeader ? (
-                <>
-                    <Header />
-                    <Navbar />
-                    <Outlet />
-                </>
-            ) : (
-                <Outlet />
-            )
-            }
-
+            <Header />
+            <Navbar />
+            <Outlet />
         </>
     )
 }

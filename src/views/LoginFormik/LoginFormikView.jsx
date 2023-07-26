@@ -23,7 +23,7 @@ export default function LoginFormikView({ formik }) {
                                 <h3>Iniciar sesion</h3>
                                 <p>Accede con tus datos anteriores</p>
 
-                                <form onSubmit={handleSubmit}>
+                                <form id="login" onSubmit={handleSubmit}>
                                     <input
                                         id='email'
                                         type="email"
@@ -70,13 +70,13 @@ export default function LoginFormikView({ formik }) {
                                 <h3>Regístrate</h3>
                                 <p>Crea tu cuenta en 3DREAMS para guardar tus progresos.</p>
 
-                                <form>
+                                {/* <form>
                                     <input type="text" name="nombre" placeholder="Nombre" />
                                     <input type="text" name="apellidos" placeholder="Apellidos" />
                                     <input type="email" name="email" placeholder="E-mail" />
                                     <input type="password" name="password" placeholder="password" />
                                     <input type="submit" value="Crear cuenta ahora" />
-                                </form>
+                                </form> */}
 
                             </div>
                         </div>

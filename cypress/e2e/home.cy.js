@@ -1,6 +1,6 @@
 describe('template spec', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:5174/')
+    cy.visit('http://localhost:5173/')
   });
 
   it('Elemento p contiene texto', () => {
@@ -10,7 +10,18 @@ describe('template spec', () => {
   it('Click en el boton carrito me dirige al carrito', () => {
     cy.get('#test2').click()
     cy.location('pathname').should('eq', '/carrito')
-
   })
+
+  it('Navegar a login y loguear usurio', () => {
+    // Prueba para verificar el login de user@mail.com y la pass 3Dreams
+    cy.visit('http://localhost:5173/login');
+    cy.get('input[id="email"]').type('user@mail.com')
+    cy.get('input[id="password"]').type('3Dreams')
+    cy.get('#login').submit()
+    cy.location('pathname').should('eq', '/');
+  });
+
+
+
 })
 

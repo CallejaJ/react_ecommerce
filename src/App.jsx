@@ -27,7 +27,7 @@ export default function App() {
       <BrowserRouter>
         <AuthContextProvider>
           <Routes>
-            <Route path="/" element={<Layout withHeader />}>
+            <Route path="/" element={<Layout />}>
               <Route index element={<Home />} />
               <Route path="login" element={<LoginFormik />} />
               {/* Rutas públicas */}

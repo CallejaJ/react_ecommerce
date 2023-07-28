@@ -8,10 +8,16 @@ export default function Card4({ cards }) {
 
     return (
         <>
-            <p className="container card-text text-secondary mt-3 mb-4">Para un uso común se utilizan materiales que van desde las resinas hasta los plásticos. Sin embargo, en la impresión 3D en la construcción se pueden usan acero y hormigón e incluso plásticos sintéticos. Los ladrillos inteligentes que se usan en las casas mediante esta tecnología tienen forma de lego y están hechos de hormigón de alta resistencia. Los ladrillos se van instalando poco a poco en una placa de tierra que es la base de la casa, para hacer las paredes utiliza unas guías que sirven como rieles donde un robot coloca los ladrillos poco a poco. Para terminar las paredes, hacen unas capas de acabado que recubren distintos elementos e infraestructuras como tuberías y cables.</p>
+            <div id="columnas" className="container card-text text-secondary mt-3 mb-4">
+                <p>Normalmente los modelos 3D utilizan materiales que van desde las resinas hasta los plásticos.  </p>
+                <p>Sin embargo, en la impresión 3D en la construcción se pueden usan acero y hormigón e incluso plásticos sintéticos.</p>
+                <p>Los ladrillos inteligentes que se usan en las casas mediante esta tecnología tienen forma de lego y están hechos de hormigón de alta resistencia.</p>
+                <p>Te parecerá increible esta tecnología de vanguardia, sostenible y resistente a seismos. ¿Quieres aprender más sobre esta tecnología? Modelamos tu hogar de entre los diferentes modelos y estilos arquitectónicos.</p>
+                <p>¿Quieres aprender más sobre esta tecnología? Modelamos tu hogar de entre los diferentes modelos y estilos arquitectónicos.</p>
+            </div>
             {cards.map((card, index) => (
                 <div key={index} className="container card mb-3">
-                    <img src={card.imagen} className="card-img-top mt-3 mb-3" alt=".." />
+                    <img src={card.imagen} className="card-img-top mt-3 mb-3" alt={card.titulo} />
                     <div className="card-body">
                         <div className="d-flex justify-content-between">
                             <h6 className="card-title">{card.titulo}</h6>
@@ -26,11 +32,13 @@ export default function Card4({ cards }) {
                             <i className="bi bi-star-fill"></i>
                         </div>
 
-                        <p className="card-text text-secondary mt-3 mb-4">{card.texto}</p>
-
+                        <p className="card-text text-secondary mt-3 ">{card.texto1}</p>
+                        <div id="columnas" className="container card-text text-secondary mt-2 mb-4">
+                            <p className="card-text text-secondary mt-3 mb-4">{card.texto2}</p>
+                            <p className="card-text text-secondary mt-3 mb-4">{card.texto3}</p>
+                        </div>
                         <div className="d-flex gap-3">
-                            <Link addToCart={addToCart} className="btn btn-primary w-40" >Añadir al carrito</Link>
-                            <Link className="btn btn-secondary w-20" to="/modelos">Ver más</Link>
+                            <Link addToCart={addToCart} className="btn btn-primary w-50" >Añadir al carrito</Link>
                         </div>
                     </div>
                 </div>

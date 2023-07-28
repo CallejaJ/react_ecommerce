@@ -13,7 +13,7 @@ export default
         <>
 
             <div className="container align-items-center" >
-                <img className="mt-3 mb-3" src={tecnology} loading="lazy"></img>
+                <img className="mt-3 mb-3" src={tecnology}></img>
             </div>
 
             <div className="container mt-3">

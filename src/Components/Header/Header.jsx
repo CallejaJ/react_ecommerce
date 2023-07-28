@@ -4,9 +4,9 @@ import logo from "../../assets/webp/logo-sin-fondo.webp"
 import { useCartContext } from '../../context/CartContext';
 
 function Header() {
-    const { totalItems } = useCartContext()
+    let { totalItems } = useCartContext()
     return (
-        <header className="headerB navbar navbar-expand-lg py-5 bg-primary">
+        <header className="navbar navbar-expand-lg py-5 bg-primary">
             <div className="container gap-3">
                 <div className="logo">
                     <img className="navbar-brand" src={logo}></img>

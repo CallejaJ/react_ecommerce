@@ -21,21 +21,21 @@ export default function Navbar() {
 
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li className="nav-item">
-                                    <Link className="nav-link active text-primary"
+                                    <Link className="nav-link active text-white"
                                         aria-current="page"
                                         to="/">Inicio</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link active text-primary" aria-current="page" to="/modelos">Modelos</Link>
+                                    <Link className="nav-link active text-white" aria-current="page" to="/modelos">Modelos</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link active text-primary" aria-current="page" to="/tecnologias">Tecnologias</Link>
+                                    <Link className="nav-link active text-white" aria-current="page" to="/tecnologias">Tecnologias</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link active text-primary" aria-current="page" to="/garantia">Garantia</Link>
+                                    <Link className="nav-link active text-white" aria-current="page" to="/garantia">Garantia</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link active text-primary" aria-current="page" to="/experiencias">Experiencias</Link>
+                                    <Link className="nav-link active text-white" aria-current="page" to="/experiencias">Experiencias</Link>
                                 </li>
                             </ul>
                         </div>
@@ -49,7 +49,7 @@ export default function Navbar() {
                             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                                 <ul className="navbar-nav me-auto mb-2 mb-lg-0 main-color">
                                     <li className="nav-item">
-                                        <Link onClick={loggingOut} className="nav-link active text-secondary" aria-current="page" to="/" >Cerrar sesion</Link>
+                                        <Link onClick={loggingOut} className="nav-link active text-white" aria-current="page" to="/" >Cerrar sesion</Link>
                                     </li>
                                 </ul>
 

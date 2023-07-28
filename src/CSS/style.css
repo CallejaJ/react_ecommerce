@@ -154,14 +154,10 @@ a {
 
 /* Header */
 
-.headerB {
-  background: url(https://wallpapercave.com/wp/wp7873943.jpg);
-  background-size: cover;
-  background-position: right;
-}
-
-header .main-color {
+header {
   color: var(--blanco);
+  background: rgb(2, 0, 36);
+  background: linear-gradient(100deg, rgba(0, 212, 255, 1) 10%, rgba(9, 9, 121, 1) 55%, rgba(2, 0, 36, 1) 100%);
 }
 
 header .container {
@@ -169,7 +165,7 @@ header .container {
   display: flex;
   gap: 8px;
   justify-content: space-between;
-  max-height: 80px;
+  max-height: 40px;
 }
 
 .logo {
@@ -460,6 +456,11 @@ se coloque junto al número de precio usando display:inline
 }
 
 /* Navigation */
+
+nav {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(70deg, rgba(0, 212, 255, 1) 10%, rgba(9, 9, 121, 1) 55%, rgba(2, 0, 36, 1) 100%);
+}
 
 #navegacion {
   display: inherit;

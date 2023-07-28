@@ -9,10 +9,11 @@ export default function PublicRoute() {
     if (!user) {
         return <Navigate to="/login" />
     }
-
-    return (
-        <div>
-            <Outlet />
-        </div>
-    )
+    else {
+        return (
+            <div>
+                <Outlet />
+            </div>
+        )
+    }
 }

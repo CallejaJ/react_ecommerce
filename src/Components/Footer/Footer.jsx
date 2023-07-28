@@ -58,8 +58,6 @@ function Footer() {
                     </div>
                 </footer>
             </section>
-
-
         </>
     )
 }

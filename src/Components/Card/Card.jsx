@@ -28,10 +28,10 @@ function Card({ cards }) {
                                 <i className="bi bi-star-fill"></i>
                             </div>
 
-                            <p className="card-text">{card.text}</p>
+                            <p className="card-text">{card.text1}</p>
 
                             <div className="d-flex gap-3">
-                                <button onClick={() => addToCart({ id })} className="btn btn-primary w-100" >Añadir al cesta</button>
+                                <button onClick={() => addToCart({ id })} className="btn btn-primary w-100" >Añadir a la cesta</button>
                                 <Link className="btn btn-secondary w-20" to={`/modelos/${card.id}`}>Detalles</Link>
                             </div>
                         </div>

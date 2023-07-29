@@ -5,15 +5,13 @@ export default
     function Stepper() {
     return (
         <>
-            <nav className="container mt-5 mb-5" aria-label="Page navigation example">
+            <div className="container mt-5 mb-5" aria-label="Page navigation example">
                 <ul className="pagination justify-content-end gap-5">
-
-                    <li className="page-item"><Link className="button_cesta page-link" to="/cesta"><i className="bi bi-basket-fill text-primary"></i>Detalles cesta</Link></li>
-                    <li className="page-item"><Link className="button_cesta page-link" to="/cesta/pago"><i className="bi bi-credit-card-fill align-items-center text-primary"></i>Formas de pago</Link></li>
-                    <li className="page-item"><Link className="button_cesta page-link" to="/cesta/enviar"><i className="bi bi-send-fill align-items-center text-primary"></i>Finalizar compra</Link></li>
-
+                    <li className="page-item"><Link className="button_cesta page-link" to="/cesta">1. Detalles de tu cesta</Link></li>
+                    <li className="page-item"><Link className="button_cesta page-link" to="/cesta/pago">2. Formas de pago</Link></li>
+                    <li className="page-item"><Link className="button_cesta page-link" to="/cesta/enviar">3. Finalizar compra</Link></li>
                 </ul>
-            </nav>
+            </div >
         </>
     );
 }

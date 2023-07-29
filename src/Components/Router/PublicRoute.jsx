@@ -7,7 +7,7 @@ export default function PublicRoute() {
     // comprobar en el contexto si existe usuario
     const { user } = useAuthContext();
     if (user) {
-        return <Navigate to="/carrito" />
+        return <Navigate to="/cesta" />
     }
     else {
         return (

@@ -97,7 +97,7 @@ h5 {
 }
 
 span.texto-grande {
-  font-size: 2em;
+  font-size: 1.3em;
   color: var(--negro);
 }
 
@@ -209,7 +209,7 @@ footer {
 }
 
 /* 
-❏ En la página de carrito, consigue que los botones de los productos
+❏ En la página de cesta, consigue que los botones de los productos
 recomendados ocupen el 100% del ancho de la caja usando display:block.
 Ojo, solo para estos botones, no para todos.
 */
@@ -218,9 +218,19 @@ Ojo, solo para estos botones, no para todos.
   display: block;
 }
 
+.gradient-custom {
+  /* fallback for old browsers */
+  background: #6a11cb;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
+}
 
 /* 
-❏ Consigue que el número de productos del botón de carrito en el header
+❏ Consigue que el número de productos del botón de cesta en el header
 quede flotando en la esquina superior derecha del botón, usando position
 relative en el botón y position absolute en el número.
 */
@@ -271,7 +281,7 @@ divlog {
 
 /* 
 ❏ Consigue que todos los botones, por defecto, tengan display:inline-block y
-asegúrate que el proceso de compra del carrito se ve como en el diseño.
+asegúrate que el proceso de compra del cesta se ve como en el diseño.
 */
 
 .button {
@@ -289,7 +299,7 @@ asegúrate que el proceso de compra del carrito se ve como en el diseño.
   transition: all 0.3s;
 }
 
-.button_carrito {
+.button_cesta {
   display: inline-block;
   text-decoration: none;
   padding: 16px 24px;
@@ -309,7 +319,7 @@ asegúrate que el proceso de compra del carrito se ve como en el diseño.
   color: var(--principal);
 }
 
-.button_carrito:hover {
+.button_cesta:hover {
   background-color: transparent;
   color: var(--principal);
 }

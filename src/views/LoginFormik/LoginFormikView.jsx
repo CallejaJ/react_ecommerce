@@ -16,9 +16,9 @@ export default function LoginFormikView({ formik }) {
 
             <div className="container mt-5">
                 <div className="row">
-                    <div className="col">
+                    <div className="col mb-5">
                         <div>
-                            <div className="text border border-secondary border-1 rounded-4 p-5 align-items-center">
+                            <div className="text border border-primary border-1 rounded-4 p-5 align-items-center">
 
                                 <h3>Iniciar sesion</h3>
                                 <p>Accede con tus datos anteriores</p>
@@ -63,20 +63,20 @@ export default function LoginFormikView({ formik }) {
 
                         </div>
                     </div>
-                    <div className="col">
+                    <div className="col mb-5">
                         <div>
-                            <div className="text border border-secondary border-1 rounded-4 p-5 align-items-center">
+                            <div className="text border border-primary border-1 rounded-4 p-5 align-items-center">
 
                                 <h3>Regístrate</h3>
-                                <p>Crea tu cuenta en 3DREAMS para guardar tus progresos.</p>
+                                <p>Crea una cuenta en 3DREAMS para guardar tus progresos.</p>
 
-                                {/* <form>
+                                <form>
                                     <input type="text" name="nombre" placeholder="Nombre" />
                                     <input type="text" name="apellidos" placeholder="Apellidos" />
                                     <input type="email" name="email" placeholder="E-mail" />
                                     <input type="password" name="password" placeholder="password" />
                                     <input type="submit" value="Crear cuenta ahora" />
-                                </form> */}
+                                </form>
 
                             </div>
                         </div>

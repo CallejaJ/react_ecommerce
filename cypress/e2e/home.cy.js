@@ -7,9 +7,9 @@ describe('template spec', () => {
     cy.get('#test1').should('have.text', 'Diseños personalizados, diferentes estilos y estructuras para vivir en el hogar de tus sueños.');
   })
 
-  it('Click en el boton carrito me dirige al carrito', () => {
+  it('Click en el boton cesta me dirige al cesta', () => {
     cy.get('#test2').click()
-    cy.location('pathname').should('eq', '/carrito')
+    cy.location('pathname').should('eq', '/cesta')
   })
 
   it('Navegar a login y loguear usurio', () => {

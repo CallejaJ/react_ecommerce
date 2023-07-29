@@ -1,7 +1,7 @@
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import LoginFormik from "./views/LoginFormik/LoginFormik"
-import PublicRoute from './components/Router/PublicRoute';
 import PrivateRoute from "./Components/Router/PrivateRoute";
+import PublicRoute from "./Components/Router/PublicRoute";
 import AuthContextProvider from "./context/AuthContext";
 
 import Modelos from "./views/Modelos";
@@ -10,7 +10,7 @@ import Tecnologias from "./views/Tecnologias";
 import Garantia from "./views/Garantia";
 import NotFound from "./views/NotFound";
 import Experiencias from "./views/Experiencias";
-import Carrito from "./views/Carrito"
+import Cesta from "./views/Cesta/Cesta"
 import Home from "./views/Home";
 import Pago from "./views/Pago";
 import Enviar from "./views/Enviar"
@@ -43,8 +43,8 @@ export default function App() {
             </Route>
             {/* rutas privadas */}
             <Route element={<PrivateRoute />} >
-              <Route path="/carrito" >
-                <Route index element={<Carrito />} />
+              <Route path="/cesta" >
+                <Route index element={<Cesta />} />
                 <Route path="pago" element={<Pago />} />
                 <Route path="enviar" element={<Enviar />} />
               </Route>

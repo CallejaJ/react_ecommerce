@@ -6,8 +6,7 @@ import { Link, useParams } from 'react-router-dom'
 import "bootstrap/dist/css/bootstrap.css"
 
 
-export default
-    function Detalles() {
+export default function Detalles() {
 
     const { id } = useParams();
     console.log(id);
@@ -50,14 +49,14 @@ export default
                                 <p className="card-text text-secondary mt-3 mb-4">{modelo.texto}</p>
 
                                 <div className="d-flex gap-3">
-                                    <Link className="btn btn-primary w-40" >Añadir al carrito</Link>
+                                    <Link className="btn btn-primary w-40" >Añadir al cesta</Link>
                                     <Link className="btn btn-secondary w-20" to="/modelos">Ver más</Link>
                                 </div>
                             </div>
                         </div>
                     </>
                 ) : (
-                    <h1> El id del modelo elegido es {id} </h1>
+                    <h1> Cargando.... </h1>
                 )
             }
             <Benefits />
@@ -66,9 +65,3 @@ export default
         </>
     );
 }
-
-{/* <h1 className="container text-secondary mt-3 mb-3">Detalle de producto</h1>
-
-
-<Card cards={card} />
- */}

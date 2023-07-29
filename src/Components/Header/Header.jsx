@@ -19,9 +19,9 @@ function Header() {
                 <button className="btn btn-outline-light w-20" type="submit">Buscar</button>
 
 
-                <Link className="nav-link active text-primary" aria-current="page" to="carrito">
+                <Link className="nav-link active text-primary" aria-current="page" to="cesta">
                     <button id="test2" type="button" className="btn btn btn-light position-relative">
-                        Carrito
+                        cesta
                         <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                             {totalItems}
                             <span className="visually-hidden">unread messages</span>

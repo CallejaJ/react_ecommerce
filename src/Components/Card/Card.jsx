@@ -31,7 +31,7 @@ function Card({ cards }) {
                             <p className="card-text">{card.text}</p>
 
                             <div className="d-flex gap-3">
-                                <button onClick={() => addToCart({ id })} className="btn btn-primary w-100" >Añadir al carrito</button>
+                                <button onClick={() => addToCart({ id })} className="btn btn-primary w-100" >Añadir al cesta</button>
                                 <Link className="btn btn-secondary w-20" to={`/modelos/${card.id}`}>Detalles</Link>
                             </div>
                         </div>

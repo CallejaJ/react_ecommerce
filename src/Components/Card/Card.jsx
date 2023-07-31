@@ -10,8 +10,8 @@ function Card({ cards }) {
         <>
 
             <div className="container d-flex justify-content-evenly my-3 mt-4">
-                {cards.map((card, id) => (
-                    <div key={id} className="card">
+                {cards.map((card, index) => (
+                    <div key={index} className="card">
                         <img width={300} height={150} src={card.imagen} className="card-img-top" alt="imagen modelo" />
 
                         <div className="card-body gap-3">
@@ -31,7 +31,7 @@ function Card({ cards }) {
                             <p className="card-text">{card.text1}</p>
 
                             <div className="d-flex gap-3">
-                                <button onClick={() => addToCart({ id })} className="btn btn-primary w-100" >Añadir a la cesta</button>
+                                <button onClick={() => addToCart(card)} className="btn btn-primary w-100" >Añadir a la cesta</button>
                                 <Link className="btn btn-secondary w-20" to={`/modelos/${card.id}`}>Detalles</Link>
                             </div>
                         </div>

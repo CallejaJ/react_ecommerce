@@ -17,6 +17,7 @@ import Enviar from "./views/Enviar"
 import Detalles from "./views/Detalles/Detalles";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css"
+import CartContextProvider from "./context/CartContext";
 
 
 
@@ -26,12 +27,10 @@ export default function App() {
     <>
       <BrowserRouter>
         <AuthContextProvider>
-          <Routes>
-            <Route path="/" element={<Layout />}>
-              <Route index element={<Home />} />
-              <Route path="login" element={<LoginFormik />} />
-              {/* Rutas públicas */}
-              <Route element={<PublicRoute />} >
+          <CartContextProvider>
+            <Routes>
+              <Route path="/" element={<Layout />}>
+                <Route index element={<Home />} />
                 <Route path="modelos">
                   <Route index element={<Modelos />} />
                   <Route path=":id" element={<Detalles />} />
@@ -39,19 +38,22 @@ export default function App() {
                 <Route path="tecnologias" element={<Tecnologias />} />
                 <Route path="garantia" element={<Garantia />} />
                 <Route path="experiencias" element={<Experiencias />} />
+                {/* Rutas públicas */}
+                <Route element={<PublicRoute />} >
+                  <Route path="login" element={<LoginFormik />} />
+                </Route>
               </Route>
-            </Route>
-            {/* rutas privadas */}
-            <Route element={<PrivateRoute />} >
-              <Route path="/cesta" >
-                <Route index element={<Cesta />} />
-                <Route path="pago" element={<Pago />} />
-                <Route path="enviar" element={<Enviar />} />
+              {/* rutas privadas */}
+              <Route element={<PrivateRoute />} >
+                <Route path="/cesta" >
+                  <Route index element={<Cesta />} />
+                  <Route path="pago" element={<Pago />} />
+                  <Route path="enviar" element={<Enviar />} />
+                </Route>
               </Route>
-            </Route>
-
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </CartContextProvider>
         </AuthContextProvider>
       </BrowserRouter>
 

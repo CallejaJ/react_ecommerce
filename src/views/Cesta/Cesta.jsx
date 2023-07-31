@@ -24,7 +24,7 @@ import {
 
 export default function Cesta() {
     // const { id } = useParams();
-    let id = 1
+    const id = 1
     console.log(id);
 
     return (
@@ -40,8 +40,8 @@ export default function Cesta() {
                                     <MDBCol md="8">
                                         <MDBCard className="mb-4">
                                             <MDBCardHeader className="py-3">
-                                                <MDBTypography tag="h5" className="mb-0">
-                                                    Detalles de tu cesta
+                                                <MDBTypography tag="h3" className="text-primary mb-0">
+                                                    Resumen de tu cesta
                                                 </MDBTypography>
                                             </MDBCardHeader>
                                             <MDBCardBody>
@@ -59,18 +59,17 @@ export default function Cesta() {
                                                     </MDBCol>
 
                                                     <MDBCol lg="5" md="6" className=" mb-4 mb-lg-0">
-                                                        <p>
-                                                            <strong>{id}</strong>
+                                                        <p className="align-items-center">
+                                                            <strong >{id}</strong>
                                                         </p>
                                                         <p>{id.titulo}</p>
                                                         <p>{id.texto1}</p>
                                                     </MDBCol>
-                                                    <MDBCol lg="4" md="6" className="mb-4 mb-lg-0">
-                                                        <div className="d-flex mb-4" style={{ maxHeight: "100px", maxWidth: "300px" }}>
-                                                            <MDBInput defaultValue={1} min={0} type="number" label="Cantidad" />
-                                                            <button className="btn btn-secondary w-50 mt-2 mb-2 gap-2">Eliminar</button>
+                                                    <MDBCol lg="4" md="6" className="mb-4 mb-lg-0 gap-3">
+                                                        <div className="d-flex gap-3 w-100 align-items-center">
+                                                            <MDBInput defaultValue={1} min={0} type="number" />
+                                                            <button className="btn btn-white w-50 mt-2 mb-2 gap-2"><i className="bi bi-trash text-primary w-100 mt-2 mb-2 gap-2"></i></button>
                                                         </div>
-
                                                         <p className="text-start text-md-center">
                                                             <strong>{id.precio}</strong>
                                                         </p>
@@ -296,7 +295,7 @@ export default function Cesta() {
                                             <MDBCard className="mb-4">
                                                 <MDBCardHeader>
                                                     <MDBTypography tag="h5" className="mb-0">
-                                                        Detalles de tu cesta
+                                                        Resumen de tu cesta
                                                     </MDBTypography>
                                                 </MDBCardHeader>
                                                 <MDBCardBody>

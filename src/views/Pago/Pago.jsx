@@ -66,163 +66,79 @@ export default function Pago() {
                             <MDBContainer className="py-5 h-100">
                                 <MDBRow className="justify-content-center align-items-center h-100">
                                     <MDBCol>
-                                        <MDBCard background="light" className="border-0 rounded-2 " >
+                                        <MDBCard background="light" className="border-0 rounded-2" >
                                             <MDBCardBody className="p-4">
                                                 <MDBRow>
                                                     <MDBCol lg="7">
                                                         <MDBTypography tag="h5">
                                                             <Link className="btn btn-secondary w-40 mt-2 mb-2" to="/modelos">Seguir comprando</Link>
                                                         </MDBTypography>
-
                                                         <hr />
-
                                                         <div className="d-flex justify-content-between align-items-center mb-4">
                                                             <div>
-                                                                <h1 className="mb-1 text-primary">Forma de pago</h1>
-                                                                <p className="mb-0">Tienes un modelo pendiente de procesar</p>
+                                                                <h3 className="mb-1 text-primary">Mis tarjetas</h3>
+                                                                <p className="mb-0">Elige entre tus tarjetas o añade una nueva</p>
                                                             </div>
-
                                                         </div>
-
-                                                        <MDBCard className="mb-3">
+                                                        <MDBCard className="mb-1 mt-1">
                                                             <MDBCardBody >
                                                                 <div className="d-flex justify-content-between">
                                                                     <div className="d-flex flex-row align-items-center">
-                                                                        <div>
-                                                                            <MDBCardImage
-                                                                                src={id.imagen}
-                                                                                fluid className="rounded-3" style={{ width: "65px" }}
-                                                                                alt={id.titulo} />
-                                                                        </div>
-                                                                        <div className="ms-3">
-                                                                            <MDBTypography tag="h5">
-                                                                                {id.titulo}                                                                                </MDBTypography>
-                                                                            <p className="small mb-0">{id.texto1}</p>
-                                                                        </div>
+                                                                        <form>
+                                                                            <label htmlFor="tarjeta1">
+                                                                                <input type="radio" id="tarjeta" name="tarjeta" value="7654 checked" />VISA ... 7654</label>
+                                                                        </form>
                                                                     </div>
                                                                     <div className="d-flex flex-row align-items-center">
-                                                                        <div style={{ width: "50px" }}>
-                                                                            <MDBTypography tag="h5" className="fw-normal mb-0">
-                                                                                1
-                                                                            </MDBTypography>
-                                                                        </div>
-                                                                        <div style={{ width: "80px" }}>
-                                                                            <MDBTypography tag="h5" className="mb-0">
-                                                                                {id.precio}
-                                                                            </MDBTypography>
-                                                                        </div>
-                                                                        <button className="btn btn-white w-50 mt-2 mb-2 gap-2"><i className="bi bi-trash text-primary w-100 mt-2 mb-2 gap-2"></i></button>
+                                                                        <button className="btn btn-primary w-100" to="/cesta/enviar">Seleccionar</button>
+                                                                        <button className="btn btn-white w-50"><i className="bi bi-trash text-primary w-100 mt-2 mb-2 gap-2"></i></button>
                                                                     </div>
                                                                 </div>
                                                             </MDBCardBody>
                                                         </MDBCard>
 
-                                                        <MDBCard className="mb-3">
-                                                            <MDBCardBody>
+                                                        <MDBCard className="mb-1 mt-1">
+                                                            <MDBCardBody >
                                                                 <div className="d-flex justify-content-between">
                                                                     <div className="d-flex flex-row align-items-center">
-                                                                        <div>
-                                                                            <MDBCardImage
-                                                                                src={id.imagen}
-                                                                                fluid className="rounded-3" style={{ width: "65px" }}
-                                                                                alt={id.titulo} />
-                                                                        </div>
-                                                                        <div className="ms-3">
-                                                                            <MDBTypography tag="h5">
-                                                                                {id.titulo}                                                                                </MDBTypography>
-                                                                            <p className="small mb-0">{id.texto1}</p>
-                                                                        </div>
+                                                                        <form>
+                                                                            <label htmlFor="tarjeta2">
+                                                                                <input type="radio" id="tarjeta" name="tarjeta" value="2365" />AMERICAN EXPRESS ...9099</label>
+                                                                        </form>
                                                                     </div>
                                                                     <div className="d-flex flex-row align-items-center">
-                                                                        <div style={{ width: "50px" }}>
-                                                                            <MDBTypography tag="h5" className="fw-normal mb-0">
-                                                                                1
-                                                                            </MDBTypography>
-                                                                        </div>
-                                                                        <div style={{ width: "80px" }}>
-                                                                            <MDBTypography tag="h5" className="mb-0">
-                                                                                {id.precio}
-                                                                            </MDBTypography>
-                                                                        </div>
-                                                                        <button className="btn btn-white w-50 mt-2 mb-2 gap-2"><i className="bi bi-trash text-primary w-100 mt-2 mb-2 gap-2"></i></button>
+                                                                        <button className="btn btn-primary w-100" to="/cesta/enviar">Seleccionar</button>
+                                                                        <button className="btn btn-white w-50"><i className="bi bi-trash text-primary w-100 mt-2 mb-2 gap-2"></i></button>
                                                                     </div>
                                                                 </div>
                                                             </MDBCardBody>
                                                         </MDBCard>
 
-                                                        <MDBCard className="mb-3">
-                                                            <MDBCardBody>
+                                                        <MDBCard className="mb-1 mt-1">
+                                                            <MDBCardBody >
                                                                 <div className="d-flex justify-content-between">
-                                                                    <div className="d-flex flex-row align-items-center">
-                                                                        <div>
-                                                                            <MDBCardImage
-                                                                                src={id.imagen}
-                                                                                fluid className="rounded-3" style={{ width: "65px" }}
-                                                                                alt={id.titulo} />
-                                                                        </div>
-                                                                        <div className="ms-3">
-                                                                            <MDBTypography tag="h5">
-                                                                                {id.titulo}                                                                                </MDBTypography>
-                                                                            <p className="small mb-0">{id.texto1}</p>
-                                                                        </div>
+                                                                    <div className="d-flex align-items-center">
+                                                                        <form>
+                                                                            <label htmlFor="tarjeta3">
+                                                                                <input type="radio" id="tarjeta" name="tarjeta" value="5576" />MASTERCARD ...5576</label>
+                                                                        </form>
                                                                     </div>
-                                                                    <div className="d-flex flex-row align-items-center">
-                                                                        <div style={{ width: "50px" }}>
-                                                                            <MDBTypography tag="h5" className="fw-normal mb-0">
-                                                                                1
-                                                                            </MDBTypography>
-                                                                        </div>
-                                                                        <div style={{ width: "80px" }}>
-                                                                            <MDBTypography tag="h5" className="mb-0">
-                                                                                {id.precio}
-                                                                            </MDBTypography>
-                                                                        </div>
-                                                                        <button className="btn btn-white w-50 mt-2 mb-2 gap-2"><i className="bi bi-trash text-primary w-100 mt-2 mb-2 gap-2"></i></button>
+                                                                    <div className="d-flex align-items-center">
+                                                                        <button className="btn btn-primary w-100 " to="/cesta/enviar">Seleccionar</button>
+                                                                        <button className="btn btn-white w-50 gap-2"><i className="bi bi-trash text-primary w-100 mt-2 mb-2 gap-2"></i></button>
                                                                     </div>
                                                                 </div>
                                                             </MDBCardBody>
                                                         </MDBCard>
 
-                                                        <MDBCard className="mb-3">
-                                                            <MDBCardBody>
-                                                                <div className="d-flex justify-content-between">
-                                                                    <div className="d-flex flex-row align-items-center">
-                                                                        <div>
-                                                                            <MDBCardImage
-                                                                                src={id.imagen}
-                                                                                fluid className="rounded-3" style={{ width: "65px" }}
-                                                                                alt={id.titulo} />
-                                                                        </div>
-                                                                        <div className="ms-3">
-                                                                            <MDBTypography tag="h5">
-                                                                                {id.titulo}                                                                                </MDBTypography>
-                                                                            <p className="small mb-0">{id.texto1}</p>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div className="d-flex flex-row align-items-center">
-                                                                        <div style={{ width: "50px" }}>
-                                                                            <MDBTypography tag="h5" className="fw-normal mb-0">
-                                                                                1
-                                                                            </MDBTypography>
-                                                                        </div>
-                                                                        <div style={{ width: "80px" }}>
-                                                                            <MDBTypography tag="h5" className="mb-0">
-                                                                                {id.precio}
-                                                                            </MDBTypography>
-                                                                        </div>
-                                                                        <button className="btn btn-white w-50 mt-2 mb-2 gap-2"><i className="bi bi-trash text-primary w-100 mt-2 mb-2 gap-2"></i></button>
-                                                                    </div>
-                                                                </div>
-                                                            </MDBCardBody>
-                                                        </MDBCard>
                                                     </MDBCol>
 
                                                     <MDBCol lg="5">
-                                                        <MDBCard background='success' className="bg-primary text-white rounded-3">
+                                                        <MDBCard className="rounded-3">
                                                             <MDBCardBody>
                                                                 <div className="d-flex justify-content-between align-items-center mb-4">
                                                                     <MDBTypography tag="h5" className="mb-0">
-                                                                        Detalles de la tarjeta bancaria
+                                                                        Añadir nueva tarjeta bancaria
                                                                     </MDBTypography>
                                                                     <MDBCardImage src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-6.webp"
                                                                         fluid className="rounded-3" style={{ width: "45px" }} alt="Avatar" />
@@ -279,8 +195,9 @@ export default function Pago() {
                                                                 </div>
 
                                                                 <div className="d-flex gap-3 w-100">
-                                                                    <Link className="btn btn-primary w-100 mt-4 mb-2" to="/cesta/pago">Continuar</Link>
+                                                                    <Link className="btn btn-primary w-100 mt-4 mb-2" to="/cesta/enviar">Continuar</Link>
                                                                 </div>
+                                                                <Link className="btn btn-primary w-100 mt-4 mb-2" to="/cesta/enviar">Continuar</Link>
                                                             </MDBCardBody>
                                                         </MDBCard>
                                                     </MDBCol>

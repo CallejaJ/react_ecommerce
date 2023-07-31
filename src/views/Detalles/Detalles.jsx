@@ -1,10 +1,11 @@
+import { Link, useParams } from 'react-router-dom'
+import { useCartContext } from "../../context/CartContext";
+
 import Benefits from "../../Components/Benefits/Benefits"
 import Footer from "../../Components/Footer/Footer"
 // import Card from "../../Components/Card/Card"
 import { card } from "../../Components/Card/CardsDummy"
-import { Link, useParams } from 'react-router-dom'
 import "bootstrap/dist/css/bootstrap.css"
-import { useCartContext } from "../../context/CartContext";
 
 
 
@@ -60,8 +61,9 @@ export default function Detalles() {
 
                                 </div>
                                 <div className="d-flex gap-3">
-                                    <Link addToCart={addToCart} className="btn btn-primary w-40" >Añadir a la cesta</Link>
-                                    <Link className="btn btn-secondary w-20" to="/modelos">Ver más</Link>                                </div>
+                                    <button onClick={() => addToCart({ id })} className="btn btn-primary w-40" >Añadir a la cesta</button>
+                                    <Link className="btn btn-secondary w-20" to="/modelos">Ver más</Link>
+                                </div>
                             </div>
                         </div>
                     </>

@@ -17,9 +17,9 @@ export default function CartContextProvider({ children }) {
 
     function addToCart(item) {
 
-        const cartItemIndex = items.findIndex((element) => element.id === element.id);
+        const cartItemIndex = items.findIndex((element) => element.id === item.id);
 
-        if (cartItemIndex != NOT_FOUND) {
+        if (cartItemIndex !== NOT_FOUND) {
             const currentItems = [...items];
             currentItems[cartItemIndex].amount = currentItems[cartItemIndex].amount + 1;
             setItems(currentItems);

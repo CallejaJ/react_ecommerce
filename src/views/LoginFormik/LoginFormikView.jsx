@@ -5,7 +5,7 @@ import Alert from 'react-bootstrap/Alert';
 
 export default function LoginFormikView({ formik }) {
 
-    const { errorMessage } = useAuthContext();
+    const { message } = useAuthContext();
     // es una respuesta del backend si hay errores en el endpoint
 
     const { values, touched, errors, handleChange, handleSubmit, handleBlur } = formik;
@@ -48,9 +48,9 @@ export default function LoginFormikView({ formik }) {
                                     {errors.password && touched.password && (
                                         <p className="error">{errors.password}</p>
                                     )}
-                                    {errorMessage ? (
+                                    {message ? (
                                         <Alert variant='info' >
-                                            {errorMessage}
+                                            {message}
                                         </Alert>
                                     ) : null
                                     }

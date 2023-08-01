@@ -54,7 +54,8 @@ export const card = [
     texto2: "Un proyecto 3D en arquitectura para hacerte una idea aproximada de las características de la construcción, desde la geometría hasta elementos particulares, volúmenes, iluminación y también materiales constructivos.",
     texto3: "Así, reducimos la posibilidad de errores a niveles estéticos o incluso funcional y dimensional, un aspecto que puede significar un ahorro de costes.",
     texto4: "El diseño 3D permite recrear no solo el aspecto del inmueble, sino de su entorno para que la imagen sea lo más fidedigna posible respecto a lo que será una vez materializada. Permiten mostrar una imagen muy realista del resultado final del proyecto. Esa imagen es capaz de recrear ambientes y de transmitir aspectos importantes, como colores o volúmenes.",
-    texto5: "Elige cambios en el mobiliario o su distribución, así como añadir elementos o modificarlos para hacerte una idea lo más aproximada posible a lo que será la imagen del proyecto una vez ejecutado.", id: 4
+    texto5: "Elige cambios en el mobiliario o su distribución, así como añadir elementos o modificarlos para hacerte una idea lo más aproximada posible a lo que será la imagen del proyecto una vez ejecutado.",
+    id: 4
   },
   {
     titulo: "Modelo 5",
@@ -97,7 +98,8 @@ export const card = [
     texto2: "Un proyecto 3D en arquitectura para hacerte una idea aproximada de las características de la construcción, desde la geometría hasta elementos particulares, volúmenes, iluminación y también materiales constructivos.",
     texto3: "Así, reducimos la posibilidad de errores a niveles estéticos o incluso funcional y dimensional, un aspecto que puede significar un ahorro de costes.",
     texto4: "El diseño 3D permite recrear no solo el aspecto del inmueble, sino de su entorno para que la imagen sea lo más fidedigna posible respecto a lo que será una vez materializada. Permiten mostrar una imagen muy realista del resultado final del proyecto. Esa imagen es capaz de recrear ambientes y de transmitir aspectos importantes, como colores o volúmenes.",
-    texto5: "Elige cambios en el mobiliario o su distribución, así como añadir elementos o modificarlos para hacerte una idea lo más aproximada posible a lo que será la imagen del proyecto una vez ejecutado.", id: 8
+    texto5: "Elige cambios en el mobiliario o su distribución, así como añadir elementos o modificarlos para hacerte una idea lo más aproximada posible a lo que será la imagen del proyecto una vez ejecutado.",
+    id: 8
   },
   {
     titulo: "Modelo 9",
@@ -107,7 +109,8 @@ export const card = [
     texto2: "Un proyecto 3D en arquitectura para hacerte una idea aproximada de las características de la construcción, desde la geometría hasta elementos particulares, volúmenes, iluminación y también materiales constructivos.",
     texto3: "Así, reducimos la posibilidad de errores a niveles estéticos o incluso funcional y dimensional, un aspecto que puede significar un ahorro de costes.",
     texto4: "El diseño 3D permite recrear no solo el aspecto del inmueble, sino de su entorno para que la imagen sea lo más fidedigna posible respecto a lo que será una vez materializada. Permiten mostrar una imagen muy realista del resultado final del proyecto. Esa imagen es capaz de recrear ambientes y de transmitir aspectos importantes, como colores o volúmenes.",
-    texto5: "Elige cambios en el mobiliario o su distribución, así como añadir elementos o modificarlos para hacerte una idea lo más aproximada posible a lo que será la imagen del proyecto una vez ejecutado.", id: 9
+    texto5: "Elige cambios en el mobiliario o su distribución, así como añadir elementos o modificarlos para hacerte una idea lo más aproximada posible a lo que será la imagen del proyecto una vez ejecutado.",
+    id: 9
   },
   {
     titulo: "Modelo 10",
@@ -117,7 +120,8 @@ export const card = [
     texto2: "Un proyecto 3D en arquitectura para hacerte una idea aproximada de las características de la construcción, desde la geometría hasta elementos particulares, volúmenes, iluminación y también materiales constructivos.",
     texto3: "Así, reducimos la posibilidad de errores a niveles estéticos o incluso funcional y dimensional, un aspecto que puede significar un ahorro de costes.",
     texto4: "El diseño 3D permite recrear no solo el aspecto del inmueble, sino de su entorno para que la imagen sea lo más fidedigna posible respecto a lo que será una vez materializada. Permiten mostrar una imagen muy realista del resultado final del proyecto. Esa imagen es capaz de recrear ambientes y de transmitir aspectos importantes, como colores o volúmenes.",
-    texto5: "Elige cambios en el mobiliario o su distribución, así como añadir elementos o modificarlos para hacerte una idea lo más aproximada posible a lo que será la imagen del proyecto una vez ejecutado.", id: 10
+    texto5: "Elige cambios en el mobiliario o su distribución, así como añadir elementos o modificarlos para hacerte una idea lo más aproximada posible a lo que será la imagen del proyecto una vez ejecutado.",
+    id: 10
   },
   {
     titulo: "Modelo 11",
@@ -127,6 +131,7 @@ export const card = [
     texto2: "Un proyecto 3D en arquitectura para hacerte una idea aproximada de las características de la construcción, desde la geometría hasta elementos particulares, volúmenes, iluminación y también materiales constructivos.",
     texto3: "Así, reducimos la posibilidad de errores a niveles estéticos o incluso funcional y dimensional, un aspecto que puede significar un ahorro de costes.",
     texto4: "El diseño 3D permite recrear no solo el aspecto del inmueble, sino de su entorno para que la imagen sea lo más fidedigna posible respecto a lo que será una vez materializada. Permiten mostrar una imagen muy realista del resultado final del proyecto. Esa imagen es capaz de recrear ambientes y de transmitir aspectos importantes, como colores o volúmenes.",
-    texto5: "Elige cambios en el mobiliario o su distribución, así como añadir elementos o modificarlos para hacerte una idea lo más aproximada posible a lo que será la imagen del proyecto una vez ejecutado.", id: 11
+    texto5: "Elige cambios en el mobiliario o su distribución, así como añadir elementos o modificarlos para hacerte una idea lo más aproximada posible a lo que será la imagen del proyecto una vez ejecutado.",
+    id: 11
   }
 ]

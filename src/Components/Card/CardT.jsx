@@ -2,7 +2,7 @@ import "../../CSS/style.css"
 import { Link } from "react-router-dom"
 import { useCartContext } from "../../context/CartContext";
 
-export default function Card4({ cards }) {
+export default function CardT({ cards }) {
     const { addToCart } = useCartContext();
 
 
@@ -40,7 +40,7 @@ export default function Card4({ cards }) {
                             <p className="card-text text-secondary mb-2">{card.texto5}</p>
                         </div>
                         <div className="d-flex gap-3">
-                            <Link addToCart={addToCart} className="btn btn-primary w-30" >Añadir a la cesta</Link>
+                            <button onClick={() => addToCart(card)} className="btn btn-primary w-30" >Añadir a la cesta</button>
                             <Link className="btn btn-secondary w-20" to="/">Volver</Link>
                         </div>
                     </div>

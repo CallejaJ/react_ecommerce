@@ -15,7 +15,7 @@ import slider8 from '../../assets/webp/slider8.webp'
 import { experiencia } from "../../Components/Experiencia/ExperienciasDummy"
 import Experiencia from "../../Components/Experiencia"
 import Footer from "../../Components/Footer"
-import Card4 from "../../Components/Card/Card4"
+import CardT from "../../Components/Card/CardT"
 
 
 let experiencia3 = []
@@ -147,7 +147,7 @@ function Modelos() {
             </div>
             <h1 className="container text-primary mb-4"><strong>Modelos</strong></h1>
 
-            <Card4 cards={card} />
+            <CardT cards={card} />
 
             <section className="container d-flex justify-content-between my-5 py-5">
                 <div className=" container w-100">

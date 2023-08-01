@@ -32,20 +32,30 @@ export default function CartContextProvider({ children }) {
 
     function removeFromCart(id) {
 
-        const cartItemIndex = items.findIndex((element) => element.id === id.id);
-        console.log(id);
 
-        if (cartItemIndex !== NOT_FOUND) {
-            const currentItems = [...items];
-            if (currentItems[cartItemIndex].amount > 0) {
-                currentItems[cartItemIndex].amount = currentItems[cartItemIndex].amount - 1;
-                setItems(currentItems);
-            }
+        const currentItems = [...items];
+        const itemToRemove = currentItems.find((item) => item.id === id);
+        if (itemToRemove && itemToRemove.total > 1) {
+            itemToRemove.total = itemToRemove.total - 1;
+            setItems(currentItems);
+        } else {
+            setItems((currentItems) => currentItems.filter((item) => item.id !== id))
         }
-        else {
-            setItems((currentItems) => [...currentItems, { ...id, amount: 1 }])
-        }
+        // const cartItemIndex = items.findIndex((element) => element.id === id.id);
+        // console.log(id);
+
+        // if (cartItemIndex !== NOT_FOUND) {
+        //     const currentItems = [...items];
+        //     if (currentItems[cartItemIndex].amount > 0) {
+        //         currentItems[cartItemIndex].amount = currentItems[cartItemIndex].amount - 1;
+        //         setItems(currentItems);
+        //     }
+        // }
+        // else {
+        //     setItems((currentItems) => [...currentItems, { ...id, amount: 1 }])
+        // }
     }
+
 
     const total = items.reduce((acc, item) => {
         const { amount } = item;

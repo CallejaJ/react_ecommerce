@@ -1,37 +1,34 @@
-import Benefits from "../../Components/Benefits/Benefits"
-import "bootstrap/dist/css/bootstrap.css"
-import Footer from "../../Components/Footer/Footer"
-import Stepper from "../../Components/Stepper/Stepper"
 import { Link } from 'react-router-dom'
+import { useCartContext } from "../../context/CartContext";
+import Benefits from "../../Components/Benefits/Benefits"
+import Stepper from "../../Components/Stepper/Stepper"
+import Footer from "../../Components/Footer/Footer"
+import "bootstrap/dist/css/bootstrap.css"
 
 import {
-    MDBBtn,
     MDBCard,
     MDBCardBody,
     MDBCardHeader,
     MDBCardImage,
     MDBCol,
     MDBContainer,
-    MDBIcon,
     MDBInput,
     MDBListGroup,
     MDBListGroupItem,
     MDBRipple,
     MDBRow,
-    MDBTooltip,
     MDBTypography,
 } from "mdb-react-ui-kit";
 
 export default function Cesta() {
-    // const { id } = useParams();
-    const id = 1
-    console.log(id);
+
+    const { card, removeFromCart } = useCartContext();
 
     return (
         <>
             <Stepper />
             {
-                id ? (
+                card ? (
                     // aqui saco el detalle de la tarjeta elegida
                     <>
                         <section className="container h-100 h-custom border border-primary border-2 rounded-4" style={{ backgroundColor: "#eee" }}>
@@ -49,7 +46,7 @@ export default function Cesta() {
                                                     <MDBCol lg="3" md="12" className="mb-4 mb-lg-0">
                                                         <MDBRipple rippleTag="div" rippleColor="light"
                                                             className="bg-image rounded hover-zoom hover-overlay">
-                                                            <img src={id.imagen}
+                                                            <img src={card.imagen}
                                                                 className="w-100" />
                                                             <a href="#!">
                                                                 <div className="mask" style={{ backgroundColor: "rgba(251, 251, 251, 0.2)", }}>
@@ -60,18 +57,18 @@ export default function Cesta() {
 
                                                     <MDBCol lg="5" md="6" className=" mb-4 mb-lg-0">
                                                         <p className="align-items-center">
-                                                            <strong >{id}</strong>
+                                                            <strong >{card.id}</strong>
                                                         </p>
-                                                        <p>{id.titulo}</p>
-                                                        <p>{id.texto1}</p>
+                                                        <p>{card.titulo}</p>
+                                                        <p>{card.texto1}</p>
                                                     </MDBCol>
                                                     <MDBCol lg="4" md="6" className="mb-4 mb-lg-0 gap-3">
                                                         <div className="d-flex gap-3 w-100 align-items-center">
                                                             <MDBInput defaultValue={1} min={0} type="number" />
-                                                            <button className="btn btn-white w-50 mt-2 mb-2 gap-2"><i className="bi bi-trash text-primary w-100 mt-2 mb-2 gap-2"></i></button>
+                                                            <button onClick={() => removeFromCart(card.id)} className="btn btn-white w-50 mt-2 mb-2 gap-2"><i className="bi bi-trash text-primary w-100 mt-2 mb-2 gap-2"></i></button>
                                                         </div>
                                                         <p className="text-start text-md-center">
-                                                            <strong>{id.precio}</strong>
+                                                            <strong>{card.precio}</strong>
                                                         </p>
                                                     </MDBCol>
                                                 </MDBRow>
@@ -123,7 +120,7 @@ export default function Cesta() {
                                                     <MDBListGroupItem
                                                         className="d-flex justify-content-between align-items-center border-0 px-0">
                                                         Modelos elegidos
-                                                        <span>{id.precio}</span>
+                                                        <span>{card.precio}</span>
                                                     </MDBListGroupItem>
                                                     <MDBListGroupItem className="d-flex justify-content-between align-items-center border-0 px-0">
                                                         Envío
@@ -132,13 +129,13 @@ export default function Cesta() {
                                                     <MDBListGroupItem
                                                         className="d-flex justify-content-between align-items-center border-0 px-0 mb-3">
                                                         <div>
-                                                            <strong>{id.precio}</strong>
+                                                            <strong>{card.precio}</strong>
                                                             <strong>
                                                                 <p className="mb-0">(IVA incluido)</p>
                                                             </strong>
                                                         </div>
                                                         <span>
-                                                            <strong>{id.precio}</strong>
+                                                            <strong>{card.precio}</strong>
                                                         </span>
                                                     </MDBListGroupItem>
                                                 </MDBListGroup>
@@ -156,183 +153,101 @@ export default function Cesta() {
                     </>
                 ) : (
                     <>
-                        <div className="container">
-                            <section className="h-100 gradient-custom">
-                                <MDBContainer className="py-5 h-100">
-                                    <MDBRow className="justify-content-center my-4">
-                                        <MDBCol md="8">
-                                            <MDBCard className="mb-4">
-                                                <MDBCardHeader className="py-3">
-                                                    <MDBTypography tag="h5" className="mb-0">
-                                                        Tu cesta está vacío
-                                                    </MDBTypography>
-                                                </MDBCardHeader>
-                                                <MDBCardBody>
-                                                    <MDBRow>
-                                                        <MDBCol lg="3" md="12" className="mb-4 mb-lg-0">
-                                                            <MDBRipple rippleTag="div" rippleColor="light"
-                                                                className="bg-image rounded hover-zoom hover-overlay">
-                                                                <img src={id.imagen}
-                                                                    className="w-100" />
-                                                                <a href="#!">
-                                                                    <div className="mask" style={{ backgroundColor: "rgba(251, 251, 251, 0.2)", }}>
-                                                                    </div>
-                                                                </a>
-                                                            </MDBRipple>
-                                                        </MDBCol>
-
-                                                        <MDBCol lg="5" md="6" className=" mb-4 mb-lg-0">
-                                                            <p>
-                                                                <strong>{id}</strong>
-                                                            </p>
-                                                            <p>{id.texto}</p>
-                                                            <p>Size: M</p>
-
-                                                            <MDBTooltip wrapperProps={{ size: "sm" }} wrapperClass="me-1 mb-2"
-                                                                title="Remove item">
-                                                                <MDBIcon fas icon="trash" />
-                                                            </MDBTooltip>
-
-                                                        </MDBCol>
-                                                        <MDBCol lg="4" md="6" className="mb-4 mb-lg-0">
-                                                            <div className="d-flex mb-4" style={{ maxWidth: "300px" }}>
-                                                                <MDBBtn className="px-3 me-2">
-                                                                    <MDBIcon fas icon="minus" />
-                                                                </MDBBtn>
-
-                                                                <MDBInput defaultValue={1} min={0} type="number" label="Cantidad" />
-
-                                                                <MDBBtn className="px-3 ms-2">
-                                                                    <MDBIcon fas icon="plus" />
-                                                                </MDBBtn>
-                                                            </div>
-
-                                                            <p className="text-start text-md-center">
-                                                                <strong>{id.precio}</strong>
-                                                            </p>
-                                                        </MDBCol>
-                                                    </MDBRow>
-
-                                                    <hr className="my-4" />
-
-                                                    <MDBRow>
-                                                        <MDBCol lg="3" md="12" className="mb-4 mb-lg-0">
-                                                            <MDBRipple rippleTag="div" rippleColor="light"
-                                                                className="bg-image rounded hover-zoom hover-overlay">
-                                                                <img src={id.imagen} className="w-100" />
-                                                                <a href="#!">
-                                                                    <div className="mask" style={{ backgroundColor: "rgba(251, 251, 251, 0.2)", }}>
-                                                                    </div>
-                                                                </a>
-                                                            </MDBRipple>
-                                                        </MDBCol>
-
-                                                        <MDBCol lg="5" md="6" className=" mb-4 mb-lg-0">
-                                                            <p>
-                                                                <strong>{id.titulo}</strong>
-                                                            </p>
-                                                            <p>{id.texto}</p>
-                                                            <p>Size: M</p>
-
-                                                            <MDBTooltip wrapperProps={{ size: "sm" }} wrapperClass="me-1 mb-2"
-                                                                title="Eliminar">
-                                                                <MDBIcon fas icon="trash" />
-                                                            </MDBTooltip>
+                        <section className="container h-100 h-custom border border-primary border-2 rounded-4" style={{ backgroundColor: "#eee" }}>
+                            <MDBContainer className="py-5 h-100">
+                                <MDBRow className="justify-content-center my-4">
+                                    <MDBCol md="8">
+                                        <MDBCard className="mb-4">
+                                            <MDBCardHeader className="py-3">
+                                                <MDBTypography tag="h3" className="text-primary mb-0">
+                                                    Resumen de tu cesta
+                                                </MDBTypography>
+                                            </MDBCardHeader>
+                                            <MDBCardBody>
+                                                <MDBRow>
 
 
-                                                        </MDBCol>
-                                                        <MDBCol lg="4" md="6" className="mb-4 mb-lg-0">
-                                                            <div className="d-flex mb-4" style={{ maxWidth: "300px" }}>
-                                                                <MDBBtn className="px-3 me-2">
-                                                                    <MDBIcon fas icon="minus" />
-                                                                </MDBBtn>
+                                                    <MDBCol lg="5" md="6" className="text-secondary mb-4 mb-lg-0">
+                                                        <h5 className="align-items-center">
+                                                            <strong >Tu cesta está vacía</strong>
+                                                        </h5>
+                                                    </MDBCol>
+                                                </MDBRow>
 
-                                                                <MDBInput defaultValue={1} min={0} type="number" label="Cantidad" />
+                                            </MDBCardBody>
+                                        </MDBCard>
 
-                                                                <MDBBtn className="px-3 ms-2">
-                                                                    <MDBIcon fas icon="plus" />
-                                                                </MDBBtn>
-                                                            </div>
+                                        <MDBCard className="mb-4">
+                                            <MDBCardBody>
+                                                <p>
+                                                    <strong>Fecha de entrega estimada</strong>
+                                                </p>
+                                                <p className="mb-0">12/10/2023 - 14/10/2023</p>
+                                            </MDBCardBody>
+                                        </MDBCard>
 
-                                                            <p className="text-start text-md-center">
-                                                                <strong>{id.precio}</strong>
-                                                            </p>
-                                                        </MDBCol>
-                                                    </MDBRow>
-                                                </MDBCardBody>
-                                            </MDBCard>
+                                        <MDBCard className="mb-4 mb-lg-0">
+                                            <MDBCardBody>
+                                                <p>
+                                                    <strong>Aceptamos las siguientes formas de pago</strong>
+                                                </p>
+                                                <MDBCardImage className="me-2" width="45px"
+                                                    src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/visa.svg"
+                                                    alt="Visa" />
+                                                <MDBCardImage className="me-2" width="45px"
+                                                    src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/amex.svg"
+                                                    alt="American Express" />
+                                                <MDBCardImage className="me-2" width="45px"
+                                                    src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/mastercard.svg"
+                                                    alt="Mastercard" />
+                                                <MDBCardImage className="me-2" width="45px"
+                                                    src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce/includes/gateways/paypal/assets/images/paypal.png"
+                                                    alt="PayPal acceptance mark" />
+                                            </MDBCardBody>
+                                        </MDBCard>
+                                    </MDBCol>
+                                    <MDBCol md="4">
+                                        <MDBCard className="mb-4">
+                                            <MDBCardHeader>
+                                                <MDBTypography tag="h5" className="mb-0">
+                                                    Resumen de tu compra
+                                                </MDBTypography>
+                                            </MDBCardHeader>
+                                            <MDBCardBody>
+                                                <MDBListGroup>
+                                                    <MDBListGroupItem
+                                                        className="d-flex justify-content-between align-items-center border-0 px-0">
+                                                        Modelos elegidos
+                                                        <span>0</span>
+                                                    </MDBListGroupItem>
+                                                    <MDBListGroupItem className="d-flex justify-content-between align-items-center border-0 px-0">
+                                                        Envío
+                                                        <span>Gratis</span>
+                                                    </MDBListGroupItem>
+                                                    <MDBListGroupItem
+                                                        className="d-flex justify-content-between align-items-center border-0 px-0 mb-3">
+                                                        <div>
+                                                            <p>Total</p>
+                                                            <strong>
+                                                                <p className="mb-0">(IVA incluido)</p>
+                                                            </strong>
+                                                        </div>
+                                                        <span>
+                                                            <strong>0</strong>
+                                                        </span>
+                                                    </MDBListGroupItem>
+                                                </MDBListGroup>
 
-                                            <MDBCard className="mb-4">
-                                                <MDBCardBody>
-                                                    <p>
-                                                        <strong>Fecha de entrega estimada</strong>
-                                                    </p>
-                                                    <p className="mb-0">12.10.2020 - 14.10.2020</p>
-                                                </MDBCardBody>
-                                            </MDBCard>
-
-                                            <MDBCard className="mb-4 mb-lg-0">
-                                                <MDBCardBody>
-                                                    <p>
-                                                        <strong>Aceptamos</strong>
-                                                    </p>
-                                                    <MDBCardImage className="me-2" width="45px"
-                                                        src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/visa.svg"
-                                                        alt="Visa" />
-                                                    <MDBCardImage className="me-2" width="45px"
-                                                        src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/amex.svg"
-                                                        alt="American Express" />
-                                                    <MDBCardImage className="me-2" width="45px"
-                                                        src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/mastercard.svg"
-                                                        alt="Mastercard" />
-                                                    <MDBCardImage className="me-2" width="45px"
-                                                        src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce/includes/gateways/paypal/assets/images/paypal.png"
-                                                        alt="PayPal acceptance mark" />
-                                                </MDBCardBody>
-                                            </MDBCard>
-                                        </MDBCol>
-                                        <MDBCol md="4">
-                                            <MDBCard className="mb-4">
-                                                <MDBCardHeader>
-                                                    <MDBTypography tag="h5" className="mb-0">
-                                                        Resumen de tu cesta
-                                                    </MDBTypography>
-                                                </MDBCardHeader>
-                                                <MDBCardBody>
-                                                    <MDBListGroup>
-                                                        <MDBListGroupItem
-                                                            className="d-flex justify-content-between align-items-center border-0 px-0 pb-0">
-                                                            Modelo
-                                                            <span>{id.precio}</span>
-                                                        </MDBListGroupItem>
-                                                        <MDBListGroupItem className="d-flex justify-content-between align-items-center px-0">
-                                                            Envío
-                                                            <span>Gratis</span>
-                                                        </MDBListGroupItem>
-                                                        <MDBListGroupItem
-                                                            className="d-flex justify-content-between align-items-center border-0 px-0 mb-3">
-                                                            <div>
-                                                                <strong>{id.precio}</strong>
-                                                                <strong>
-                                                                    <p className="mb-0">(IVA incluido)</p>
-                                                                </strong>
-                                                            </div>
-                                                            <span>
-                                                                <strong>{id.precio}</strong>
-                                                            </span>
-                                                        </MDBListGroupItem>
-                                                    </MDBListGroup>
-
-                                                    <MDBBtn block size="lg">
-                                                        Pagar
-                                                    </MDBBtn>
-                                                </MDBCardBody>
-                                            </MDBCard>
-                                        </MDBCol>
-                                    </MDBRow>
-                                </MDBContainer>
-                            </section>
-                        </div>
+                                                <div className="d-flex gap-3 w-100">
+                                                    <Link className="btn btn-primary w-50 mt-2 mb-2" to="/cesta/pago">Continuar</Link>
+                                                    <Link className="btn btn-secondary w-100 mt-2 mb-2" to="/modelos">Seguir comprando</Link>
+                                                </div>
+                                            </MDBCardBody>
+                                        </MDBCard>
+                                    </MDBCol>
+                                </MDBRow>
+                            </MDBContainer>
+                        </section>
                     </>
                 )
             }

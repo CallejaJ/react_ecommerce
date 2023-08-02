@@ -49,21 +49,19 @@ export default function App() {
                 <Route path="unauthorized" element={<Unauthorized />} />
               </Route>
               {/* rutas privadas */}
-              <Route element={<PrivateRoute allowedRoles={[roles.ALL_USERS]} />} >
+              <Route element={<PrivateRoute allowedRoles={roles.ALL_USERS} />} >
                 <Route path="/cesta" >
                   <Route index element={<Cesta />} />
                   <Route path="pago" element={<Pago />} />
                   <Route path="enviar" element={<Enviar />} />
                 </Route>
               </Route>
-              <Route
-                path="admin"
+              <Route path="admin"
                 element={<PrivateRoute allowedRoles={[roles.ADMIN]} />}
               >
                 <Route index element={<Admin />} />
               </Route>
-              <Route
-                path="superadmin"
+              <Route path="superadmin"
                 element={<PrivateRoute allowedRoles={[roles.SUPER_ADMIN]} />}
               >
                 <Route index element={<SuperAdmin />} />

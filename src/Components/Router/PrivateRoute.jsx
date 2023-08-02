@@ -7,7 +7,7 @@ export default function PrivateRoute({ allowedRoles }) {
     const location = useLocation();
     const { user } = useAuthContext();
 
-    return allowedRoles?.includes(user?.userRole) ? (
+    return allowedRoles?.includes(user?.role) ? (
         <Outlet />
     ) : user ? (
         <Navigate to="/unauthorized" state={{ from: location }} replace />

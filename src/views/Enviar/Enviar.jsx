@@ -21,7 +21,6 @@ import {
 export default function Enviar() {
     // const { id } = useParams();
     let id = 1
-    console.log(id);
 
     return (
         <>

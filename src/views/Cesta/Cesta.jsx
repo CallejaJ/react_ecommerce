@@ -12,7 +12,6 @@ import {
     MDBCardImage,
     MDBCol,
     MDBContainer,
-    MDBInput,
     MDBListGroup,
     MDBListGroupItem,
     MDBRipple,
@@ -28,7 +27,7 @@ export default function Cesta() {
         <>
             <Stepper />
             {items ? (
-                // aqui saco el detalle de la tarjeta elegida
+                // aqui saco el detalle de las tarjetas elegidas
                 <>
                     <section className="container h-100 h-custom border border-primary border-2 rounded-4" style={{ backgroundColor: "#eee" }}>
                         {items.map((item, index) => (
@@ -49,28 +48,26 @@ export default function Cesta() {
                                                                 className="bg-image rounded hover-zoom hover-overlay">
                                                                 <img src={item.imagen}
                                                                     className="w-100" />
-                                                                <a href="#!">
-                                                                    <div className="mask" style={{ backgroundColor: "rgba(251, 251, 251, 0.2)", }}>
-                                                                    </div>
-                                                                </a>
+                                                                <div className="mask" style={{ backgroundColor: "rgba(251, 251, 251, 0.2)", }}>
+                                                                </div>
+
                                                             </MDBRipple>
                                                         </MDBCol>
 
-                                                        <MDBCol lg="5" md="6" className=" mb-4 mb-lg-0">
-                                                            <p className="align-items-center">
-                                                                <strong >{item.id}</strong>
-                                                            </p>
-                                                            <p>{item.titulo}</p>
+                                                        <MDBCol lg="5" md="6" className="mt-2 mb-lg-0">
+
+                                                            <p>Modelo elegido: <strong> {item.id}</strong></p>
                                                             <p>{item.texto1}</p>
+
                                                         </MDBCol>
-                                                        <MDBCol lg="4" md="6" className="mb-4 mb-lg-0 gap-3">
+                                                        <MDBCol lg="4" md="6" className="mb-4 mb-lg-0 gap-4">
                                                             <div className="d-flex gap-3 w-100 align-items-center">
-                                                                <MDBInput defaultValue={1} min={0} type="number" />
+                                                                Total:<strong>{item.precio}</strong>
+
+                                                                {/* <MDBInput defaultValue={1} min={0} type="number" /> */}
                                                                 <button onClick={() => removeFromCart(item.id)} className="btn btn-white w-50 mt-2 mb-2 gap-2"><i className="bi bi-trash text-primary w-100 mt-2 mb-2 gap-2"></i></button>
                                                             </div>
-                                                            <p className="text-start text-md-center">
-                                                                <strong>{item.precio}</strong>
-                                                            </p>
+
                                                         </MDBCol>
                                                     </MDBRow>
 
@@ -120,7 +117,7 @@ export default function Cesta() {
                                                     <MDBListGroup>
                                                         <MDBListGroupItem
                                                             className="d-flex justify-content-between align-items-center border-0 px-0">
-                                                            Modelos elegidos
+                                                            Importe
                                                             <span>{item.precio}</span>
                                                         </MDBListGroupItem>
                                                         <MDBListGroupItem className="d-flex justify-content-between align-items-center border-0 px-0">
@@ -128,20 +125,15 @@ export default function Cesta() {
                                                             <span>Gratis</span>
                                                         </MDBListGroupItem>
                                                         <MDBListGroupItem
-                                                            className="d-flex justify-content-between align-items-center border-0 px-0 mb-3">
-                                                            <div>
-                                                                <strong>{item.precio}</strong>
-                                                                <strong>
-                                                                    <p className="mb-0">(IVA incluido)</p>
-                                                                </strong>
-                                                            </div>
+                                                            className="d-flex justify-content-between align-items-center border-0 px-0">
+                                                            Total<strong>(IVA incluido)</strong>
                                                             <span>
                                                                 <strong>{item.precio}</strong>
                                                             </span>
                                                         </MDBListGroupItem>
                                                     </MDBListGroup>
 
-                                                    <div className="d-flex gap-3 w-100">
+                                                    <div className="d-flex gap-3 w-100 mt-3">
                                                         <Link className="btn btn-primary w-50 mt-2 mb-2" to="/cesta/pago">Continuar</Link>
                                                         <Link className="btn btn-secondary w-100 mt-2 mb-2" to="/modelos">Seguir comprando</Link>
                                                     </div>
@@ -168,18 +160,14 @@ export default function Cesta() {
                                         </MDBCardHeader>
                                         <MDBCardBody>
                                             <MDBRow>
-
-
                                                 <MDBCol lg="5" md="6" className="text-secondary mb-4 mb-lg-0">
                                                     <h5 className="align-items-center">
                                                         <strong >Tu cesta está vacía</strong>
                                                     </h5>
                                                 </MDBCol>
                                             </MDBRow>
-
                                         </MDBCardBody>
                                     </MDBCard>
-
                                     <MDBCard className="mb-4">
                                         <MDBCardBody>
                                             <p>
@@ -240,7 +228,6 @@ export default function Cesta() {
                                                     </span>
                                                 </MDBListGroupItem>
                                             </MDBListGroup>
-
                                             <div className="d-flex gap-3 w-100">
                                                 <Link className="btn btn-primary w-50 mt-2 mb-2" to="/cesta/pago">Continuar</Link>
                                                 <Link className="btn btn-secondary w-100 mt-2 mb-2" to="/modelos">Seguir comprando</Link>

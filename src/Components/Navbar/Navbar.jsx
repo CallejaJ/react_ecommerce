@@ -37,6 +37,12 @@ export default function Navbar() {
                                 <li className="nav-item">
                                     <Link className="nav-link active text-white" aria-current="page" to="/experiencias">Experiencias</Link>
                                 </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link active text-white" aria-current="page" to="/admin">Admin</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link active text-white" aria-current="page" to="/superadmin">SuperAdmin</Link>
+                                </li>
                             </ul>
                         </div>
                     </div>

@@ -17,8 +17,7 @@ while (card2.length < items) {
     aleatoryCard = card[Math.floor(Math.random() * card.length)];
     if (!repetida(aleatoryCard, card2)) {
         card2.push(aleatoryCard);
-        console.log(aleatoryCard);
-        console.log(card2);
+
     }
 }
 
@@ -40,8 +39,6 @@ while (experiencia3.length < item) {
     experienceCard = experiencia[Math.floor(Math.random() * experiencia.length)];
     if (!repetidas(experienceCard, experiencia3)) {
         experiencia3.push(experienceCard);
-        console.log(experienceCard);
-        console.log(experiencia3);
     }
 }
 

@@ -11,8 +11,6 @@ while (card2.length < items) {
     aleatoryCard = card[Math.floor(Math.random() * card.length)];
     if (!repetida(aleatoryCard, card2)) {
         card2.push(aleatoryCard);
-        console.log(aleatoryCard);
-        console.log(card2);
     }
 }
 

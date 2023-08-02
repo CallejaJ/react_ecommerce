@@ -14,8 +14,7 @@ while (experiencia2.length < items) {
     experienceCard = experiencia[Math.floor(Math.random() * experiencia.length)];
     if (!repetida(experienceCard, experiencia2)) {
         experiencia2.push(experienceCard);
-        console.log(experienceCard);
-        console.log(experiencia2);
+
     }
 }
 

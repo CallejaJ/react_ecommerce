@@ -12,7 +12,6 @@ import "bootstrap/dist/css/bootstrap.css"
 export default function Detalles() {
 
     const { id } = useParams();
-    console.log(id);
     const { addToCart } = useCartContext();
 
 

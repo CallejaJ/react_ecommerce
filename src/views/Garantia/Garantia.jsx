@@ -31,8 +31,6 @@ while (garantia2.length < items) {
     warrantyCard = garantia[Math.floor(Math.random() * garantia.length)];
     if (!repetida(warrantyCard, garantia2)) {
         garantia2.push(warrantyCard);
-        console.log(warrantyCard);
-        console.log(garantia2);
     }
 }
 

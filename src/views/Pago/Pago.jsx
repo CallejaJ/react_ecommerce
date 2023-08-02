@@ -53,7 +53,6 @@ import {
 export default function Pago() {
     // const { id } = useParams();
     let id = 1
-    console.log(id);
 
     return (
         <>

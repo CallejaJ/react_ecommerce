@@ -13,7 +13,6 @@ const NOT_FOUND = -1;
 
 export default function CartContextProvider({ children }) {
     const [items, setItems] = useState([])
-    console.log(items);
 
     function addToCart(item) {
 
@@ -41,19 +40,6 @@ export default function CartContextProvider({ children }) {
         } else {
             setItems((currentItems) => currentItems.filter((item) => item.id !== id))
         }
-        // const cartItemIndex = items.findIndex((element) => element.id === id.id);
-        // console.log(id);
-
-        // if (cartItemIndex !== NOT_FOUND) {
-        //     const currentItems = [...items];
-        //     if (currentItems[cartItemIndex].amount > 0) {
-        //         currentItems[cartItemIndex].amount = currentItems[cartItemIndex].amount - 1;
-        //         setItems(currentItems);
-        //     }
-        // }
-        // else {
-        //     setItems((currentItems) => [...currentItems, { ...id, amount: 1 }])
-        // }
     }
 
 

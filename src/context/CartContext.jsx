@@ -13,6 +13,8 @@ const NOT_FOUND = -1;
 
 export default function CartContextProvider({ children }) {
     const [items, setItems] = useState([])
+    console.log(items);
+
 
     function addToCart(item) {
 
@@ -47,6 +49,7 @@ export default function CartContextProvider({ children }) {
         const { amount } = item;
         return acc + amount;
     }, 0);
+
 
 
     const value = {

@@ -22,7 +22,6 @@ import {
 export default function Cesta() {
 
     const { items, totalItems, removeFromCart } = useCartContext();
-
     return (
         <>
             <Stepper />
@@ -55,7 +54,7 @@ export default function Cesta() {
 
                                                         <MDBCol lg="5" md="6" className="lg-0">
                                                             <p>Modelo elegido: <strong> {item.id}</strong></p>
-                                                            <p>Cantidad: <strong> {totalItems}</strong></p>
+                                                            <p>Cantidad: <strong> {item.amount}</strong></p>
                                                             <p>{item.texto1}</p>
                                                         </MDBCol>
 

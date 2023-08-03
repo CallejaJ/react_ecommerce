@@ -21,7 +21,7 @@ import {
 
 export default function Cesta() {
 
-    const { items, totalItems, removeFromCart } = useCartContext();
+    const { items, totalAmount, removeFromCart } = useCartContext();
     return (
         <>
             <Stepper />
@@ -113,7 +113,7 @@ export default function Cesta() {
                                                 <MDBListGroupItem
                                                     className="d-flex justify-content-between align-items-center border-0 px-0">
                                                     Importe
-                                                    <span>{totalItems}<i className="bi bi-currency-euro text-primary"></i></span>
+                                                    <span>{totalAmount}<i className="bi bi-currency-euro text-primary"></i></span>
                                                 </MDBListGroupItem>
                                                 <MDBListGroupItem className="d-flex justify-content-between align-items-center border-0 px-0">
                                                     Envío
@@ -123,7 +123,7 @@ export default function Cesta() {
                                                     className="d-flex justify-content-between align-items-center border-0 px-0">
                                                     Total<strong>(IVA incluido)</strong>
                                                     <span>
-                                                        <strong>{totalItems}<i className="bi bi-currency-euro text-primary"></i></strong>
+                                                        <strong>{totalAmount}<i className="bi bi-currency-euro text-primary"></i></strong>
                                                     </span>
                                                 </MDBListGroupItem>
                                             </MDBListGroup>

@@ -50,11 +50,16 @@ export default function CartContextProvider({ children }) {
         return acc + amount;
     }, 0);
 
+    const totalPrice = items.reduce((acc, item) => {
+        const { precio, amount } = item;
+        return acc + precio * amount;
+    }, 0);
 
 
     const value = {
         totalItems: total,
         items,
+        totalAmount: totalPrice,
         addToCart,
         removeFromCart,
     };

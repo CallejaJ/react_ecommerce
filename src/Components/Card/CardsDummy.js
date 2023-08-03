@@ -15,7 +15,7 @@ import modelo11 from '../../assets/webp/modelo11.webp'
 export const card = [
   {
     titulo: "Modelo 1",
-    precio: "1.895",
+    precio: "1895",
     imagen: modelo1,
     texto1: "Vivienda de 200 m2.",
     texto2: "Un proyecto 3D en arquitectura para hacerte una idea aproximada de las características de la construcción, desde la geometría hasta elementos particulares, volúmenes, iluminación y también materiales constructivos.",
@@ -26,7 +26,7 @@ export const card = [
   },
   {
     titulo: "Modelo 2",
-    precio: "2.395",
+    precio: "2395",
     imagen: modelo2,
     texto1: "Vivienda de 270 m2.",
     texto2: "Un proyecto 3D en arquitectura para hacerte una idea aproximada de las características de la construcción, desde la geometría hasta elementos particulares, volúmenes, iluminación y también materiales constructivos.",
@@ -37,7 +37,7 @@ export const card = [
   },
   {
     titulo: "Modelo 3",
-    precio: "2.195",
+    precio: "2195",
     imagen: modelo3,
     texto1: "Vivienda de 260 m2.",
     texto2: "Un proyecto 3D en arquitectura para hacerte una idea aproximada de las características de la construcción, desde la geometría hasta elementos particulares, volúmenes, iluminación y también materiales constructivos.",
@@ -48,7 +48,7 @@ export const card = [
   },
   {
     titulo: "Modelo 4",
-    precio: "2.895",
+    precio: "2895",
     imagen: modelo4,
     texto1: "Vivienda de 300 m2.",
     texto2: "Un proyecto 3D en arquitectura para hacerte una idea aproximada de las características de la construcción, desde la geometría hasta elementos particulares, volúmenes, iluminación y también materiales constructivos.",
@@ -59,7 +59,7 @@ export const card = [
   },
   {
     titulo: "Modelo 5",
-    precio: "2.995",
+    precio: "2995",
     imagen: modelo5,
     texto1: "Vivienda de 320 m2.",
     texto2: "Un proyecto 3D en arquitectura para hacerte una idea aproximada de las características de la construcción, desde la geometría hasta elementos particulares, volúmenes, iluminación y también materiales constructivos.",
@@ -70,7 +70,7 @@ export const card = [
   },
   {
     titulo: "Modelo 6",
-    precio: "3.495",
+    precio: "3495",
     imagen: modelo6,
     texto1: "Vivienda de 520 m2.",
     texto2: "Un proyecto 3D en arquitectura para hacerte una idea aproximada de las características de la construcción, desde la geometría hasta elementos particulares, volúmenes, iluminación y también materiales constructivos.",
@@ -81,7 +81,7 @@ export const card = [
   },
   {
     titulo: "Modelo 7",
-    precio: "4.895",
+    precio: "4895",
     imagen: modelo7,
     texto1: "Vivienda de 620 m2.",
     texto2: "Un proyecto 3D en arquitectura para hacerte una idea aproximada de las características de la construcción, desde la geometría hasta elementos particulares, volúmenes, iluminación y también materiales constructivos.",
@@ -92,7 +92,7 @@ export const card = [
   },
   {
     titulo: "Modelo 8",
-    precio: "3.095",
+    precio: "3095",
     imagen: modelo8,
     texto1: "Vivienda de 320 m2.",
     texto2: "Un proyecto 3D en arquitectura para hacerte una idea aproximada de las características de la construcción, desde la geometría hasta elementos particulares, volúmenes, iluminación y también materiales constructivos.",
@@ -103,7 +103,7 @@ export const card = [
   },
   {
     titulo: "Modelo 9",
-    precio: "4.265",
+    precio: "4265",
     imagen: modelo9,
     texto1: "Vivienda de 420 m2.",
     texto2: "Un proyecto 3D en arquitectura para hacerte una idea aproximada de las características de la construcción, desde la geometría hasta elementos particulares, volúmenes, iluminación y también materiales constructivos.",
@@ -114,7 +114,7 @@ export const card = [
   },
   {
     titulo: "Modelo 10",
-    precio: "1.965",
+    precio: "1965",
     imagen: modelo10,
     texto1: "Vivienda de 220 m2.",
     texto2: "Un proyecto 3D en arquitectura para hacerte una idea aproximada de las características de la construcción, desde la geometría hasta elementos particulares, volúmenes, iluminación y también materiales constructivos.",
@@ -125,7 +125,7 @@ export const card = [
   },
   {
     titulo: "Modelo 11",
-    precio: "3.495",
+    precio: "3495",
     imagen: modelo11,
     texto1: "Vivienda de 320 m2.",
     texto2: "Un proyecto 3D en arquitectura para hacerte una idea aproximada de las características de la construcción, desde la geometría hasta elementos particulares, volúmenes, iluminación y también materiales constructivos.",

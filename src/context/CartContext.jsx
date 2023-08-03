@@ -48,6 +48,7 @@ export default function CartContextProvider({ children }) {
         return acc + amount;
     }, 0);
 
+
     const value = {
         totalItems: total,
         items,

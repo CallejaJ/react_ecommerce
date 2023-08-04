@@ -1,9 +1,9 @@
 import Benefits from "../../Components/Benefits/Benefits"
-import "bootstrap/dist/css/bootstrap.css"
+import { useCartContext } from "../../context/CartContext";
+import { formatter } from "../../utils/numberFormat";
 import Footer from "../../Components/Footer/Footer"
 import { Link } from "react-router-dom"
 import Stepper from "../../Components/Stepper"
-
 import "bootstrap/dist/css/bootstrap.css"
 
 import {
@@ -16,49 +16,18 @@ import {
     MDBRow,
     MDBTypography,
 } from "mdb-react-ui-kit";
-
-
-
-
-
-// <main className="container">
-//     <div>
-//         <h2>Mis tarjetas</h2>
-//         <form>
-//             <label htmlFor="tarjeta1">
-//                 <input type="radio" id="tarjeta" name="tarjeta" value="7654 checked" />VISA ...7654</label>
-//             <label htmlFor="tarjeta2">
-//                 <input type="radio" id="tarjeta" name="tarjeta" value="2365" />AMERICAN EXPRESS ...9099</label>
-//             <label htmlFor="tarjeta3">
-//                 <input type="radio" id="tarjeta" name="tarjeta" value="5576" />MASTERCARD ...5576</label>
-//             <a href="finalizarcompra.htm">Pagar con esta tarjeta</a>
-//         </form>
-//     </div>
-
-//     <div>
-//         <h2>Añadir nueva tarjeta</h2>
-//         <form>
-//             <input type="text" name="tarjeta" placeholder="Número de tarjeta" />
-//             <input type="text" name="titular" placeholder="Titular de la tarjeta" />
-//             <input type="date" name="caducidad" placeholder="Fecha de caducidad" />
-//             <input type="number" name="CVV" placeholder="CVV" min="0" max="3" />
-//             <button type="button">Añadir a mis tarjetas</button>
-//         </form>
-//     </div>
-
-
-
-
+import BankCard from "../../Components/BankCard/BankCard";
+import { bankCard } from "../../Components/BankCard/BankCardsDummy";
 
 export default function Pago() {
-    // const { id } = useParams();
-    let id = 1
+    const { items, totalAmount, taxesAmount } = useCartContext();
+
 
     return (
         <>
             <Stepper />
             {
-                id ? (
+                items ? (
                     // aqui saco el detalle de la tarjeta elegida
                     <>
                         <section className="container h-100 h-custom border border-primary border-2 rounded-4" style={{ backgroundColor: "#eee" }}>
@@ -79,59 +48,8 @@ export default function Pago() {
                                                                 <p className="mb-0">Elige entre tus tarjetas o añade una nueva</p>
                                                             </div>
                                                         </div>
-                                                        <MDBCard className="mb-1 mt-1">
-                                                            <MDBCardBody >
-                                                                <div className="d-flex justify-content-between">
-                                                                    <div className="d-flex flex-row align-items-center">
-                                                                        <form>
-                                                                            <label htmlFor="tarjeta1">
-                                                                                <input type="radio" id="tarjeta" name="tarjeta" value="7654 checked" />VISA ... 7654</label>
-                                                                        </form>
-                                                                    </div>
-                                                                    <div className="d-flex flex-row align-items-center">
-                                                                        <button className="btn btn-primary w-100" to="/cesta/enviar">Seleccionar</button>
-                                                                        <button className="btn btn-white w-50"><i className="bi bi-trash text-primary w-100 mt-2 mb-2 gap-2"></i></button>
-                                                                    </div>
-                                                                </div>
-                                                            </MDBCardBody>
-                                                        </MDBCard>
-
-                                                        <MDBCard className="mb-1 mt-1">
-                                                            <MDBCardBody >
-                                                                <div className="d-flex justify-content-between">
-                                                                    <div className="d-flex flex-row align-items-center">
-                                                                        <form>
-                                                                            <label htmlFor="tarjeta2">
-                                                                                <input type="radio" id="tarjeta" name="tarjeta" value="2365" />AMERICAN EXPRESS ...9099</label>
-                                                                        </form>
-                                                                    </div>
-                                                                    <div className="d-flex flex-row align-items-center">
-                                                                        <button className="btn btn-primary w-100" to="/cesta/enviar">Seleccionar</button>
-                                                                        <button className="btn btn-white w-50"><i className="bi bi-trash text-primary w-100 mt-2 mb-2 gap-2"></i></button>
-                                                                    </div>
-                                                                </div>
-                                                            </MDBCardBody>
-                                                        </MDBCard>
-
-                                                        <MDBCard className="mb-1 mt-1">
-                                                            <MDBCardBody >
-                                                                <div className="d-flex justify-content-between">
-                                                                    <div className="d-flex align-items-center">
-                                                                        <form>
-                                                                            <label htmlFor="tarjeta3">
-                                                                                <input type="radio" id="tarjeta" name="tarjeta" value="5576" />MASTERCARD ...5576</label>
-                                                                        </form>
-                                                                    </div>
-                                                                    <div className="d-flex align-items-center">
-                                                                        <button className="btn btn-primary w-100 " to="/cesta/enviar">Seleccionar</button>
-                                                                        <button className="btn btn-white w-50 gap-2"><i className="bi bi-trash text-primary w-100 mt-2 mb-2 gap-2"></i></button>
-                                                                    </div>
-                                                                </div>
-                                                            </MDBCardBody>
-                                                        </MDBCard>
-
+                                                        <BankCard bankCards={bankCard} />
                                                     </MDBCol>
-
                                                     <MDBCol lg="5">
                                                         <MDBCard className="rounded-3">
                                                             <MDBCardBody>
@@ -180,7 +98,7 @@ export default function Pago() {
 
                                                                 <div className="d-flex justify-content-between">
                                                                     <p className="mb-2">Importe total</p>
-                                                                    <p className="mb-2">{id.precio}€</p>
+                                                                    <p className="mb-2">{(formatter.format(totalAmount))}</p>
                                                                 </div>
 
                                                                 <div className="d-flex justify-content-between">
@@ -190,13 +108,13 @@ export default function Pago() {
 
                                                                 <div className="d-flex justify-content-between">
                                                                     <p className="mb-2">Total <strong>(IVA incluido)</strong></p>
-                                                                    <p className="mb-2">{id.precio}€</p>
+                                                                    <p className="mb-2"><strong>{(formatter.format(taxesAmount))}</strong></p>
                                                                 </div>
 
                                                                 <div className="d-flex gap-3 w-100">
+                                                                    <Link className="btn btn-secondary w-100 mt-4 mb-2" to="/cesta/enviar">Añadir a mis tarjetas</Link>
                                                                     <Link className="btn btn-primary w-100 mt-4 mb-2" to="/cesta/enviar">Continuar</Link>
                                                                 </div>
-                                                                <Link className="btn btn-primary w-100 mt-4 mb-2" to="/cesta/enviar">Continuar</Link>
                                                             </MDBCardBody>
                                                         </MDBCard>
                                                     </MDBCol>
@@ -218,3 +136,30 @@ export default function Pago() {
         </>
     );
 }
+
+
+
+// <main className="container">
+//     <div>
+//         <h2>Mis tarjetas</h2>
+//         <form>
+//             <label htmlFor="tarjeta1">
+//                 <input type="radio" id="tarjeta" name="tarjeta" value="7654 checked" />VISA ...7654</label>
+//             <label htmlFor="tarjeta2">
+//                 <input type="radio" id="tarjeta" name="tarjeta" value="2365" />AMERICAN EXPRESS ...9099</label>
+//             <label htmlFor="tarjeta3">
+//                 <input type="radio" id="tarjeta" name="tarjeta" value="5576" />MASTERCARD ...5576</label>
+//             <a href="finalizarcompra.htm">Pagar con esta tarjeta</a>
+//         </form>
+//     </div>
+
+//     <div>
+//         <h2>Añadir nueva tarjeta</h2>
+//         <form>
+//             <input type="text" name="tarjeta" placeholder="Número de tarjeta" />
+//             <input type="text" name="titular" placeholder="Titular de la tarjeta" />
+//             <input type="date" name="caducidad" placeholder="Fecha de caducidad" />
+//             <input type="number" name="CVV" placeholder="CVV" min="0" max="3" />
+//             <button type="button">Añadir a mis tarjetas</button>
+//         </form>
+//     </div>

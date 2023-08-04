@@ -3,7 +3,7 @@ import "../../CSS/style.css"
 import { Link } from "react-router-dom"
 import { useCartContext } from "../../context/CartContext";
 
-function Card({ cards }) {
+export default function Card({ cards }) {
     const { addToCart } = useCartContext();
 
     return (
@@ -42,4 +42,3 @@ function Card({ cards }) {
     )
 }
 
-export default Card

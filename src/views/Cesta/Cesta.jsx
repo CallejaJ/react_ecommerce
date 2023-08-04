@@ -4,6 +4,7 @@ import Benefits from "../../Components/Benefits/Benefits"
 import Stepper from "../../Components/Stepper/Stepper"
 import Footer from "../../Components/Footer/Footer"
 import "bootstrap/dist/css/bootstrap.css"
+import { formatter } from '../../utils/numberFormat';
 
 import {
     MDBCard,
@@ -21,7 +22,7 @@ import {
 
 export default function Cesta() {
 
-    const { items, totalAmount, removeFromCart } = useCartContext();
+    const { items, totalAmount, taxesAmount, removeFromCart } = useCartContext();
     return (
         <>
             <Stepper />
@@ -46,13 +47,13 @@ export default function Cesta() {
                                                             <MDBRipple rippleTag="div" rippleColor="light"
                                                                 className="bg-image rounded hover-zoom hover-overlay">
                                                                 <img height={90} src={item.imagen}
-                                                                    className="w-100" />
+                                                                    className="w-100 mt-3" />
                                                                 <div className="mask" style={{ backgroundColor: "rgba(251, 251, 251, 0.2)", }}>
                                                                 </div>
                                                             </MDBRipple>
                                                         </MDBCol>
 
-                                                        <MDBCol lg="5" md="6" className="lg-0">
+                                                        <MDBCol lg="5" md="6" className="lg-0 mt-2">
                                                             <p>Modelo elegido: <strong> {item.id}</strong></p>
                                                             <p>Cantidad: <strong> {item.amount}</strong></p>
                                                             <p>{item.texto1}</p>
@@ -60,8 +61,8 @@ export default function Cesta() {
 
                                                         <MDBCol lg="4" md="6" className="mb-1 mb-lg-0 gap-4">
                                                             <div className="d-flex gap-3 w-100 align-items-center">
-                                                                Total:<strong>{item.precio}</strong>
-                                                                {/* <MDBInput defaultValue={1} min={0} type="number" /> */}
+                                                                Total:
+                                                                <strong>{(formatter.format(item.precio))}</strong>
                                                                 <button onClick={() => removeFromCart(item.id)} className="btn btn-white w-50 mt-2 mb-2 gap-2"><i className="bi bi-trash text-primary w-100 mt-2 mb-2 gap-2"></i></button>
                                                             </div>
                                                         </MDBCol>
@@ -112,25 +113,27 @@ export default function Cesta() {
                                             <MDBListGroup>
                                                 <MDBListGroupItem
                                                     className="d-flex justify-content-between align-items-center border-0 px-0">
-                                                    Importe
-                                                    <span>{totalAmount}<i className="bi bi-currency-euro text-primary"></i></span>
+                                                    Importe a pagar
+                                                    <span>
+                                                        <span>{(formatter.format(totalAmount))}</span>
+                                                    </span>
                                                 </MDBListGroupItem>
                                                 <MDBListGroupItem className="d-flex justify-content-between align-items-center border-0 px-0">
-                                                    Envío
-                                                    <span>Gratis</span>
+                                                    Transporte
+                                                    <span>Gratuito</span>
                                                 </MDBListGroupItem>
                                                 <MDBListGroupItem
                                                     className="d-flex justify-content-between align-items-center border-0 px-0">
-                                                    Total<strong>(IVA incluido)</strong>
+                                                    Total (IVA incluido)
                                                     <span>
-                                                        <strong>{totalAmount}<i className="bi bi-currency-euro text-primary"></i></strong>
+                                                        <strong>{(formatter.format(taxesAmount))}</strong>
                                                     </span>
                                                 </MDBListGroupItem>
                                             </MDBListGroup>
 
-                                            <div className="d-flex gap-3 w-100 mt-3">
-                                                <Link className="btn btn-primary w-50 mt-2 mb-2" to="/cesta/pago">Continuar</Link>
-                                                <Link className="btn btn-secondary w-100 mt-2 mb-2" to="/modelos">Seguir comprando</Link>
+                                            <div className="d-flex gap-4 w-100 mt-3">
+                                                <Link className="btn btn-secondary w-100 mt-4 mb-2" to="/modelos">Seguir comprando</Link>
+                                                <Link className="btn btn-primary w-50 mt-4 mb-2" to="/cesta/pago">Continuar</Link>
                                             </div>
                                         </MDBCardBody>
 
@@ -138,14 +141,12 @@ export default function Cesta() {
                                 </MDBCol>
                             </MDBRow>
                         </MDBContainer>
-
                     </section >
                 </>
 
             ) : (
                 <>
-                    <p>No hay ningún modelo seleccionado</p>
-                    {/* <section className="container h-100 h-custom border border-primary border-2 rounded-4" style={{ backgroundColor: "#eee" }}>
+                    <section className="container h-100 h-custom border border-primary border-2 rounded-4" style={{ backgroundColor: "#eee" }}>
                         <MDBContainer className="py-5 h-100">
                             <MDBRow className="justify-content-center my-4">
                                 <MDBCol md="8">
@@ -226,7 +227,6 @@ export default function Cesta() {
                                                 </MDBListGroupItem>
                                             </MDBListGroup>
                                             <div className="d-flex gap-3 w-100">
-                                                <Link className="btn btn-primary w-50 mt-2 mb-2" to="/cesta/pago">Continuar</Link>
                                                 <Link className="btn btn-secondary w-100 mt-2 mb-2" to="/modelos">Seguir comprando</Link>
                                             </div>
                                         </MDBCardBody>
@@ -234,7 +234,7 @@ export default function Cesta() {
                                 </MDBCol>
                             </MDBRow>
                         </MDBContainer>
-                    </section> */}
+                    </section>
                 </>
             )
             }

@@ -33,11 +33,10 @@ export default function CartContextProvider({ children }) {
 
     function removeFromCart(id) {
 
-
         const currentItems = [...items];
         const itemToRemove = currentItems.find((item) => item.id === id);
-        if (itemToRemove && itemToRemove.total > 1) {
-            itemToRemove.total = itemToRemove.total - 1;
+        if (itemToRemove && itemToRemove.amount > 1) {
+            itemToRemove.amount = itemToRemove.amount - 1;
             setItems(currentItems);
         } else {
             setItems((currentItems) => currentItems.filter((item) => item.id !== id))
@@ -50,9 +49,14 @@ export default function CartContextProvider({ children }) {
         return acc + amount;
     }, 0);
 
-    const totalPrice = items.reduce((acc, item) => {
+    let totalPrice = items.reduce((acc, item) => {
         const { precio, amount } = item;
         return acc + precio * amount;
+    }, 0);
+
+    let taxesPrice = items.reduce((acc, item) => {
+        const { precio, amount } = item;
+        return (acc + precio * amount * 1.21);
     }, 0);
 
 
@@ -60,6 +64,7 @@ export default function CartContextProvider({ children }) {
         totalItems: total,
         items,
         totalAmount: totalPrice,
+        taxesAmount: taxesPrice,
         addToCart,
         removeFromCart,
     };

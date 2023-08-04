@@ -171,7 +171,7 @@ export default function Cesta() {
                                             <p>
                                                 <strong>Fecha de entrega estimada</strong>
                                             </p>
-                                            <p className="mb-0">12/10/2023 - 14/10/2023</p>
+                                            <p className="mb-0">Por confirmar</p>
                                         </MDBCardBody>
                                     </MDBCard>
 
@@ -207,27 +207,21 @@ export default function Cesta() {
                                                 <MDBListGroupItem
                                                     className="d-flex justify-content-between align-items-center border-0 px-0">
                                                     Modelos elegidos
-                                                    <span>0</span>
+                                                    <span>Por confirmar</span>
                                                 </MDBListGroupItem>
                                                 <MDBListGroupItem className="d-flex justify-content-between align-items-center border-0 px-0">
                                                     Envío
                                                     <span>Gratis</span>
                                                 </MDBListGroupItem>
                                                 <MDBListGroupItem
-                                                    className="d-flex justify-content-between align-items-center border-0 px-0 mb-3">
-                                                    <div>
-                                                        <p>Total</p>
-                                                        <strong>
-                                                            <p className="mb-0">(IVA incluido)</p>
-                                                        </strong>
-                                                    </div>
-                                                    <span>
-                                                        <strong>0</strong>
+                                                    className="d-flex justify-content-between align-items-center border-0 px-0">
+                                                    Total (IVA incluido)
+                                                    <span>Por confirmar
                                                     </span>
                                                 </MDBListGroupItem>
                                             </MDBListGroup>
                                             <div className="d-flex gap-3 w-100">
-                                                <Link className="btn btn-secondary w-100 mt-2 mb-2" to="/modelos">Seguir comprando</Link>
+                                                <Link className="btn btn-primary w-100 mt-4 mb-2" to="/modelos">Seguir comprando</Link>
                                             </div>
                                         </MDBCardBody>
                                     </MDBCard>

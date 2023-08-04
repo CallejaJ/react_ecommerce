@@ -26,7 +26,7 @@ export default function Cesta() {
     return (
         <>
             <Stepper />
-            {items ? (
+            {items.length > 0 ? (
                 // aqui saco el detalle de las tarjetas elegidas
                 <>
                     <section className="container h-100 h-custom border border-primary border-2 rounded-4" style={{ backgroundColor: "#eee" }}>

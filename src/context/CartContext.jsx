@@ -54,17 +54,13 @@ export default function CartContextProvider({ children }) {
         return acc + precio * amount;
     }, 0);
 
-    let taxesPrice = items.reduce((acc, item) => {
-        const { precio, amount } = item;
-        return (acc + precio * amount * 1.21);
-    }, 0);
 
 
     const value = {
         totalItems: total,
         items,
         totalAmount: totalPrice,
-        taxesAmount: taxesPrice,
+        taxesAmount: totalPrice * 1.21,
         addToCart,
         removeFromCart,
     };

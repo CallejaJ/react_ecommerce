@@ -79,11 +79,7 @@ export default function AuthContextProvider({ children }) {
         catch (err) {
             throw new Error(err.message)
         }
-
-
     }
-
-
 
 
     function logout() {

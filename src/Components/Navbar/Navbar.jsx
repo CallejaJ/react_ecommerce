@@ -26,16 +26,24 @@ export default function Navbar() {
                                         to="/">Inicio</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link active text-white" aria-current="page" to="/modelos">Modelos</Link>
+                                    <Link className="nav-link active text-white"
+                                        aria-current="page"
+                                        to="/modelos">Modelos</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link active text-white" aria-current="page" to="/tecnologias">Tecnologias</Link>
+                                    <Link className="nav-link active text-white"
+                                        aria-current="page"
+                                        to="/tecnologias">Tecnologias</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link active text-white" aria-current="page" to="/garantia">Garantia</Link>
+                                    <Link className="nav-link active text-white"
+                                        aria-current="page"
+                                        to="/garantia">Garantia</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link active text-white" aria-current="page" to="/experiencias">Experiencias</Link>
+                                    <Link className="nav-link active text-white"
+                                        aria-current="page"
+                                        to="/experiencias">Experiencias</Link>
                                 </li>
 
                             </ul>
@@ -50,13 +58,20 @@ export default function Navbar() {
                                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                                     <ul className="navbar-nav me-auto mb-2 mb-lg-0 main-color">
                                         <li className="nav-item">
-                                            <Link className="nav-link active text-white" aria-current="page" to="/admin">Admin</Link>
+                                            <Link className="nav-link active text-white"
+                                                aria-current="page"
+                                                to="/admin">Admin</Link>
                                         </li>
                                         <li className="nav-item">
-                                            <Link className="nav-link active text-white" aria-current="page" to="/superadmin">SuperAdmin</Link>
+                                            <Link className="nav-link active text-white"
+                                                aria-current="page"
+                                                to="/superadmin">SuperAdmin</Link>
                                         </li>
                                         <li className="nav-item">
-                                            <Link onClick={loggingOut} className="nav-link active text-white" aria-current="page" to="/" >Cerrar sesion</Link>
+                                            <Link onClick={loggingOut}
+                                                className="nav-link active text-white"
+                                                aria-current="page"
+                                                to="/" >Cerrar sesion</Link>
                                         </li>
                                     </ul>
 

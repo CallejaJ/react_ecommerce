@@ -23,6 +23,7 @@ import Unauthorized from "./views/Unauthorized/Unauthorized";
 import RegisterFormik from "./views/Registry/RegisterFormik";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css"
+import Pasarela from "./views/Pasarela/Pasarela";
 
 
 
@@ -56,6 +57,8 @@ export default function App() {
                   <Route index element={<Cesta />} />
                   <Route path="pago" element={<Pago />} />
                   <Route path="enviar" element={<Enviar />} />
+                  <Route path="pasarela" element={<Pasarela />} />
+
                 </Route>
               </Route>
               <Route path="admin"

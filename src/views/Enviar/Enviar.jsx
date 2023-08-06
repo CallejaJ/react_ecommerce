@@ -1,9 +1,8 @@
+import { Link, Navigate } from "react-router-dom"
 import Benefits from "../../Components/Benefits/Benefits"
-import "bootstrap/dist/css/bootstrap.css"
 import Footer from "../../Components/Footer/Footer"
 import Stepper from "../../Components/Stepper"
 import "bootstrap/dist/css/bootstrap.css"
-import { Link, Navigate } from "react-router-dom"
 
 import {
     MDBCard,
@@ -28,29 +27,23 @@ export default function Enviar() {
         <>
             <Stepper />
 
-            {items ? (
+            {items.length > 0 ? (
                 // aqui saco el detalle de la tarjeta elegida
                 <>
                     <section className="container h-100 h-custom border border-primary border-2 rounded-4" style={{ backgroundColor: "#eee" }}>
                         <MDBContainer className="py-5 h-100">
                             <MDBRow className="justify-content-center align-items-center h-100">
+
                                 <MDBCol>
                                     <MDBCard background="light" className="border-0 rounded-2" >
                                         <MDBCardBody className="p-4">
                                             <MDBRow>
-                                                <MDBCol lg="7">
-                                                    <MDBTypography tag="h5">
-                                                        <Link className="btn btn-secondary w-40 mt-2 mb-2" to="/modelos">Seguir comprando</Link>
-                                                    </MDBTypography>
-
-                                                    <hr />
-
+                                                <MDBCol lg="6">
                                                     <div className="d-flex justify-content-between align-items-center mb-4">
                                                         <div>
                                                             <h3 className="mb-1 text-primary">Dirección de envío</h3>
                                                             <p className="mb-0">Selecciona entre las siguientes direcciones disponibles.</p>
                                                         </div>
-
                                                     </div>
 
                                                     <MDBCard className="mb-3">
@@ -60,8 +53,29 @@ export default function Enviar() {
                                                                     <div className="ms-3">
                                                                         <MDBTypography tag="h5">
                                                                         </MDBTypography>
+                                                                        <p className="small mb-0">Roberto Benavent</p>
                                                                         <p className="small mb-0">Paseo de la Castellana 136, 5ºH</p>
                                                                         <p className="small mb-0">28880 - Madrid</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div className="d-flex flex-row align-items-center">
+                                                                    <button className="btn btn-primary w-70" to="/cesta/enviar">Elegir</button>
+                                                                    <button className="btn btn-white w-50 mt-2 mb-2 gap-2"><i className="bi bi-trash text-primary w-100 mt-2 mb-2 gap-2"></i></button>
+                                                                </div>
+                                                            </div>
+                                                        </MDBCardBody>
+                                                    </MDBCard>
+                                                    <MDBCard className="mb-3">
+                                                        <MDBCardBody >
+                                                            <div className="d-flex justify-content-between">
+                                                                <div className="d-flex flex-row align-items-center">
+                                                                    <div className="ms-3">
+                                                                        <MDBTypography tag="h5">
+
+                                                                        </MDBTypography>
+                                                                        <p className="small mb-0">María Luisa Salgado</p>
+                                                                        <p className="small mb-0">Urbanización Doña Casilda 9-2 2ªD</p>
+                                                                        <p className="small mb-0">11205 - Cádiz</p>
                                                                     </div>
                                                                 </div>
                                                                 <div className="d-flex flex-row align-items-center">
@@ -78,9 +92,11 @@ export default function Enviar() {
                                                                 <div className="d-flex flex-row align-items-center">
                                                                     <div className="ms-3">
                                                                         <MDBTypography tag="h5">
+
                                                                         </MDBTypography>
-                                                                        <p className="small mb-0">Paseo de la Castellana 136, 5ºH</p>
-                                                                        <p className="small mb-0">28880 - Madrid</p>
+                                                                        <p className="small mb-0">María Luisa Salgado</p>
+                                                                        <p className="small mb-0">Avenida de Los Álamos, 37</p>
+                                                                        <p className="small mb-0">08880 - San Cugat del Vallés</p>
                                                                     </div>
                                                                 </div>
                                                                 <div className="d-flex flex-row align-items-center">
@@ -89,27 +105,6 @@ export default function Enviar() {
                                                                 </div>
                                                             </div>
                                                         </MDBCardBody>
-                                                    </MDBCard>
-
-                                                    <MDBCard className="mb-3">
-                                                        <MDBCard className="mb-3">
-                                                            <MDBCardBody >
-                                                                <div className="d-flex justify-content-between">
-                                                                    <div className="d-flex flex-row align-items-center">
-                                                                        <div className="ms-3">
-                                                                            <MDBTypography tag="h5">
-                                                                            </MDBTypography>
-                                                                            <p className="small mb-0">Paseo de la Castellana 136, 5ºH</p>
-                                                                            <p className="small mb-0">28880 - Madrid</p>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div className="d-flex flex-row align-items-center">
-                                                                        <button className="btn btn-primary w-70" to="/cesta/enviar">Elegir</button>
-                                                                        <button className="btn btn-white w-50 mt-2 mb-2 gap-2"><i className="bi bi-trash text-primary w-100 mt-2 mb-2 gap-2"></i></button>
-                                                                    </div>
-                                                                </div>
-                                                            </MDBCardBody>
-                                                        </MDBCard>
                                                     </MDBCard>
 
                                                     <MDBCard className="mb-3">
@@ -120,6 +115,7 @@ export default function Enviar() {
                                                                         <MDBTypography tag="h5">
 
                                                                         </MDBTypography>
+                                                                        <p className="small mb-0">Juan Luis Benavent</p>
                                                                         <p className="small mb-0">Paseo de la Castellana 136, 5ºH</p>
                                                                         <p className="small mb-0">28880 - Madrid</p>
                                                                     </div>
@@ -131,53 +127,56 @@ export default function Enviar() {
                                                             </div>
                                                         </MDBCardBody>
                                                     </MDBCard>
+                                                    <MDBTypography tag="h5">
+                                                        <Link className="btn btn-secondary w-100 mt-4 mb-0" to="/cesta">Volver a la cesta de compra</Link>
+                                                    </MDBTypography>
                                                 </MDBCol>
 
-                                                <MDBCol lg="5">
+                                                <MDBCol lg="6">
                                                     <MDBCard className="rounded-3">
                                                         <MDBCardBody>
                                                             <div className="d-flex justify-content-between align-items-center mb-4">
                                                                 <MDBTypography tag="h5" className="mb-0">
                                                                     Añadir nueva dirección de envío
                                                                 </MDBTypography>
-                                                                <MDBCardImage src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-6.webp"
-                                                                    fluid className="rounded-3" style={{ width: "45px" }} alt="Avatar" />
+
+                                                                <MDBCardImage src="https://www.shareicon.net/download/2016/10/18/844008_package.ico"
+                                                                    fluid className="text-primary rounded-5" style={{ width: "45px" }} alt="delivery-address" />
                                                             </div>
 
-                                                            <p className="small">Tipo de tarjeta</p>
-                                                            <MDBCardImage className="me-2" width="45px"
-                                                                src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/visa.svg"
-                                                                alt="Visa" />
-                                                            <MDBCardImage className="me-2" width="45px"
-                                                                src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/amex.svg"
-                                                                alt="American Express" />
-                                                            <MDBCardImage className="me-2" width="45px"
-                                                                src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/mastercard.svg"
-                                                                alt="Mastercard" />
-                                                            <MDBCardImage className="me-2" width="45px"
-                                                                src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce/includes/gateways/paypal/assets/images/paypal.png"
-                                                                alt="PayPal" />
+                                                            <p className="small">Introduzca sus datos personales y nosotros nos encargaremos del resto.</p>
 
-                                                            <form className="mt-4">
-                                                                <MDBInput className="mb-2" label="Titular de la tarjeta" type="text" size="lg"
+
+                                                            <form className="mt-4 text-secondary">
+                                                                <MDBInput className="mb-2" label="Nombre completo" type="text" size="lg"
                                                                     placeholder="JOHN DOE" contrast />
 
-                                                                <MDBInput className="mb-2" label="Número de tarjeta" type="text" size="lg"
-                                                                    minLength="16" maxLength="19" placeholder="1234 5678 9012 3457" contrast />
+                                                                <MDBInput className="mb-2" label="Dirección" type="text" size="lg"
+                                                                    minLength="16" maxLength="19" placeholder="CALLE MARMOLES Nº2" contrast />
 
-                                                                <MDBRow className="mb-4">
+                                                                <MDBRow className="mb-2 text-secondary">
                                                                     <MDBCol md="6">
-                                                                        <MDBInput className="mb-2" label="Fecha de Validez" type="text" size="lg"
-                                                                            minLength="7" maxLength="7" placeholder="MM/YYYY" contrast />
+                                                                        <MDBInput className="mb-2" label="Número" type="text" size="lg"
+                                                                            minLength="9" maxLength="13" placeholder="Nº2 - 1ºB" contrast />
                                                                     </MDBCol>
                                                                     <MDBCol md="6">
-                                                                        <MDBInput className="mb-2" label="CVV" type="text" size="lg" minLength="3"
-                                                                            maxLength="3" placeholder="&#9679;&#9679;&#9679;" contrast />
+                                                                        <MDBInput className="mb-2" label="C.P." type="text" size="lg" minLength="5"
+                                                                            maxLength="6" placeholder="28880" contrast />
+                                                                    </MDBCol>
+                                                                </MDBRow>
+                                                                <MDBRow className="mb-2 text-secondary">
+                                                                    <MDBCol md="6">
+                                                                        <MDBInput className="mb-2 " label="Población" type="text" size="lg"
+                                                                            minLength="3" maxLength="13" placeholder="Madrid" contrast />
+                                                                    </MDBCol>
+                                                                    <MDBCol md="6">
+                                                                        <MDBInput className="mb-2" label="Teléfono" type="text" size="lg"
+                                                                            minLength="9" maxLength="13" placeholder="632 657 789" contrast />
                                                                     </MDBCol>
                                                                 </MDBRow>
                                                             </form>
 
-                                                            <hr />
+                                                            <hr className="mt-5" />
 
                                                             <div className="d-flex justify-content-between">
                                                                 <p className="mb-2">Importe total</p>
@@ -196,7 +195,7 @@ export default function Enviar() {
 
                                                             <div className="d-flex gap-3 w-100">
                                                                 <Link className="btn btn-secondary w-50 mt-4 mb-2" to="/cesta/enviar">Añadir</Link>
-                                                                <Link className="btn btn-primary w-50 mt-4 mb-2" to="/cesta/enviar">Pasarela de pago</Link>
+                                                                <Link className="btn btn-primary w-50 mt-4 mb-2" to="/cesta/pasarela">Pasarela de pago</Link>
                                                             </div>
                                                         </MDBCardBody>
                                                     </MDBCard>
@@ -215,7 +214,6 @@ export default function Enviar() {
                 <Navigate to="/cesta" />
             )
             }
-
         </>
     );
 }

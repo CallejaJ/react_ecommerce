@@ -4,9 +4,10 @@ import { formatter } from "../../utils/numberFormat";
 import Footer from "../../Components/Footer/Footer"
 import { Link, Navigate } from "react-router-dom"
 import Stepper from "../../Components/Stepper"
-import "bootstrap/dist/css/bootstrap.css"
 import BankCard from "../../Components/BankCard/BankCard";
+import "bootstrap/dist/css/bootstrap.css"
 import { bankCard } from "../../Components/BankCard/BankCardsDummy";
+
 
 import {
     MDBCard,
@@ -17,6 +18,7 @@ import {
     MDBInput,
     MDBRow,
     MDBTypography,
+
 } from "mdb-react-ui-kit";
 
 export default function Pago() {
@@ -26,7 +28,7 @@ export default function Pago() {
     return (
         <>
             <Stepper />
-            {items ? (
+            {items.length > 0 ? (
                 // aqui saco el detalle de la tarjeta elegida
                 <>
                     <section className="container h-100 h-custom border border-primary border-2 rounded-4" style={{ backgroundColor: "#eee" }}>
@@ -36,11 +38,7 @@ export default function Pago() {
                                     <MDBCard background="light" className="border-0 rounded-2" >
                                         <MDBCardBody className="p-4">
                                             <MDBRow>
-                                                <MDBCol lg="7">
-                                                    <MDBTypography tag="h5">
-                                                        <Link className="btn btn-secondary w-40 mt-2 mb-2" to="/modelos">Seguir comprando</Link>
-                                                    </MDBTypography>
-                                                    <hr />
+                                                <MDBCol lg="6">
                                                     <div className="d-flex justify-content-between align-items-center mb-4">
                                                         <div>
                                                             <h3 className="mb-1 text-primary">Mis tarjetas</h3>
@@ -48,31 +46,22 @@ export default function Pago() {
                                                         </div>
                                                     </div>
                                                     <BankCard bankCards={bankCard} />
+                                                    <MDBTypography tag="h5">
+                                                        <Link className="btn btn-secondary w-100 mt-4 mb-0" to="/cesta">Volver a la cesta de compra</Link>
+                                                    </MDBTypography>
                                                 </MDBCol>
-                                                <MDBCol lg="5">
+                                                <MDBCol lg="6">
                                                     <MDBCard className="rounded-3">
                                                         <MDBCardBody>
                                                             <div className="d-flex justify-content-between align-items-center mb-4">
                                                                 <MDBTypography tag="h5" className="mb-0">
                                                                     Añadir nueva tarjeta bancaria
                                                                 </MDBTypography>
-                                                                <MDBCardImage src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-6.webp"
-                                                                    fluid className="rounded-3" style={{ width: "45px" }} alt="Avatar" />
+                                                                <MDBCardImage src="https://shop.carmen24.es/wp-content/uploads/2020/12/pago-seguro-garantizado.png"
+                                                                    fluid className="rounded-3" style={{ width: "195px" }} alt="Avatar" />
                                                             </div>
+                                                            <p className="small">Introduzca los datos de su tarjeta bancaria para procesar el pago.</p>
 
-                                                            <p className="small">Tipo de tarjeta</p>
-                                                            <MDBCardImage className="me-2" width="45px"
-                                                                src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/visa.svg"
-                                                                alt="Visa" />
-                                                            <MDBCardImage className="me-2" width="45px"
-                                                                src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/amex.svg"
-                                                                alt="American Express" />
-                                                            <MDBCardImage className="me-2" width="45px"
-                                                                src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/mastercard.svg"
-                                                                alt="Mastercard" />
-                                                            <MDBCardImage className="me-2" width="45px"
-                                                                src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce/includes/gateways/paypal/assets/images/paypal.png"
-                                                                alt="PayPal" />
 
                                                             <form className="mt-4">
                                                                 <MDBInput className="mb-2" label="Titular de la tarjeta" type="text" size="lg"
@@ -87,13 +76,13 @@ export default function Pago() {
                                                                             minLength="7" maxLength="7" placeholder="MM/YYYY" contrast />
                                                                     </MDBCol>
                                                                     <MDBCol md="6">
-                                                                        <MDBInput className="mb-2" label="CVV" type="text" size="lg" minLength="3"
+                                                                        <MDBInput type="password" className="mb-2" label="CVV" size="lg" minLength="3"
                                                                             maxLength="3" placeholder="&#9679;&#9679;&#9679;" contrast />
                                                                     </MDBCol>
                                                                 </MDBRow>
                                                             </form>
 
-                                                            <hr />
+                                                            <hr className="mt-5" />
 
                                                             <div className="d-flex justify-content-between">
                                                                 <p className="mb-2">Importe total</p>

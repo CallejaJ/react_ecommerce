@@ -4,13 +4,13 @@ export default function Checkbox({ ...props }) {
   const [field, meta] = useField(props);
   return (
     <>
-      <div className="checkbox">
+      <div className="checkbox mt-1">
         <input
           {...props}
           {...field}
           className={meta.touched && meta.error ? "input-error" : ""}
         />
-        <span className="text-secondary">Acepto los términos y condiciones</span>
+        <span className="text-secondary">  Acepto los términos y condiciones</span>
       </div>
       {meta.touched && meta.error && <div className="error">{meta.error}</div>}
     </>

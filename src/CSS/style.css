@@ -8,7 +8,7 @@
 
 :root {
   --hue: 220;
-  --principal: hsl(var(--hue) 100% 26% / 1);
+  --principal: hsl(var(--hue) 100% 40% / 1);
   --secundario: hsl(var(--hue) 71% 70% / 1);
   --resalto: hsl(calc(var(--hue) - 180)91% 50% / 1);
   --negro: hsl(var(--hue) 21% 20% / 1);

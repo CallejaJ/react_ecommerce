@@ -5,8 +5,8 @@ import Footer from "../../Components/Footer/Footer"
 import { Link, Navigate } from "react-router-dom"
 import Stepper from "../../Components/Stepper"
 import BankCard from "../../Components/BankCard/BankCard";
-import "bootstrap/dist/css/bootstrap.css"
 import { bankCard } from "../../Components/BankCard/BankCardsDummy";
+import "bootstrap/dist/css/bootstrap.css"
 
 
 import {
@@ -63,7 +63,7 @@ export default function Pago() {
                                                             <p className="small">Introduzca los datos de su tarjeta bancaria para procesar el pago.</p>
 
 
-                                                            <form className="mt-4">
+                                                            <form className="mt-4 text-secondary">
                                                                 <MDBInput className="mb-2" label="Titular de la tarjeta" type="text" size="lg"
                                                                     placeholder="JOHN DOE" contrast />
 

@@ -2,8 +2,9 @@ import { Link, Navigate } from "react-router-dom"
 import Benefits from "../../Components/Benefits/Benefits"
 import Footer from "../../Components/Footer/Footer"
 import Stepper from "../../Components/Stepper"
-import "bootstrap/dist/css/bootstrap.css"
-
+import { formatter } from "../../utils/numberFormat"
+import { useCartContext } from "../../context/CartContext"
+import carriers from "../../assets/carriers.png"
 import {
     MDBCard,
     MDBCardBody,
@@ -14,9 +15,7 @@ import {
     MDBRow,
     MDBTypography,
 } from "mdb-react-ui-kit";
-import { formatter } from "../../utils/numberFormat"
-import { useCartContext } from "../../context/CartContext"
-
+import "bootstrap/dist/css/bootstrap.css"
 
 
 export default function Enviar() {
@@ -140,8 +139,8 @@ export default function Enviar() {
                                                                     Añadir nueva dirección de envío
                                                                 </MDBTypography>
 
-                                                                <MDBCardImage src="https://www.shareicon.net/download/2016/10/18/844008_package.ico"
-                                                                    fluid className="text-primary rounded-5" style={{ width: "45px" }} alt="delivery-address" />
+                                                                <MDBCardImage src={carriers}
+                                                                    fluid className="text-primary rounded-5" style={{ width: "175px" }} alt="delivery-address" />
                                                             </div>
 
                                                             <p className="small">Introduzca sus datos personales y nosotros nos encargaremos del resto.</p>
@@ -154,7 +153,7 @@ export default function Enviar() {
                                                                 <MDBInput className="mb-2" label="Dirección" type="text" size="lg"
                                                                     minLength="16" maxLength="19" placeholder="CALLE MARMOLES Nº2" contrast />
 
-                                                                <MDBRow className="mb-2 text-secondary">
+                                                                <MDBRow className="mb-2">
                                                                     <MDBCol md="6">
                                                                         <MDBInput className="mb-2" label="Número" type="text" size="lg"
                                                                             minLength="9" maxLength="13" placeholder="Nº2 - 1ºB" contrast />
@@ -164,7 +163,7 @@ export default function Enviar() {
                                                                             maxLength="6" placeholder="28880" contrast />
                                                                     </MDBCol>
                                                                 </MDBRow>
-                                                                <MDBRow className="mb-2 text-secondary">
+                                                                <MDBRow className="mb-2">
                                                                     <MDBCol md="6">
                                                                         <MDBInput className="mb-2 " label="Población" type="text" size="lg"
                                                                             minLength="3" maxLength="13" placeholder="Madrid" contrast />

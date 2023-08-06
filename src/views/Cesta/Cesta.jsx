@@ -5,6 +5,8 @@ import Stepper from "../../Components/Stepper/Stepper"
 import Footer from "../../Components/Footer/Footer"
 import "bootstrap/dist/css/bootstrap.css"
 import { formatter } from '../../utils/numberFormat';
+import cardsaccepted from "../../assets/cardsaccepted.png"
+
 
 import {
     MDBCard,
@@ -87,18 +89,9 @@ export default function Cesta() {
                                             <p>
                                                 <strong>Aceptamos las siguientes formas de pago</strong>
                                             </p>
-                                            <MDBCardImage className="me-2" width="45px"
-                                                src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/visa.svg"
-                                                alt="Visa" />
-                                            <MDBCardImage className="me-2" width="45px"
-                                                src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/amex.svg"
-                                                alt="American Express" />
-                                            <MDBCardImage className="me-2" width="45px"
-                                                src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/masteritem.svg"
-                                                alt="Mastercard" />
-                                            <MDBCardImage className="me-2" width="45px"
-                                                src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce/includes/gateways/paypal/assets/images/paypal.png"
-                                                alt="PayPal acceptance mark" />
+                                            <MDBCardImage src={cardsaccepted}
+                                                fluid className="rounded-5" style={{ width: "245px" }}
+                                                alt="cards-accepted" />
                                         </MDBCardBody>
                                     </MDBCard>
                                 </MDBCol>

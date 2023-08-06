@@ -7,9 +7,7 @@ import "bootstrap/dist/css/bootstrap.css"
 import {
     MDBCard,
     MDBCardBody,
-    MDBCol,
     MDBContainer,
-    MDBRow,
 } from "mdb-react-ui-kit";
 
 
@@ -24,19 +22,12 @@ export default function Pasarela() {
             <>
                 <section className="container h-100 h-custom border border-primary border-2 rounded-4" style={{ backgroundColor: "#eee" }}>
                     <MDBContainer className="py-5 h-100">
-                        <MDBRow className="justify-content-center align-items-center h-100">
-
-                            <MDBCol>
-
-                                <MDBCard background="light" className="border-0 rounded-2" >
-                                    <MDBCardBody className="p-4">
-                                        <MDBRow>
-                                            <img src={pagoexito} />
-                                        </MDBRow>
-                                    </MDBCardBody>
-                                </MDBCard>
-                            </MDBCol>
-                        </MDBRow>
+                        <MDBCard background="light" className=" border-0 rounded-2" >
+                            <MDBCardBody className="d-flex align-items-center p-4">
+                                <img src={pagoexito}
+                                    className="" style={{ width: "495px" }} alt="sucess-payment" />
+                            </MDBCardBody>
+                        </MDBCard>
                     </MDBContainer>
                 </section>
                 <Benefits />

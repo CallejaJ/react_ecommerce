@@ -1,6 +1,5 @@
 import Benefits from "../../Components/Benefits/Benefits"
 import Footer from "../../Components/Footer/Footer"
-import Stepper from "../../Components/Stepper"
 import pagoexito from "../../assets/pagoexito.png"
 import "bootstrap/dist/css/bootstrap.css"
 
@@ -17,10 +16,9 @@ export default function Pasarela() {
 
     return (
         <>
-            <Stepper />
 
             <>
-                <section className="container h-100 h-custom border border-primary border-2 rounded-4" style={{ backgroundColor: "#eee" }}>
+                <section className="container h-100 h-custom border border-primary border-2 rounded-4 mt-5" style={{ backgroundColor: "#eee" }}>
                     <MDBContainer className="py-5 h-100">
                         <MDBCard background="light" className=" border-0 rounded-2" >
                             <MDBCardBody className="d-flex align-items-center p-4">

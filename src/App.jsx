@@ -4,8 +4,6 @@ import PrivateRoute from "./Components/Router/PrivateRoute";
 import PublicRoute from "./Components/Router/PublicRoute";
 import AuthContextProvider from "./context/AuthContext";
 import CartContextProvider from "./context/CartContext";
-import { roles } from "./const/roles";
-
 import Modelos from "./views/Modelos";
 import Layout from "./Components/Layout";
 import Tecnologias from "./views/Tecnologias";
@@ -17,8 +15,6 @@ import Pago from "./views/Pago";
 import Enviar from "./views/Enviar"
 import Detalles from "./views/Detalles/Detalles";
 import NotFound from "./views/NotFound";
-import Admin from "./views/Admin/Admin";
-import SuperAdmin from "./views/SuperAdmin/SuperAdmin";
 import Unauthorized from "./views/Unauthorized/Unauthorized";
 import RegisterFormik from "./views/Registry/RegisterFormik";
 import "./App.css";
@@ -52,25 +48,15 @@ export default function App() {
                 <Route path="unauthorized" element={<Unauthorized />} />
               </Route>
               {/* rutas privadas */}
-              <Route element={<PrivateRoute allowedRoles={roles.ALL_USERS} />} >
+              <Route element={<PrivateRoute />} >
                 <Route path="/cesta" >
                   <Route index element={<Cesta />} />
                   <Route path="pago" element={<Pago />} />
                   <Route path="enviar" element={<Enviar />} />
                   <Route path="pasarela" element={<Pasarela />} />
-
                 </Route>
               </Route>
-              <Route path="admin"
-                element={<PrivateRoute allowedRoles={[roles.ADMIN]} />}
-              >
-                <Route index element={<Admin />} />
-              </Route>
-              <Route path="superadmin"
-                element={<PrivateRoute allowedRoles={[roles.SUPER_ADMIN]} />}
-              >
-                <Route index element={<SuperAdmin />} />
-              </Route>
+
               <Route path="*" element={<NotFound />} />
             </Routes>
           </CartContextProvider>

@@ -4,9 +4,11 @@ import jwtDecode from 'jwt-decode';
 const AuthContext = createContext(
     {
         user: null,
-        message: null,
+        loginMessage: null,
+        registerMessage: null,
         login: () => { },
-        logout: () => { }
+        logout: () => { },
+        register: () => { }
     });
 
 const USER_KEY = "USER_KEY"
@@ -17,7 +19,9 @@ export default function AuthContextProvider({ children }) {
     // children es todo lo que abraza el contexto en la APP
     // el estado lo inicializo nulo porque no hay usuario
     const [user, setUser] = useState(JSON.parse(localStorage.getItem(USER_KEY)) ?? null);
-    const [message, setMessage] = useState(null);
+    const [loginMessage, setLoginMessage] = useState(null);
+    const [registerMessage, setRegisterMessage] = useState(null);
+
 
     async function login({ email, password }) {
         try {
@@ -34,10 +38,10 @@ export default function AuthContextProvider({ children }) {
                 const user = jwtDecode(token.jwt)
                 setUser(user)
                 localStorage.setItem(USER_KEY, JSON.stringify(user))
-                setMessage("Ya puedes navegar")
+                setLoginMessage("Ya puedes navegar")
             }
             else {
-                setMessage("Inténtalo de nuevo")
+                setLoginMessage("Inténtalo de nuevo")
 
             }
 
@@ -56,13 +60,39 @@ export default function AuthContextProvider({ children }) {
         }
     }
 
+    async function register({ username, surname, newEmail, password }) {
+        try {
+            const response = await fetch("http://localhost:3000/user/", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ name: username, surname: surname, email: newEmail, password: password })
+            })
+            if (response.ok) {
+                console.log("Usuario registrado");
+                setRegisterMessage("Registro correcto. Ir a login.")
+            } else {
+                setRegisterMessage("El usuario ya existe.")
+            }
+        }
+        catch (err) {
+            throw new Error(err.message)
+        }
+
+
+    }
+
+
+
+
     function logout() {
         localStorage.removeItem(USER_KEY);
         setUser(null)
     }
 
     const value = {
-        user, login, logout, message,
+        user, login, logout, loginMessage, registerMessage, register
     };
 
     return (

@@ -14,31 +14,4 @@ export const LoginFormikSchema = yup.object().shape({
                 "Al menos 5 caracteres, 1 mayúscula, 1 minúscula, 1 dígito numérico",
         })
         .required("Obligatorio"),
-
-    username: yup
-        .string()
-        .min(3, "Al menos 3 caracteres.")
-        .required("Obligatorio"),
-
-    surname: yup
-        .string()
-        .min(3, "Al menos 3 caracteres.")
-        .required("Obligatorio"),
-    newEmail: yup.string().email("Por favor, escriba un email válido").required("Obligatorio"),
-
-    newPassword: yup
-        .string()
-        .matches(passwordRules, {
-            message:
-                "Al menos 5 caracteres, 1 mayúscula, 1 minúscula, 1 dígito numérico",
-        })
-        .required("Obligatorio"),
-
-    confirmPassword: yup
-        .string()
-        .oneOf([yup.ref("newpassword"), null], "Las contraseñas no coinciden")
-        .required("Obligatorio"),
-    acceptedTC: yup
-        .boolean()
-        .oneOf([true], "Por favor, acepta los términos y condiciones."),
 });

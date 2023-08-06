@@ -27,9 +27,10 @@ export const RegisterFormikSchema = yup.object().shape({
 
     confirmPassword: yup
         .string()
-        .oneOf([yup.ref("newpassword"), null], "Las contraseñas no coinciden")
+        .oneOf([yup.ref("password"), null], "Las contraseñas no coinciden")
         .required("Obligatorio"),
+
     acceptedTC: yup
         .boolean()
-        .oneOf([true], "Por favor, acepta los términos y condiciones."),
+        .oneOf([true], "Please accept the terms and conditions"),
 });

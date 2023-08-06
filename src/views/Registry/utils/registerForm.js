@@ -4,4 +4,5 @@ export const initialValues = {
     newEmail: "",
     password: "",
     confirmPassword: "",
+    acceptedTC: false
 };

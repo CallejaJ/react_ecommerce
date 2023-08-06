@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 export default function LoginFormikView({ formik }) {
 
-    const { message } = useAuthContext();
+    const { loginMessage } = useAuthContext();
     // es una respuesta del backend si hay errores en el endpoint
 
     const { values, touched, errors, handleChange, handleSubmit, handleBlur } = formik;
@@ -49,9 +49,9 @@ export default function LoginFormikView({ formik }) {
                                     {errors.password && touched.password && (
                                         <p className="error">{errors.password}</p>
                                     )}
-                                    {message ? (
+                                    {loginMessage ? (
                                         <Alert variant='info' >
-                                            {message}
+                                            {loginMessage}
                                         </Alert>
                                     ) : null
                                     }

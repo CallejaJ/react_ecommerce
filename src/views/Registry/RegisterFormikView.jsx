@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 export default function RegisterFormikView({ formik }) {
 
-    const { message } = useAuthContext();
+    const { registerMessage } = useAuthContext();
     // es una respuesta del backend si hay errores en el endpoint
 
     const { values, touched, errors, handleChange, handleSubmit, handleBlur } = formik;
@@ -56,7 +56,7 @@ export default function RegisterFormikView({ formik }) {
                                         onChange={handleChange}
                                         className={errors.surname && touched.surname ? "input-error" : ""}
                                     />
-                                    {errors.email && touched.surname && (
+                                    {errors.surname && touched.surname && (
                                         <p className="error">{errors.surname}</p>
                                     )}
                                     <input
@@ -84,7 +84,7 @@ export default function RegisterFormikView({ formik }) {
                                         <p className="error">{errors.password}</p>
                                     )}
                                     <input
-                                        type="confirmpassword"
+                                        type="password"
                                         name="confirmPassword"
                                         placeholder="Repite tu contraseña"
                                         value={values.confirmPassword}
@@ -96,9 +96,9 @@ export default function RegisterFormikView({ formik }) {
                                         <p className="error">{errors.confirmPassword}</p>
                                     )}
                                     <div><Checkbox type="checkbox" name="acceptedTC" /></div>
-                                    {message ? (
+                                    {registerMessage ? (
                                         <Alert variant='info' >
-                                            {message}
+                                            {registerMessage}
                                         </Alert>
                                     ) : null
                                     }

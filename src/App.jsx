@@ -20,6 +20,7 @@ import NotFound from "./views/NotFound";
 import Admin from "./views/Admin/Admin";
 import SuperAdmin from "./views/SuperAdmin/SuperAdmin";
 import Unauthorized from "./views/Unauthorized/Unauthorized";
+import RegisterFormik from "./views/Registry/RegisterFormik";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css"
 
@@ -45,6 +46,7 @@ export default function App() {
                 {/* Rutas públicas */}
                 <Route element={<PublicRoute />} >
                   <Route path="login" element={<LoginFormik />} />
+                  <Route path="register" element={<RegisterFormik />} />
                 </Route>
                 <Route path="unauthorized" element={<Unauthorized />} />
               </Route>

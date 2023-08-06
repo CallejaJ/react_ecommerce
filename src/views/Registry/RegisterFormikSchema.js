@@ -3,17 +3,7 @@ import * as yup from "yup";
 const passwordRules = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}$/;
 
 
-export const LoginFormikSchema = yup.object().shape({
-
-    email: yup.string().email("Por favor, escriba un email válido").required("Obligatorio"),
-
-    password: yup
-        .string()
-        .matches(passwordRules, {
-            message:
-                "Al menos 5 caracteres, 1 mayúscula, 1 minúscula, 1 dígito numérico",
-        })
-        .required("Obligatorio"),
+export const RegisterFormikSchema = yup.object().shape({
 
     username: yup
         .string()
@@ -24,9 +14,10 @@ export const LoginFormikSchema = yup.object().shape({
         .string()
         .min(3, "Al menos 3 caracteres.")
         .required("Obligatorio"),
+
     newEmail: yup.string().email("Por favor, escriba un email válido").required("Obligatorio"),
 
-    newPassword: yup
+    password: yup
         .string()
         .matches(passwordRules, {
             message:

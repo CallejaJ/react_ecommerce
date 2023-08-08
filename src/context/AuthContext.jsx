@@ -22,6 +22,13 @@ export default function AuthContextProvider({ children }) {
     const [loginMessage, setLoginMessage] = useState(null);
     const [registerMessage, setRegisterMessage] = useState(null);
 
+    setTimeout(() => {
+        setRegisterMessage(null)
+    }, 5000)
+
+    setTimeout(() => {
+        setLoginMessage(null)
+    }, 5000)
 
     async function login({ email, password }) {
         try {

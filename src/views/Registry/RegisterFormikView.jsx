@@ -8,7 +8,8 @@ import { Link } from 'react-router-dom';
 export default function RegisterFormikView({ formik }) {
 
     const { registerMessage } = useAuthContext();
-    // es una respuesta del backend si hay errores en el endpoint
+
+
 
     const { values, touched, errors, handleChange, handleSubmit, handleBlur } = formik;
 

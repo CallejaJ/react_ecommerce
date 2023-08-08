@@ -9,6 +9,11 @@ export default function LoginFormikView({ formik }) {
     const { loginMessage } = useAuthContext();
     // es una respuesta del backend si hay errores en el endpoint
 
+    setTimeout(() => {
+        loginMessage
+    }, 4000)
+
+
     const { values, touched, errors, handleChange, handleSubmit, handleBlur } = formik;
 
     return (
@@ -49,12 +54,13 @@ export default function LoginFormikView({ formik }) {
                                     {errors.password && touched.password && (
                                         <p className="error">{errors.password}</p>
                                     )}
+
                                     {loginMessage ? (
                                         <Alert variant='info' >
                                             {loginMessage}
                                         </Alert>
-                                    ) : null
-                                    }
+                                    ) : null}
+
                                     <input
                                         type="submit"
                                         value="Iniciar sesión" />

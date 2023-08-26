@@ -7,11 +7,8 @@ import { Link } from 'react-router-dom';
 
 export default function RegisterFormikView({ formik }) {
 
-    const { registerMessage } = useAuthContext();
-
-
-
     const { values, touched, errors, handleChange, handleSubmit, handleBlur } = formik;
+    const { registerMessage } = useAuthContext();
 
     return (
 

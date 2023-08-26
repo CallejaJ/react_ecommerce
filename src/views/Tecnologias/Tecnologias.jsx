@@ -16,7 +16,7 @@ export default
                 <img className="mt-3 mb-3" src={tecnology}></img>
             </div>
 
-            <div className="container mt-3">
+            <div className="container mt-2 mb-3">
                 <h1 className="container text-primary mb-4"><strong>Tecnologías</strong></h1>
                 <div id="columnas" className="container mt-3">
                     <p>La impresión 3D en la construcción es una las tecnologías que promete revolucionar el sector en el futuro. La impresión 3D permite un uso en casi cualquier campo y ámbito, desde la arquitectura, la ingeniería, la construcción, el sector aeroespacial, la educación e incluso en la sanidad para el reemplazo de órganos humanos.</p>

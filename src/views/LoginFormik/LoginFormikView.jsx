@@ -56,7 +56,7 @@ export default function LoginFormikView({ formik }) {
                                     )}
 
                                     {loginMessage ? (
-                                        <Alert variant='info' >
+                                        <Alert severity="info" >
                                             {loginMessage}
                                         </Alert>
                                     ) : null}

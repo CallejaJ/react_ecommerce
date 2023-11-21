@@ -1,0 +1,562 @@
+/* 
+❏ Inyectamos un código de color 
+❏ : root { almacena variables de css que se pueden alterar }
+❏ se definen primero y se utilizan después
+❏ cogemos un color que nos gusta, en coolors, lo
+❏ creamos una paleta de color
+*/
+
+:root {
+  --hue: 220.8;
+  --principal: hsl(var(--hue) 100% 40% / 1);
+  --secundario: hsl(var(--hue) 71% 70% / 1);
+  --resalto: hsl(calc(var(--hue) - 180)91% 50% / 1);
+  --negro: hsl(var(--hue) 21% 20% / 1);
+  --blanco: hsl(var(--hue) 21% 98% / 1);
+  --gris: hsl(var(--hue) 21% 80% / 1);
+  --error: hsl(7deg 91% 50% / 1)
+}
+
+
+
+/* ❏ Para evitar que se redimensione el ancho 
+ejecutamos el box-sizing.*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* 
+❏ Poner todos los textos de la web en color #222, 
+❏ Importar la fuente “Inter” en tu Diseño desde Google. Para ello:
+❏ Seleccionar los tamaños 400 y 600
+❏ Copiar el <link> para pegarlo en el <head>
+❏ Indicar al <body> de tu web que la font-family debe ser “Inter”
+❏ Establece en 16px el tamaño del texto base de toda la web.
+*/
+
+
+body {
+  color: var(--negro);
+  background-color: var(--blanco);
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  font-size: 16px;
+}
+
+body.dark {
+  --negro: hsl(var(--hue) 21% 98% / 1);
+  --blanco: hsl(var(--hue)21% 20% / 1);
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Colores */
+
+.main-color {
+  color: var(--principal);
+}
+
+.error-color {
+  color: var(--error);
+}
+
+/* Tipografía */
+
+/* 
+❏ Generar una escala tipográfica, para ello:
+❏ Indicar una proporción de 1.333
+❏ Un texto base de 16px
+❏ 6 tamaños por encima del texto base
+❏ 1 tamaño por debajo del texto base 
+/*
+
+/* 
+❏ Añadir clases inteligentes a la declaración de tamaños de título 
+para reutilizar ese tamaño de texto y poder aumentar o reducir elementos HTML 
+sin cambiar de etiqueta.
+*/
+
+p {
+  margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 3rem 0 1.38rem;
+  line-height: 1.3;
+  color: var(--negro);
+}
+
+span.texto-grande {
+  font-size: 1.3em;
+  color: var(--negro);
+}
+
+
+h1,
+.h1 {
+  margin-top: 0;
+  font-size: 3.052rem;
+}
+
+h2,
+.h2 {
+  font-size: 2.441rem;
+}
+
+h3,
+.h3 {
+  font-size: 1.953rem;
+}
+
+h4,
+.h4 {
+  font-size: 1.563rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+ul {
+  padding-left: 2rem;
+  list-style-type: none;
+}
+
+/* 
+❏ Trasladar los tamaños superiores a cada uno de los tipos de título 
+por orden y el tamaño inferior a la etiqueta small. 
+*/
+
+small,
+.text_small {
+  font-size: 0.8rem;
+}
+
+
+/* 
+❏ Poner un color a todos los enlaces de la web.
+*/
+
+
+a {
+  color: var(--principal);
+}
+
+/* Header */
+
+header {
+  color: var(--blanco);
+  background: rgb(2, 0, 36);
+  background: linear-gradient(100deg, rgba(0, 212, 255, 1) 10%, rgba(9, 9, 121, 1) 55%, rgba(2, 0, 36, 1) 100%);
+}
+
+header .container {
+  padding: 8px;
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+  max-height: 40px;
+}
+
+.logo {
+  display: block;
+  gap: 8px;
+  align-items: center;
+}
+
+.logo img {
+  width: 50;
+  height: 50px;
+  max-width: inherit;
+}
+
+.logo h4 {
+  margin: 0;
+}
+
+.buscador-header {
+  height: 12%;
+  width: 40%;
+  display: block;
+  gap: 8px;
+}
+
+.buscador-header input {
+  width: 100%;
+}
+
+footer {
+  font-size: small;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+}
+
+.mp4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1200px;
+}
+
+/* 
+❏ En la página de cesta, consigue que los botones de los productos
+recomendados ocupen el 100% del ancho de la caja usando display:block.
+Ojo, solo para estos botones, no para todos.
+*/
+
+.recomendados {
+  display: block;
+}
+
+.gradient-custom {
+  /* fallback for old browsers */
+  background: #6a11cb;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, rgba(0, 212, 255, 1), rgba(9, 9, 121, 1), rgba(2, 0, 36, 1));
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, rgba(0, 212, 255, 1), rgba(9, 9, 121, 1), rgba(2, 0, 36, 1))
+}
+
+/* 
+❏ Consigue que el número de productos del botón de cesta en el header
+quede flotando en la esquina superior derecha del botón, usando position
+relative en el botón y position absolute en el número.
+*/
+
+#comprar {
+  position: relative;
+}
+
+#comprar span {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 24px;
+  height: 24px;
+  background: var(--negro);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Componentes */
+
+cite {
+  text-align: right;
+}
+
+figure {
+  height: 324px;
+  width: 270px;
+}
+
+
+divlog {
+  width: 546px;
+  height: 561px
+}
+
+/* Botones */
+
+#columnas {
+  column-count: 2;
+  column-gap: 20px;
+  column-rule: none;
+  list-style: none;
+}
+
+/* 
+❏ Consigue que todos los botones, por defecto, tengan display:inline-block y
+asegúrate que el proceso de compra del cesta se ve como en el diseño.
+*/
+
+.button {
+  display: inline-block;
+  text-decoration: none;
+  padding: 16px 24px;
+  border: 2px solid var(--principal);
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: var(--blanco);
+  background: var(--principal);
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.button_cesta {
+  display: inline-block;
+  text-decoration: none;
+  padding: 16px 24px;
+  border: 2px solid var(--principal);
+  border-radius: 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: var(--blanco);
+  background: var(--principal);
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.button:hover {
+  background-color: transparent;
+  color: var(--principal);
+}
+
+.button_cesta:hover {
+  background-color: transparent;
+  color: var(--principal);
+}
+
+.button-secundario {
+  background: var(--secundario);
+  border-color: var(--secundario);
+}
+
+.button-resalto:hover {
+  color: var(--resalto);
+}
+
+/* Input */
+
+
+
+form {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+input {
+  padding: 16px 24px;
+  border: 2px solid var(--gris);
+  outline: var(--gris);
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+}
+
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-group .error {
+  display: none;
+  color: var(--error);
+}
+
+.input-group.has-error label {
+  color: var(--error);
+}
+
+.input-group.has-error input {
+  border-color: var(--error);
+}
+
+.input-group.has-error .error {
+  display: block;
+}
+
+
+/* Menu */
+
+.menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu li {
+  display: inline-block;
+}
+
+.menu a {
+  text-decoration: none;
+}
+
+
+/* Página productos */
+
+.franja-tarjetas {
+  display: flex;
+  gap: 16px;
+}
+
+/* Tarjetas de producto*/
+
+.card {
+  border: 2px solid var(--gris);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.contenido-producto {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card-titulo,
+.card-titulo .precio,
+.card-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card h5 {
+  margin: 0;
+}
+
+.rating {
+  color: var(--gris);
+}
+
+.card-actions {
+  gap: 16px;
+}
+
+.card-actions .añadir {
+  width: 100%;
+}
+
+/* 
+❏ Añade una clase al grupo de precio y consigue que el icono de moneda 
+se coloque junto al número de precio usando display:inline
+*/
+
+.price {
+  display: inline;
+}
+
+/* Caja */
+
+.caja {
+  padding: 40px;
+  border: 2px solid var(--gris);
+  border-radius: 32px;
+}
+
+.caja h3 {
+  margin: 0;
+}
+
+.caja.destacado {
+  border-color: var(--principal);
+}
+
+/* Navigation */
+
+nav {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(70deg, rgba(0, 212, 255, 1) 10%, rgba(9, 9, 121, 1) 55%, rgba(2, 0, 36, 1) 100%);
+}
+
+#navegacion {
+  display: inherit;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+#navegacion .col-izq,
+#navegacion .col-der {
+  width: 49%;
+  display: inline-block;
+}
+
+#navegacion .col-der .menu {
+  text-align: right;
+}
+
+#navegacion .col-izq .menu {
+  text-align: left;
+}
+
+
+/* Helper */
+
+.container {
+  max-width: 992px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+/* Login */
+
+main.login {
+  display: flex;
+  gap: 24px;
+}
+
+main.login .caja {
+  width: 100%;
+}
+
+/* Responsive */
+
+.jumbotron {
+  padding: 160px 0;
+  background-image: url(../assets/images/logo\ grey.png);
+  background-size: cover;
+  background-position: top center;
+  background-color: var(--gris);
+  color: var(--blanco);
+}
+
+.jumbotron h1 {
+  color: var(--blanco)
+}
+
+@media only screen and(max-width:768px) {
+  main-login {
+    flex-direction: column;
+    text-align: justify;
+  }
+}
+/* Login */
+
+.gradient-custom-2 {
+  /* fallback for old browsers */
+  background: #fccb90;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, rgba(0, 212, 255, 1) 10%, rgba(9, 9, 121, 1));
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, rgba(0, 212, 255, 1) 10%, rgba(9, 9, 121, 1));
+}
+
+@media (min-width: 768px) {
+  .gradient-form {
+    height: 100vh !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .gradient-custom-2 {
+    border-top-right-radius: .3rem;
+    border-bottom-right-radius: .3rem;
+  }
+}

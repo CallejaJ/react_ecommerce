@@ -1,0 +1,22 @@
+.error {
+    color: #fc8181;
+    font-size: 0.75rem;
+    text-align: left;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+input.input-error,
+select.input-error {
+    border-color: #fc8181;
+
+}
+
+input:focus,
+select:focus {
+    border-color: #4299e1;
+}
+
+body {
+    background-color: #fafafa;
+}
